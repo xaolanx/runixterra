@@ -45,7 +45,7 @@ jobs:
       - name: Nightly flake.lock update
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
         id: nightly
-        uses: DeterminateSystems/update-flake-lock@v25
+        uses: DeterminateSystems/update-flake-lock@v26
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: nightly-update
@@ -63,7 +63,7 @@ jobs:
       - name: Weekly flake.lock update
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
         id: weekly
-        uses: DeterminateSystems/update-flake-lock@v25
+        uses: DeterminateSystems/update-flake-lock@v26
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: weekly-update
