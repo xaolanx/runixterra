@@ -185,6 +185,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    tidaluna = {
+      url = "git+https://github.com/Inrixia/TidaLuna?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "git+https://github.com/0xc000022070/zen-browser-flake?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";

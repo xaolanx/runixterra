@@ -43,5 +43,7 @@
 
     #media
     youtube-music
+    inputs.tidaluna.packages.${pkgs.system}.default
+    
   ];
 }
