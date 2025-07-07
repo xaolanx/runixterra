@@ -1215,10 +1215,10 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1751815493,
-        "narHash": "sha256-tF7Tery/v0lhBKAwj9TgBLPSng42iZzlf/MeFb7on6U=",
+        "lastModified": 1751866241,
+        "narHash": "sha256-9UJmOYKYXx/hrXTAtFCJtlrIRQmuRLQ+IKj9eTeFIXc=",
         "ref": "refs/heads/main",
-        "rev": "c4d9d4caa0c1e5c002679ca4b15db223b1942c2b",
+        "rev": "59e74c8ac38b131d664a667e046861bd72f5b651",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/sodiboo/niri-flake"
@@ -1475,10 +1475,10 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1751637120,
-        "narHash": "sha256-xVNy/XopSfIG9c46nRmPaKfH1Gn/56vQ8++xWA8itO4=",
+        "lastModified": 1751792365,
+        "narHash": "sha256-J1kI6oAj25IG4EdVlg2hQz8NZTBNYvIS0l4wpr9KcUo=",
         "ref": "nixos-unstable",
-        "rev": "5c724ed1388e53cc231ed98330a60eb2f7be4be3",
+        "rev": "1fd8bada0b6117e6c7eb54aad5813023eed37ccb",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -1514,10 +1514,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1751856594,
-        "narHash": "sha256-u/TCh+L+zyFpLYmC3PmMGJ6t0YqgJ+BhjLJ7fu2I6cs=",
+        "lastModified": 1751871666,
+        "narHash": "sha256-wBwb9DPcUpP/NoPnNMkFOP6BD/ZVVHsJ/Vis1oVTnZA=",
         "ref": "refs/heads/main",
-        "rev": "5c55fe567c5d7d07f31de080a91d58ce63ab080c",
+        "rev": "a17a60121a02f9af3a0d338fff2e83936160d754",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/NUR"
