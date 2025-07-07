@@ -1,0 +1,19 @@
+scheme: "Kanagawa Lotus"
+author: "Tommaso Laurenzi (https://github.com/rebelot)"
+variant: "light"
+base00: "#f2ecbc" # Background        (lotusWhite1)
+base01: "#e7dca4" # Light bg          (lotusWhite2)
+base02: "#dcd5a5" # Selection         (lotusWhite3)
+base03: "#989788" # Comments/borders  (lotusGray)
+base04: "#6e6b5e" # UI low-contrast   (lotusGray2)
+base05: "#5c5b58" # Main foreground   (lotusInk2)
+base06: "#3a3a37" # Alt fg (titles)   (lotusInk1)
+base07: "#2c2c2c" # Strongest fg      (lotusInk0)
+base08: "#c84053" # Red / error       (lotusRed)
+base09: "#d75f5f" # Orange / constants (lotusOrange)
+base0A: "#b89467" # Yellow / operators (lotusYellow)
+base0B: "#6f894e" # Green / strings   (lotusGreen)
+base0C: "#4e959e" # Aqua / info       (lotusCyan)
+base0D: "#5a93aa" # Blue / functions  (lotusBlue)
+base0E: "#8f7e9b" # Purple / keywords (lotusPurple)
+base0F: "#b35b79" # Pink / specials   (lotusPink)

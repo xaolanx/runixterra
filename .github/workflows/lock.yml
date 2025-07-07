@@ -1,0 +1,90 @@
+name: lock updater
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (skip actual update)"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "0 0 * * 0" # Sunday
+    - cron: "0 0 * * 1-6" # Monday–Saturday
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  chore:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DeterminateSystems/determinate-nix-action@main
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          extra-conf: |
+            lazy-trees = true
+
+      - name: Clear Cachix
+        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+        run: |
+          echo "Clearing Cachix cache"
+          curl -X 'POST' \
+            'https://app.cachix.org/api/v1/cache/xaolan/clear' \
+            -H 'accept: application/json;charset=utf-8' \
+            -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
+            -d ''
+
+      - name: Nightly flake.lock update
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
+        id: nightly
+        uses: DeterminateSystems/update-flake-lock@v25
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          branch: nightly-update
+          git-author-name: "xaolanx"
+          git-author-email: "ah0199004@gmail.com"
+          git-committer-name: "xaolanx"
+          git-committer-email: "ah0199004@gmail.com"
+          commit-msg: "chore(lockfile): nightly update"
+          pr-title: "chore(lockfile): nightly update"
+          pr-labels: |
+            dependencies
+            automated
+            nightly
+
+      - name: Weekly flake.lock update
+        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+        id: weekly
+        uses: DeterminateSystems/update-flake-lock@v25
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          branch: weekly-update
+          git-author-name: "xaolanx"
+          git-author-email: "ah0199004@gmail.com"
+          git-committer-name: "xaolanx"
+          git-committer-email: "ah0199004@gmail.com"
+          commit-msg: "chore(lockfile): weekly update"
+          pr-title: "chore(lockfile): weekly update"
+          pr-labels: |
+            dependencies
+            automated
+            weekly
+
+      - uses: DeterminateSystems/flake-checker-action@main
+
+      # - name: Auto-merge PR
+      #   if: steps.nightly.outputs.pull-request-number || steps.weekly.outputs.pull-request-number
+      #   run: |
+      #     PR_NUMBER="${{ steps.nightly.outputs.pull-request-number || steps.weekly.outputs.pull-request-number }}"
+      #     echo "Merging PR #$PR_NUMBER"
+      #     gh pr merge "$PR_NUMBER" --squash --auto
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_TOKEN }}

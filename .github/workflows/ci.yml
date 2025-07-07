@@ -1,0 +1,92 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (skip actual update)"
+        required: false
+        default: "false"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        host: [ionia]
+        config-type:
+          - type: "ionia"
+            path: ".#nixosConfigurations.{host}.config.system.build.toplevel"
+
+    steps:
+      # Checkout
+      - uses: actions/checkout@v4
+
+      # Nothing but Nix
+      - uses: wimpysworld/nothing-but-nix@main
+        with:
+          hatchet-protocol: "rampage"
+          root-safe-haven: "55296"
+          mnt-safe-haven: "2048"
+          witness-carnage: false
+
+      # Determinate Nix Action
+      - uses: DeterminateSystems/determinate-nix-action@main
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          extra-conf: |
+            lazy-trees = true
+            substituters = https://cache.nixos.org?priority=10 https://anyrun.cachix.org https://fufexan.cachix.org https://helix.cachix.org https://hyprland.cachix.org https://cache.lix.systems https://niri.cachix.org https://nix-community.cachix.org https://nix-gaming.cachix.org https://xaolan.cachix.org https://yazi.cachix.org
+            trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s= fufexan.cachix.org-1:LwCDjCJNJQf5XD2BV+yamQIMZfcKWR9ISIFy5curUsY= helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs= hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc= cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o= niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs= nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4= xaolan.cachix.org-1:GvQDGf7m6/xT7YM30jgKHmo71A1rHAjUOQxlfhBStg4= yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k=
+
+      # Cachix
+      - uses: cachix/cachix-action@master
+        with:
+          name: xaolan
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+          skipPush: ${{ github.ref != 'refs/heads/master' || github.event_name != 'push' }}
+
+      # Flake checker
+      - uses: DeterminateSystems/flake-checker-action@main
+
+      # Build NixOS config
+      - name: Build NixOS configuration
+        run: |
+          FLAKEREF="${{ matrix.config-type.path }}"
+          FLAKEREF="${FLAKEREF/\{host\}/${{ matrix.host }}}"
+          nix build ${FLAKEREF} -L
+
+      # sbomnix
+      - name: sbomnix
+        run: |
+          name="${{ matrix.host }}-${{ matrix.config-type.type }}"
+          nix run github:tiiuae/sbomnix#sbomnix -- \
+            --csv "${name}.sbom.csv" \
+            --cdx "${name}.sbom.cdx.json" \
+            --spdx "${name}.sbom.spdx.json" \
+            ./result
+
+      # vulnxscan
+      - name: vulnxscan
+        run: |
+          name="${{ matrix.host }}-${{ matrix.config-type.type }}"
+          nix run github:tiiuae/sbomnix#vulnxscan -- \
+            --triage \
+            --sbom "${name}.sbom.cdx.json"
+          if [ -e vulns.triage.csv ]; then
+            grep -v -E "not_vulnerable|fix_not_available" vulns.triage.csv > cve.csv
+            if [ $(wc -l < cve.csv) -gt 1 ]; then
+              nix run github:nixos/nixpkgs#csv2md -- --columns "0-7,9" cve.csv | tee "${name}.vulnxscan.md"
+              echo "### Vulnerability Scan Results for ${{ matrix.host }}-${{ matrix.config-type.type }}" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+              cat "${name}.vulnxscan.md" >> $GITHUB_STEP_SUMMARY
+              echo "" >> $GITHUB_STEP_SUMMARY
+            fi
+          fi
