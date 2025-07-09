@@ -18,19 +18,23 @@
         pkgs,
         ...
       }: {
-        devShells.default = pkgs.mkShell {
-          name = "dots";
-          packages = [
-            pkgs.alejandra
-            pkgs.deadnix
-            pkgs.git
-            pkgs.nodePackages.prettier
-            config.packages.repl
-          ];
-          DIRENV_LOG_FORMAT = "";
-          shellHook = ''
-            ${config.pre-commit.installationScript}
-          '';
+        devShells = {
+          default = pkgs.mkShell {
+            name = "dots";
+            packages = [
+              pkgs.alejandra
+              pkgs.deadnix
+              pkgs.git
+              pkgs.nodePackages.prettier
+              config.packages.repl
+            ];
+            DIRENV_LOG_FORMAT = "";
+            shellHook = ''
+              ${config.pre-commit.installationScript}
+            '';
+          };
+
+          tidal-ng = import ./shells/tidal-ng.nix {inherit pkgs;};
         };
 
         formatter = pkgs.alejandra;
