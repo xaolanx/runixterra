@@ -25,9 +25,9 @@ in {
     };
 
     fonts = {
-      sizes.applications = lib.mkDefault 10;
-      sizes.terminal = lib.mkDefault 11;
-      sizes.desktop = lib.mkDefault 10;
+      sizes.applications = lib.mkDefault 12;
+      sizes.terminal = lib.mkDefault 12;
+      sizes.desktop = lib.mkDefault 12;
       serif = {
         package = pkgs.aporetic;
         name = lib.mkDefault "Aporetic Serif";
@@ -49,7 +49,7 @@ in {
     cursor = {
       package = lib.mkDefault pkgs.bibata-cursors;
       name = lib.mkDefault "Bibata-Modern-Ice";
-      size = lib.mkDefault 18;
+      size = lib.mkDefault 24;
     };
 
     opacity = {

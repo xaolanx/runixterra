@@ -12,7 +12,7 @@ in {
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
       "HYPRCURSOR_THEME,${cursorName}"
-      "HYPRCURSOR_SIZE,${toString 16}"
+      "HYPRCURSOR_SIZE,${toString 24}"
       # See https://github.com/hyprwm/contrib/issues/142
       "GRIMBLAST_NO_CURSOR,0"
     ];
@@ -21,7 +21,7 @@ in {
       # finalize startup
       "uwsm finalize"
       # set cursor for HL itself
-      "hyprctl setcursor ${cursorName} ${toString 16}"
+      "hyprctl setcursor ${cursorName} ${toString 24}"
       "hyprlock"
       "quickshell"
     ];
