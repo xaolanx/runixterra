@@ -44,6 +44,8 @@
     #media
     youtube-music
     inputs.tidaluna.packages.${pkgs.system}.default
-    amberol    
+    inputs.erosanix.packages.${system}.foobar2000
+    amberol
+    kdePackages.elisa
   ];
 }

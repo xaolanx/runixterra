@@ -77,6 +77,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    erosanix = {
+      url = "git+https://github.com/emmanuelrosa/erosanix?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # helix.url = "git+https://github.com/helix-editor/helix?shallow=1";
 
     hm = {

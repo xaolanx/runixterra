@@ -25,7 +25,7 @@ in {
     };
 
     fonts = {
-      sizes.applications = lib.mkDefault 12;
+      sizes.applications = lib.mkDefault 11;
       sizes.terminal = lib.mkDefault 12;
       sizes.desktop = lib.mkDefault 12;
       serif = {
