@@ -218,13 +218,14 @@
       "locked": {
         "lastModified": 1751984126,
         "narHash": "sha256-PrNg+sypyNMU0dHLbfVFQx58NEnS59DUIu0SZSq3DSk=",
-        "ref": "refs/heads/main",
+        "ref": "nyxpkgs-unstable",
         "rev": "8feb220c99c94c4957d37253eff6100cc33d7e8a",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/chaotic-cx/nyx"
       },
       "original": {
+        "ref": "nyxpkgs-unstable",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/chaotic-cx/nyx"

@@ -68,7 +68,7 @@
 
     catppuccin.url = "git+https://github.com/catppuccin/nix?shallow=1";
 
-    chaotic.url = "git+https://github.com/chaotic-cx/nyx?shallow=1";
+    chaotic.url = "git+https://github.com/chaotic-cx/nyx?shallow=1&ref=nyxpkgs-unstable";
 
     colloid-icon.url = "git+https://github.com/xaolanx/Colloid-icon-theme?shallow=1";
 
