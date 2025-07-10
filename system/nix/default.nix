@@ -29,8 +29,8 @@
       builders-use-substitutes = true;
       experimental-features = ["nix-command" "flakes"];
       flake-registry = "/etc/nix/registry.json";
-      cores = 2;
-      max-jobs = 2;
+      # cores = 2;
+      # max-jobs = 2;
       # lazy-trees = true;
 
       # for direnv GC roots
