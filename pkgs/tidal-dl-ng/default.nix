@@ -5,6 +5,7 @@
   writeShellApplication,
   lib,
   fetchPypi,
+  kdePackages,
 }: let
   # Custom pinned dependencies
   requests_2_32_4 = python3Packages.requests.overridePythonAttrs (old: {
@@ -96,9 +97,15 @@
 
   tdng = writeShellApplication {
     name = "tdng";
-    runtimeInputs = [tidalDlNg];
+    runtimeInputs = [
+      tidalDlNg
+      kdePackages.qtbase
+      kdePackages.qtsvg
+      kdePackages.qtwayland
+    ];
     text = ''
       export QT_QPA_PLATFORM=xcb
+      export QT_PLUGIN_PATH=${kdePackages.qtbase}/lib/qt-6/plugins
       exec tidal-dl-ng-gui "$@"
     '';
   };
