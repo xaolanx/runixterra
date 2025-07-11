@@ -30,6 +30,5 @@
   zramSwap = {
     enable = true;
     memoryPercent = 100;
-    memoryMax = 6 * 1024 * 1024 * 102;
   };
 }

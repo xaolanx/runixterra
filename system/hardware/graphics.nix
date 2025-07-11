@@ -11,7 +11,6 @@
       intel-compute-runtime-legacy1
     ];
   };
-  chaotic.mesa-git.enable = true;
   environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
     LIBVA_DRIVERS_PATH = "${pkgs.intel-media-driver}/lib/dri";
