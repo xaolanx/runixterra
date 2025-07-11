@@ -1,20 +1,20 @@
 {
   systems = ["x86_64-linux"];
 
-  perSystem = {pkgs, ...}: {
+  perSystem = {pkgs, ...}: let
+    customTidalNg = import ./tidal-dl-ng {
+      inherit (pkgs) python3Packages fetchFromGitHub buildEnv writeShellApplication lib fetchPypi;
+    };
+  in {
     packages = {
-      # instant repl with automatic flake loading
       repl = pkgs.callPackage ./repl {};
-
       bibata-hyprcursor = pkgs.callPackage ./bibata-hyprcursor {};
-
       wl-ocr = pkgs.callPackage ./wl-ocr {};
-
       fdm = pkgs.callPackage ./fdm {};
 
-      # gruvbox-plus = pkgs.callPackage ./gruvbox {};
-
-      # aporetic-nerd-patch = pkgs.callPackage ./aporetic-nerd {};
+      tidal-dl-ng = customTidalNg.default;
+      tdn = customTidalNg.tdn;
+      tdng = customTidalNg.tdng;
     };
   };
 }

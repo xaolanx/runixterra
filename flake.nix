@@ -33,8 +33,6 @@
               ${config.pre-commit.installationScript}
             '';
           };
-
-          tidal-ng = import ./shells/tidal-ng.nix {inherit pkgs;};
         };
 
         formatter = pkgs.alejandra;
