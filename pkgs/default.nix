@@ -3,7 +3,7 @@
 
   perSystem = {pkgs, ...}: let
     customTidalNg = import ./tidal-dl-ng {
-      inherit (pkgs) python3Packages fetchFromGitHub buildEnv writeShellApplication lib fetchPypi kdePackages;
+      inherit (pkgs) python3Packages stdenv makeWrapper fetchFromGitHub buildEnv writeShellApplication lib fetchPypi kdePackages;
     };
   in {
     packages = {

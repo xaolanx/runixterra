@@ -6,6 +6,8 @@
   lib,
   fetchPypi,
   kdePackages,
+  stdenv,
+  makeWrapper,
 }: let
   # Custom pinned dependencies
   requests_2_32_4 = python3Packages.requests.overridePythonAttrs (old: {
@@ -109,12 +111,37 @@
       exec tidal-dl-ng-gui "$@"
     '';
   };
+
+  tdngDesktop = stdenv.mkDerivation {
+    pname = "tdng";
+    version = "0.26.2";
+    dontUnpack = true;
+
+    nativeBuildInputs = [makeWrapper];
+
+    installPhase = ''
+          mkdir -p $out/bin
+          cp ${tdng}/bin/tdng $out/bin/
+
+          mkdir -p $out/share/applications
+          cat > $out/share/applications/tdng.desktop <<EOF
+      [Desktop Entry]
+      Name=Tidal Downloader NG
+      Comment=Download music from Tidal
+      Exec=tdng
+      Icon=audio-x-generic
+      Terminal=false
+      Type=Application
+      Categories=AudioVideo;Audio;Player;
+      EOF
+    '';
+  };
 in {
   default = buildEnv {
     name = "tidal-dl-ng";
-    paths = [tdn tdng];
+    paths = [tdn tdngDesktop];
   };
 
   tdn = tdn;
-  tdng = tdng;
+  tdng = tdngDesktop;
 }
