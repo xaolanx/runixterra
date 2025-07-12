@@ -27,7 +27,7 @@ in {
       spawn-at-startup = [
         (makeCommand "uwsm finalize")
         # (makeCommand "hyprlock")
-        (makeCommand "quickshell")
+        (makeCommand "quickshell -c noctalia")
         (makeCommand "xwayland-satellite")
         (makeCommand "telegram-desktop")
         (makeCommand "wl-paste --type image --watch cliphist store")
