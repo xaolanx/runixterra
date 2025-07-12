@@ -22,7 +22,7 @@ in {
       "uwsm finalize"
       # set cursor for HL itself
       "hyprctl setcursor ${cursorName} ${toString 24}"
-      "hyprlock"
+      # "hyprlock"
       "quickshell -c kurukurubar"
     ];
 
