@@ -193,10 +193,10 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1751880463,
-        "narHash": "sha256-aSQllMKqsTYAUp4yhpspZn0Hj5yIj7Mh4UD5iyk5iMM=",
+        "lastModified": 1752227483,
+        "narHash": "sha256-eetITGJfURryoHY5gfuE9/4sEV9aSgzhPxgsQgofNa8=",
         "ref": "refs/heads/main",
-        "rev": "9474347c69e93e392f194dda7a57c641ba4b998e",
+        "rev": "5f431aac1a4038c385e6de2d2384d943e4802d61",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/catppuccin/nix"
@@ -302,10 +302,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1751898236,
-        "narHash": "sha256-dcAs3rP7XjYSbpLfN8o0S/Vzv/pVT1x1WLVpFN9J+ZU=",
+        "lastModified": 1752232033,
+        "narHash": "sha256-8rQmvTodCKjFjwc1I/cHSTUKtk5JvUApixBNIJHAQbo=",
         "ref": "refs/heads/master",
-        "rev": "5fc6b0de7dfa3200a04797ca48102a04be1515bc",
+        "rev": "66a7f795c88eb86016392f6ee0b28343ba5db7ff",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/emmanuelrosa/erosanix"
@@ -766,10 +766,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752180332,
-        "narHash": "sha256-CCufHi/GclygJZbbsKyTvqylz5E3pH2oHFL9ycB8YMM=",
+        "lastModified": 1752265577,
+        "narHash": "sha256-YhnBM3oknReSFTAuc2SMwekwjl9nDd5PUhcar4DsefM=",
         "ref": "refs/heads/master",
-        "rev": "3978bcd6961847385121db30c58dbd444d4a73df",
+        "rev": "3976e0507edc9a5f332cb2be93fa20e646d22374",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/home-manager"
@@ -932,10 +932,10 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1752149340,
-        "narHash": "sha256-DJc2ROpttbP6FHcXwWpmK7EB2cpVsP/LmXjEr8RWcO8=",
+        "lastModified": 1752270468,
+        "narHash": "sha256-SEFxC9q+BMn1FkeaBRCDb0h7hZ2B+MSi8+u85y4rgQY=",
         "ref": "refs/heads/main",
-        "rev": "b5433bb75324a95dd27eb5492141565466c2cdd6",
+        "rev": "6821723b4421bdf163f1a1cc6fd472516d44b1e7",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/hyprwm/hyprland"
@@ -985,10 +985,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752167918,
-        "narHash": "sha256-9Ul9zM3WmAdmo1eH8e1omgdv1t2qzibpQe/qY6DOkeM=",
+        "lastModified": 1752254688,
+        "narHash": "sha256-XJJ+frO4NOxVkoSGc1Mag8ESumzx2FmVRspOgFlMqF8=",
         "ref": "refs/heads/main",
-        "rev": "3eaa665afe4f981dcab12bbcbe2d491270cbb375",
+        "rev": "d723e5b153b7990d36e62a425bda3768c41dd9eb",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/hyprwm/hyprland-plugins"
@@ -1171,10 +1171,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1751139849,
-        "narHash": "sha256-S4WaVk8tR6svR+L8y4VUjFPSYhsUvA9Oc6zYYELTPY0=",
+        "lastModified": 1752218742,
+        "narHash": "sha256-GTJDHmzaeNlsUU0P03q0zHLfOAGtGQCf/oYn2SRPWKE=",
         "ref": "refs/heads/main",
-        "rev": "fee04f640676868fe343bd3ffd0b81b22bd032ee",
+        "rev": "17fefce86e6e857783aef38257af7a18be76323a",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/hyprwm/hyprlock"
@@ -1508,10 +1508,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752137032,
-        "narHash": "sha256-+vIBaUg9XysV2eUTEwLAJQSSLEZHnguHCfS1SHrFYuQ=",
+        "lastModified": 1752199489,
+        "narHash": "sha256-p2zkn8fdLvZ19MgAA5CdiuQWQ/gE3YNg1Nhbm4EAflI=",
         "ref": "refs/heads/master",
-        "rev": "7bd0cbccbb3a1c0d407b189c6b3cf1243a5c2b40",
+        "rev": "62f976ed47de88323770646a9a92e4912d33585f",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/fufexan/nix-gaming"
@@ -1798,10 +1798,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752191316,
-        "narHash": "sha256-vya1JwHqXAt0mbAcTts5UVargMlK0wfeJRrHaH71DLw=",
+        "lastModified": 1752274809,
+        "narHash": "sha256-EIpOaZoPeC+5PSeaU2UgAqgdkQ70R53W4UkabW0c94o=",
         "ref": "refs/heads/main",
-        "rev": "d257dcb0ec3e3091332f82df4e1e95d4196c436c",
+        "rev": "4fd103b49d2f1d3cd956adb3591093bc49c4b647",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/NUR"
@@ -1917,11 +1917,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752146885,
-        "narHash": "sha256-ZJK989GL+bTCQSxbG8v8/7tHMCEl/FPovkeDBNyClQE=",
+        "lastModified": 1752219538,
+        "narHash": "sha256-uckx6ukCJtuAdyGtyqS1OrwAPoxl/LNRyznNO51e8HE=",
         "ref": "refs/heads/master",
-        "rev": "d7079b75241c6e2b67f2429996fa7679ffc052e2",
-        "revCount": 616,
+        "rev": "49a3752b9d79bf9f56d8372de594d54312315470",
+        "revCount": 618,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -2030,10 +2030,10 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1752170554,
-        "narHash": "sha256-4FY36NjEACoNXk8lSarwif/UJtABR9tCLxV9ro9p9RQ=",
+        "lastModified": 1752250117,
+        "narHash": "sha256-zCPV1a8w9hRn5ukOQwaAggA3X5cMmVsZVBYo8wLfLuU=",
         "ref": "refs/heads/master",
-        "rev": "84e7ea0aa447fbc11293e76977302ab1ee0fab38",
+        "rev": "0da583a359fd911d5cbfd2c789424b888b777a4b",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/danth/stylix"
@@ -2196,10 +2196,10 @@
         "systems": "systems_7"
       },
       "locked": {
-        "lastModified": 1751490049,
-        "narHash": "sha256-eKjcsC2Ki/1KAl2yL054A1qOMwhAg8u3IsF6Q/M1TJU=",
+        "lastModified": 1752227093,
+        "narHash": "sha256-nspYGPmSjs8+tJciu8A1V0ed2k6qiSGzKkRJCdFTV/E=",
         "ref": "refs/heads/master",
-        "rev": "5ced7cf99a6cd9ea8973758f038b7940e062e184",
+        "rev": "298f02821ed20ff42674edc1f51de52a7c019507",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/Inrixia/TidaLuna"
@@ -2372,10 +2372,10 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1752114823,
-        "narHash": "sha256-+gNelo7nRn9C0csIWPooOvXtmtpx0V9e7n9h5Larf3k=",
+        "lastModified": 1752195622,
+        "narHash": "sha256-KLDPuWRfrz4Ri4QRv+D1yFSE6cIZ50uDWSFDZ/lZL1I=",
         "ref": "refs/heads/main",
-        "rev": "18795320bb8396247e626d94cc7ecc1c805f3281",
+        "rev": "6366e46c23da43f7aae7f083d00fd989321b9638",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/sxyazi/yazi"
@@ -2394,10 +2394,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752164817,
-        "narHash": "sha256-LJFIx27IOUowLsJn5wci9mHZ4CesJsiAivQWDjnZPCc=",
+        "lastModified": 1752247319,
+        "narHash": "sha256-I4QeJ5tV9R+P0JORi4tWmj20zGNhMBdbtrDqv699w1Q=",
         "ref": "refs/heads/main",
-        "rev": "9193992c4c2c4349b4280ec2b49648cae208fe63",
+        "rev": "e7da7c6876d4b674cc7832a466336cd614159468",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/0xc000022070/zen-browser-flake"
