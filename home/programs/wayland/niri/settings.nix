@@ -85,9 +85,9 @@ in {
         ];
         default-column-width = {proportion = 0.5 / 1.0;};
 
-        center-focused-column = "on-overflow";
+        center-focused-column = "never";
 
-        gaps = 14;
+        gaps = 5;
         struts = {
           left = 0;
           right = 0;
