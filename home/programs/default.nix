@@ -46,6 +46,6 @@
     inputs.tidaluna.packages.${pkgs.system}.default
     inputs.erosanix.packages.${system}.foobar2000
     amberol
-    kdePackages.elisa
+    audacious
   ];
 }
