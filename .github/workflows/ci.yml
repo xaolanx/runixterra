@@ -57,11 +57,20 @@ jobs:
       - uses: DeterminateSystems/flake-checker-action@main
 
       # Build NixOS config
-      - name: Build NixOS configuration
+      # - name: Build NixOS configuration
+      #   run: |
+      #     FLAKEREF="${{ matrix.config-type.path }}"
+      #     FLAKEREF="${FLAKEREF/\{host\}/${{ matrix.host }}}"
+      #     nix build ${FLAKEREF} -L
+
+      # Omnix CI
+      - name: Install omnix
+        run: nix profile install nixpkgs#omnix
+      - name: Run omnix ci
         run: |
-          FLAKEREF="${{ matrix.config-type.path }}"
-          FLAKEREF="${FLAKEREF/\{host\}/${{ matrix.host }}}"
-          nix build ${FLAKEREF} -L
+          om ci run \
+          --extra-access-tokens ${{ secrets.GH_TOKEN }} \
+          -- --accept-flake-config
 
       # sbomnix
       - name: sbomnix
