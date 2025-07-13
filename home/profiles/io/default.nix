@@ -1,7 +1,6 @@
 {
   imports = [
     # editors
-    #../../editors/helix
     ../../editors/nvf.nix
     ../../editors/micro.nix
 
@@ -35,7 +34,7 @@
     # ../../services/wayland/wluma.nix
 
     # terminal emulators
-    # ../../terminal/emulators/kitty.nix    
+    # ../../terminal/emulators/kitty.nix
     ../../terminal/emulators/foot.nix
     ../../terminal/emulators/wezterm.nix
   ];

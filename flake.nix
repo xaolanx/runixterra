@@ -64,8 +64,6 @@
       flake = false;
     };
 
-    catppuccin.url = "git+https://github.com/catppuccin/nix?shallow=1";
-
     chaotic.url = "git+https://github.com/chaotic-cx/nyx?shallow=1&ref=nyxpkgs-unstable";
 
     colloid-icon.url = "git+https://github.com/xaolanx/Colloid-icon-theme?shallow=1";
@@ -79,8 +77,6 @@
       url = "git+https://github.com/emmanuelrosa/erosanix?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # helix.url = "git+https://github.com/helix-editor/helix?shallow=1";
 
     hm = {
       url = "git+https://github.com/nix-community/home-manager?shallow=1";
