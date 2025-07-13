@@ -65,7 +65,7 @@ jobs:
 
       # Omnix CI
       - name: Install omnix
-        run: nix profile install nixpkgs#omnix
+        run: nix profile add nixpkgs#omnix
       - name: Run omnix ci
         run: |
           om ci run \
