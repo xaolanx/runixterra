@@ -197,10 +197,10 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1752318841,
-        "narHash": "sha256-/Vfi3vmpBDaEDCdPYEOgUIUTyt2lOTRWVj3ESBRIChY=",
+        "lastModified": 1752446018,
+        "narHash": "sha256-5dj42G/lC8ZymYep/SwI/EE0mRYgcokh1lrtRANE1IU=",
         "ref": "nyxpkgs-unstable",
-        "rev": "b342f1adfa040963c9b00f4f1755def9f8588a58",
+        "rev": "5e7a7eebbd347ab8ca1a6112a6a5aba44ad3c505",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/chaotic-cx/nyx"
@@ -747,10 +747,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752361671,
-        "narHash": "sha256-AliH6gxw6l9OFZCUuXgxmH+UvTKPeyHzBu4lnvQ8Ick=",
+        "lastModified": 1752449767,
+        "narHash": "sha256-P8mQIrgIImASTlNkHPfKwGTmyZgku8EUt6cF52s3N/Y=",
         "ref": "refs/heads/master",
-        "rev": "f2795aa053ef11f958fba49aef15a5c4d9734c02",
+        "rev": "1a4d8ffd320c2393b72e7ebc5b647122d5703056",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/home-manager"
@@ -769,11 +769,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752202894,
-        "narHash": "sha256-knafgng4gCjZIUMyAEWjxxdols6n/swkYnbWr+oF+1w=",
+        "lastModified": 1752402455,
+        "narHash": "sha256-mCHfZhQKdTj2JhCFcqfOfa3uKZbwUkPQbd0/zPnhOE8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "fab659b346c0d4252208434c3c4b3983a4b38fec",
+        "rev": "bf893ad4cbf46610dd1b620c974f824e266cd1df",
         "type": "github"
       },
       "original": {
@@ -1339,11 +1339,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752218319,
-        "narHash": "sha256-fEvLVaVduwVotOib8NqO0e4N3dMsdA04Jlfm2sZQH5Q=",
+        "lastModified": 1752340638,
+        "narHash": "sha256-9+vBdRt/jg8fAll1VD3NXBibkRq9F8Wq/mW45I5jlvc=",
         "owner": "Jovian-Experiments",
         "repo": "Jovian-NixOS",
-        "rev": "d5da490d8c2553fc8d589b49f9c036973b9656a1",
+        "rev": "1129c951dcc2a269a12cb74d64bd64e44e724ecb",
         "type": "github"
       },
       "original": {
@@ -1395,10 +1395,10 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1752341624,
-        "narHash": "sha256-TL45QOCt1+RSrRzVca3KeMjhZgkCaI585AjKUTCj3Jc=",
+        "lastModified": 1752452487,
+        "narHash": "sha256-twcawp+dcfo79MU3b7LoCug0xdwA68iVtQ6s8wNS5bM=",
         "ref": "refs/heads/main",
-        "rev": "b658155b3c10d32c62fad3bde0097b87b47d2d08",
+        "rev": "11b4d1e53016d5ea8ed4cc6fd650e385ce4b927e",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/sodiboo/niri-flake"
@@ -1429,11 +1429,11 @@
     "niri-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1750791124,
-        "narHash": "sha256-F5iVU/hjoSHSSe0gllxm0PcAaseEtGNanYK5Ha3k2Tg=",
+        "lastModified": 1752418007,
+        "narHash": "sha256-3DyujBgCewh7r5fz4L0ZRw28BJBqfqeDSVpeTud/aEU=",
         "owner": "YaLTeR",
         "repo": "niri",
-        "rev": "37458d94b288945f6cfbd3c5c233f634d59f246c",
+        "rev": "bb40a35ccf6edbe2c838686562cbdad1ef98ce72",
         "type": "github"
       },
       "original": {
@@ -1489,10 +1489,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752285931,
-        "narHash": "sha256-6jawOVAYX+hgFQgJb6+Ll7vKPGUwrNsNl3n6ThSBKW4=",
+        "lastModified": 1752373194,
+        "narHash": "sha256-wr42guldY37FVoFllUNgSavfohWKb/ExIySnzBCswDY=",
         "ref": "refs/heads/master",
-        "rev": "a5bdc5faada1290ad6ca0b91d5ca87bbfbde474a",
+        "rev": "ad11b470127157e4277a875b0fca4234cca25b78",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/fufexan/nix-gaming"
@@ -1533,10 +1533,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752346111,
-        "narHash": "sha256-SVxCIYnbED0rNYSpm3QQoOhqxYRp1GuE9FkyM5Y2afs=",
+        "lastModified": 1752441837,
+        "narHash": "sha256-FMH1OSSJp8Cx8MZHXz6KckxJGbCnVMotZNAH3v2WneU=",
         "ref": "refs/heads/main",
-        "rev": "deff7a9a0aa98a08d8c7839fe2658199ce9828f8",
+        "rev": "839e02dece5845be3a322e507a79712b73a96ba2",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/Mic92/nix-index-database"
@@ -1596,11 +1596,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1752162966,
-        "narHash": "sha256-3MxxkU8ZXMHXcbFz7UE4M6qnIPTYGcE/7EMqlZNnVDE=",
+        "lastModified": 1752308619,
+        "narHash": "sha256-pzrVLKRQNPrii06Rm09Q0i0dq3wt2t2pciT/GNq5EZQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "10e687235226880ed5e9f33f1ffa71fe60f2638a",
+        "rev": "650e572363c091045cdbc5b36b0f4c1f614d3058",
         "type": "github"
       },
       "original": {
@@ -1763,10 +1763,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752359539,
-        "narHash": "sha256-vgNUyR58cOf7hHZOSlRnVCHNynWn2khLOD1bCorAnS4=",
+        "lastModified": 1752452046,
+        "narHash": "sha256-r+VhwGJqvFPlIiBKL0x0e4cJ/AWc7GonGscyooLIboE=",
         "ref": "refs/heads/main",
-        "rev": "196696a12a1087ce8dd11708d2e7e652c5c666ed",
+        "rev": "adfccb9ee684b548be8dad404d8d374155847645",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/NUR"
@@ -1813,10 +1813,10 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1752180730,
-        "narHash": "sha256-aSmib/P5DWXrpOdwFOo+lxuupUlNTGUDsLVSxJwWfUg=",
+        "lastModified": 1752417534,
+        "narHash": "sha256-06CASFKAxc81QycTSsTw26EJOKi6VgMie6wp0ZUnvqE=",
         "ref": "refs/heads/main",
-        "rev": "8ea010d7e3bf00c2a1f24d52da88afaed87d96f5",
+        "rev": "5e2df2dd5b83c07bad3d5e17dc056b52541ecb9c",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/notashelf/nvf"
@@ -1882,11 +1882,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752219538,
-        "narHash": "sha256-uckx6ukCJtuAdyGtyqS1OrwAPoxl/LNRyznNO51e8HE=",
+        "lastModified": 1752454217,
+        "narHash": "sha256-6/IicDJR9MthXrG3qR+u4uh1JghubVQDBnDGRzugSZ0=",
         "ref": "refs/heads/master",
-        "rev": "49a3752b9d79bf9f56d8372de594d54312315470",
-        "revCount": 618,
+        "rev": "96043024159d0216d7a175a563302cce74c2b44c",
+        "revCount": 623,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -1939,11 +1939,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752201818,
-        "narHash": "sha256-d8KczaVT8WFEZdWg//tMAbv8EDyn2YTWcJvSY8gqKBU=",
+        "lastModified": 1752374969,
+        "narHash": "sha256-Ky3ynEkJXih7mvWyt9DWoiSiZGqPeHLU1tlBU4b0mcc=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "bd8f8329780b348fedcd37b53dbbee48c08c496d",
+        "rev": "75fb000638e6d0f57cb1e8b7a4550cbdd8c76f1d",
         "type": "github"
       },
       "original": {
@@ -1994,10 +1994,10 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1752364203,
-        "narHash": "sha256-oJaLYpM8NkQ4LRvv8dCd0eFg2GNopeuToM+3Pp8b+RY=",
+        "lastModified": 1752449117,
+        "narHash": "sha256-Cn24ySH/LN/Q/SsDhpOX4cTMYZa1JMOLNeNsoYqcZpY=",
         "ref": "refs/heads/master",
-        "rev": "05752c77acc9dc7ff7454c6fe6da829e3a40e548",
+        "rev": "d683e35fa5ec8bbfd45d52e4b53c7b91f7b38d06",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/danth/stylix"
@@ -2358,10 +2358,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752323914,
-        "narHash": "sha256-qb7HkBjCmVjAvgYU2XFFwF2i0nepKSdlfuahTrSOxP0=",
+        "lastModified": 1752441511,
+        "narHash": "sha256-1CaGtMQ/UhlBfXzdDF2uK0yXPgzTy43qDYTQaV6GrjE=",
         "ref": "refs/heads/main",
-        "rev": "2203a0a573adc6be31b7ea9a45779dff5daaf863",
+        "rev": "d9c8ac0065e977a6776bed89909d82d58b297c65",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/0xc000022070/zen-browser-flake"
