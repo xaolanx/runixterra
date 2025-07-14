@@ -14,6 +14,7 @@
     withHyprland = true;
     withI3 = false;  	
   };
+  zen-browser = ((import sources.zen-browser-flake) { pkgs = final; }).zen-browser; 
   nh = final.callPackage "${sources.nh}/package.nix" {
     rev = sources.nh.revision;
   };  

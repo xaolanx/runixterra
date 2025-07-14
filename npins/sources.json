@@ -138,6 +138,19 @@
       "revision": "b65a88075a824e4304dca5428ba05de1404fa635",
       "url": "https://api.github.com/repos/sxyazi/yazi/tarball/v25.5.31",
       "hash": "sha256-Er9d/5F34c2Uw+DN/9j+j7TdeWiSxMQlZSgsATC04cM="
+    },
+    "zen-browser-flake": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "1a40cdcb093a0025631ef692caa53130f821dd77",
+      "url": "https://github.com/youwen5/zen-browser-flake/archive/1a40cdcb093a0025631ef692caa53130f821dd77.tar.gz",
+      "hash": "sha256-84tAzrC/kioWRmG0jLt1HWRP/wHON7zjLtXCwWRNI/g="
     }
   },
   "version": 6

@@ -11,17 +11,27 @@ let
 in {
   config = {
     environment.systemPackages = with pkgs; [
+      anyrun
+
+      # Socmed    
       telegram-desktop
+      
+      # Browsers
       brave
+      zen-browser
+
+      # Media
       youtube-music
+      playerctl
+      audacious
+
+	  # Terminal
       micro
       git
       npins
-      anyrun
-      playerctl
-      audacious
       nvd
-      nix-output-monitor
+      nix-output-monitor      
+      
     ] ++ (builtins.attrValues wrappedPackages);
   };
 }
