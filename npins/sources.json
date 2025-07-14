@@ -1,0 +1,144 @@
+{
+  "pins": {
+    "Colloid-icon-theme": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "xaolanx",
+        "repo": "Colloid-icon-theme"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c42cb358cc7e804136a5cf5e334e73255e16332a",
+      "url": "https://github.com/xaolanx/Colloid-icon-theme/archive/c42cb358cc7e804136a5cf5e334e73255e16332a.tar.gz",
+      "hash": "sha256-4L9X00VnwhN5+e+HSB572pCl/aV9F4Fnsffb7wOHGkQ="
+    },
+    "disko": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "disko"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.12.0",
+      "revision": "7121f74b976481bc36877abaf52adab2a178fcbe",
+      "url": "https://api.github.com/repos/nix-community/disko/tarball/v1.12.0",
+      "hash": "sha256-eDoSOhxGEm2PykZFa/x9QG5eTH0MJdiJ9aR00VAofXE="
+    },
+    "hjem": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "feel-co",
+        "repo": "hjem"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "3093a74542b30f8155954d585d0ae2401e3adbe5",
+      "url": "https://github.com/feel-co/hjem/archive/3093a74542b30f8155954d585d0ae2401e3adbe5.tar.gz",
+      "hash": "sha256-LzojKFWAAreWyH56aupj/MLwuPPnnyzplw/xdbavC9c="
+    },
+    "hyprland": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "hyprwm",
+        "repo": "hyprland"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d0f58baf296a2cdd5df0f82212fe17dfbef8438e",
+      "url": "https://github.com/hyprwm/hyprland/archive/d0f58baf296a2cdd5df0f82212fe17dfbef8438e.tar.gz",
+      "hash": "sha256-kEumflYEdQSrZZQEr7kik2sBfFohEx0TsJB1rBVAQy4="
+    },
+    "nh": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "nh"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v4.1.2",
+      "revision": "33f3dc39ccabf2a82f02cb4ce17b2dbd9e4b5613",
+      "url": "https://api.github.com/repos/nix-community/nh/tarball/refs/tags/v4.1.2",
+      "hash": "sha256-v02NsZ589zzPq5xsCxyrG1/ZkFbbMkUthly50QdmYKo="
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixos-unstable",
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre826938.9807714d6944/nixexprs.tar.xz",
+      "hash": "sha256-ROMKbpfgrbogAWXNXJxUu+BoPyZdOq/MQ3UNYVP863o="
+    },
+    "nyx": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "chaotic-cx",
+        "repo": "nyx"
+      },
+      "branch": "nyxpkgs-unstable",
+      "submodules": false,
+      "revision": "5e7a7eebbd347ab8ca1a6112a6a5aba44ad3c505",
+      "url": "https://github.com/chaotic-cx/nyx/archive/5e7a7eebbd347ab8ca1a6112a6a5aba44ad3c505.tar.gz",
+      "hash": "sha256-5dj42G/lC8ZymYep/SwI/EE0mRYgcokh1lrtRANE1IU="
+    },
+    "quickshell": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://git.outfoxxed.me/",
+        "owner": "quickshell",
+        "repo": "quickshell"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.1.0",
+      "revision": "703a3789083d2f990c4e99cd25c97c2a4cccbd81",
+      "url": "https://git.outfoxxed.me/api/v1/repos/quickshell/quickshell/archive/v0.1.0.tar.gz",
+      "hash": "sha256-DdE50ZJN/mKsSF/vc9hrMboOeJ7BST5DD6GNEXgVbWg="
+    },
+    "tailray": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "NotAShelf",
+        "repo": "tailray"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v0.3.0",
+      "revision": "0c4aa1167f61359dad8c22656c0109c0e876a028",
+      "url": "https://api.github.com/repos/NotAShelf/tailray/tarball/v0.3.0",
+      "hash": "sha256-Frdo29gkUJqZ7zZFyNBvL3Gp3HRM4fapnVW5uXozgdY="
+    },
+    "yazi": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sxyazi",
+        "repo": "yazi"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v25.5.31",
+      "revision": "b65a88075a824e4304dca5428ba05de1404fa635",
+      "url": "https://api.github.com/repos/sxyazi/yazi/tarball/v25.5.31",
+      "hash": "sha256-Er9d/5F34c2Uw+DN/9j+j7TdeWiSxMQlZSgsATC04cM="
+    }
+  },
+  "version": 6
+}

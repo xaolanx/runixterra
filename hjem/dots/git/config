@@ -1,0 +1,82 @@
+    [alias]
+    	a = "add --patch"
+    	ad = "add"
+    	b = "branch"
+    	ba = "branch -a"
+    	bd = "branch --delete"
+    	bdd = "branch -D"
+    	c = "commit"
+    	ca = "commit --amend"
+    	cb = "checkout -b"
+    	cl = "clone"
+    	cm = "commit --message"
+    	co = "checkout"
+    	d = "diff"
+    	ds = "diff --staged"
+    	forgor = "commit --amend --no-edit"
+    	h = "show"
+    	h1 = "show HEAD^"
+    	h2 = "show HEAD^^"
+    	h3 = "show HEAD^^^"
+    	h4 = "show HEAD^^^^"
+    	h5 = "show HEAD^^^^^"
+    	l = "log --show-notes='*' --abbrev-commit --pretty=format:'%Cred%h %Cgreen(%aD)%Creset -%C(bold red)%d%Creset %s %C(bold blue)<%an>% %Creset' --graph"
+    	la = "log --show-notes='*' --abbrev-commit --pretty=format:'%Cred%h %Cgreen(%aD)%Creset -%C(bold red)%d%Creset %s %C(bold blue)<%an>% %Creset' --graph --all"
+    	lp = "log --show-notes='*' --abbrev-commit --pretty=format:'%Cred%h %Cgreen(%aD)%Creset -%C(bold red)%d%Creset %s %C(bold blue)<%an>% %Creset' --graph --patch"
+    	oops = "checkout --"
+    	p = "push"
+    	pc = "checkout --patch"
+    	pf = "push --force-with-lease"
+    	pl = "pull"
+    	r = "rebase"
+    	ra = "rebase --abort"
+    	rc = "rebase --continue"
+    	ri = "rebase --interactive"
+    	rs = "reset"
+    	rsh = "reset --hard"
+    	s = "status --short --branch"
+    	ss = "status"
+    	st = "stash"
+    	stc = "stash clear"
+    	sth = "stash show --patch"
+    	stl = "stash list"
+    	stp = "stash pop"
+
+    [commit]
+    	gpgSign = true
+
+    [core]
+    	pager = "/nix/store/kzknqmxbxdgg6wanbsn9gnla60hd6akq-delta-0.18.2/bin/delta"
+
+    [credential]
+    	helper = "store"
+
+    [delta]
+    	dark = true
+
+    [diff]
+    	colorMoved = "default"
+
+    [gpg]
+    	format = "ssh"
+
+    [gpg "ssh"]
+    	allowedSignersFile = "/home/xaolan/.config/git/allowed_signers"
+    	program = "/nix/store/4dmvr7nydys9qai9k3364m3fkgcz5kwn-openssh-10.0p2/bin/ssh-keygen"
+
+    [interactive]
+    	diffFilter = "/nix/store/kzknqmxbxdgg6wanbsn9gnla60hd6akq-delta-0.18.2/bin/delta --color-only"
+
+    [merge]
+    	conflictstyle = "diff3"
+
+    [pull]
+    	rebase = true
+
+    [tag]
+    	gpgSign = true
+
+    [user]
+    	email = "ah0199004@gmail.com"
+    	name = "xaolan"
+    	signingKey = "/home/xaolan/.ssh/id_ed25519"

@@ -1,0 +1,19 @@
+scheme: "Kanagawa Wave"
+author: "Tommaso Laurenzi (https://github.com/rebelot)"
+variant: "dark"
+base00: "#1f1f28" # Background (sumiInk1)
+base01: "#16161d" # Lighter background (sumiInk0)
+base02: "#2a2a37" # Visual selection bg (waveBlue2)
+base03: "#54546d" # Non-text fg & borders (sumiInk4)
+base04: "#727169" # Comments (fujiGray)
+base05: "#dcd7ba" # Default foreground (fujiWhite)
+base06: "#c8c093" # Dark foreground alt (oldWhite)
+base07: "#717c7c" # Deprecated (katanaGray)
+base08: "#e82424" # Red / error (waveRed)
+base09: "#ffa066" # Orange / constant (surimiOrange)
+base0A: "#e6c384" # Yellow / operator (waveYellow)
+base0B: "#98bb6c" # Green / strings (waveGreen)
+base0C: "#7fb4ca" # Aqua / info (waveAqua2)
+base0D: "#7e9cd8" # Blue / functions (crystalBlue)
+base0E: "#957fb8" # Violet / keywords (oniViolet)
+base0F: "#d27e99" # Pink / special (sakuraPink)
