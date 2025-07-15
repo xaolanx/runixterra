@@ -3,13 +3,12 @@ let
 
   src = import ./npins;
   pkgs = import src.nixpkgs {};
-  sources = mapAttrs (k: v: v {inherit pkgs;}) src;
+  sources = mapAttrs (_k: v: v {inherit pkgs;}) src;
 
   overlays = attrValues {
     internal = import ./overlays/default.nix {sources = src;};
     npins = import ./overlays/npins.nix; # temporary
   };
-
 
   nixosConfig = hostName:
     import (src.nixpkgs + "/nixos/lib/eval-config.nix") {
@@ -21,7 +20,7 @@ let
         ./nixos
         ./hjem
         ./pkgs
-	./modules
+        ./modules
       ];
     };
 in {

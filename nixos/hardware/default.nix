@@ -1,7 +1,7 @@
 {
   imports = [
-  	./bluetooth.nix
-  	./graphics.nix
-  	./fwupd.nix
+    ./bluetooth.nix
+    ./graphics.nix
+    ./fwupd.nix
   ];
 }

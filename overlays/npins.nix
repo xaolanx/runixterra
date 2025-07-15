@@ -2,7 +2,7 @@
 final: prev: let
   inherit (final) fetchFromGitHub rustPlatform;
 in {
-  npins = prev.npins.overrideAttrs (new: old: {
+  npins = prev.npins.overrideAttrs (new: _old: {
     src = fetchFromGitHub {
       owner = "andir";
       repo = "npins";

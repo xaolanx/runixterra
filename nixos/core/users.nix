@@ -1,7 +1,6 @@
 {
   lib,
   sources,
-  pkgs,
   ...
 }: let
   inherit (lib) mkOption;

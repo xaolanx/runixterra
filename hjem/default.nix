@@ -1,17 +1,22 @@
-{ pkgs, lib, config, sources, ... }: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   username = "xaolan";
   configDir = ./dots;
 
   # Filter for .nix files only
-  nixFiles = builtins.filter (file: lib.hasSuffix ".nix" (toString file)) 
+  nixFiles =
+    builtins.filter (file: lib.hasSuffix ".nix" (toString file))
     (lib.filesystem.listFilesRecursive configDir);
 
   # Import and merge all .nix files
-  userFiles = lib.foldl'
+  userFiles =
+    lib.foldl'
     lib.recursiveUpdate
     {}
     (map import nixFiles);
-
 in {
   runixterra.data.users = [username];
 

@@ -1,6 +1,5 @@
 {
   pkgs,
-  sources,
   wrappedPkgs,
   ...
 }: {
@@ -8,23 +7,25 @@
     ./smartgaps.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    grimblast
-    foot
-    wezterm
-    wl-clipboard
-    cliphist
-    libnotify
-    kdePackages.qt6ct
-    ripgrep
-    ripdrag
-    colloid-icon-rosepink
-    quickshell
-    wezterm
-    kitty
-  ] ++ [
-    wrappedPkgs.hyprpaper
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      grimblast
+      foot
+      wezterm
+      wl-clipboard
+      cliphist
+      libnotify
+      kdePackages.qt6ct
+      ripgrep
+      ripdrag
+      colloid-icon-rosepink
+      quickshell
+      wezterm
+      kitty
+    ]
+    ++ [
+      wrappedPkgs.hyprpaper
+    ];
 
   environment.pathsToLink = ["/share/icons"];
 

@@ -1,7 +1,9 @@
-{ config, pkgs, lib, ... }: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   inherit (builtins) concatStringsSep;
-  inherit (lib.lists) flatten;
-  inherit (lib.strings) escapeShellArg;
 
   gaps_out = 8;
   gaps_in = 4;
@@ -23,16 +25,16 @@
 
     if [ $? -eq 0 ]; then
       ${forEach (selector: ''
-        hyprctl keyword workspace "${selector}, gapsout:${toString gaps_out}, gapsin:${toString gaps_in}"
-        hyprctl keyword windowrulev2 "bordersize ${toString border_size}, floating:0, onworkspace:${selector}"
-        hyprctl keyword windowrulev2 "rounding ${toString rounding}, floating:0, onworkspace:${selector}"
-      '')}
+      hyprctl keyword workspace "${selector}, gapsout:${toString gaps_out}, gapsin:${toString gaps_in}"
+      hyprctl keyword windowrulev2 "bordersize ${toString border_size}, floating:0, onworkspace:${selector}"
+      hyprctl keyword windowrulev2 "rounding ${toString rounding}, floating:0, onworkspace:${selector}"
+    '')}
     else
       ${forEach (selector: ''
-        hyprctl keyword workspace "${selector}, gapsout:0, gapsin:0"
-        hyprctl keyword windowrulev2 "bordersize 0, floating:0, onworkspace:${selector}"
-        hyprctl keyword windowrulev2 "rounding 0, floating:0, onworkspace:${selector}"
-      '')}
+      hyprctl keyword workspace "${selector}, gapsout:0, gapsin:0"
+      hyprctl keyword windowrulev2 "bordersize 0, floating:0, onworkspace:${selector}"
+      hyprctl keyword windowrulev2 "rounding 0, floating:0, onworkspace:${selector}"
+    '')}
     fi
   '';
 in {

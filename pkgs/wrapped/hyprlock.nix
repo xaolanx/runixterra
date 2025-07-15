@@ -1,6 +1,7 @@
-{ pkgs, config, lib }:
-
-let
+{
+  pkgs,
+  config,
+}: let
   wallpaperPath = config.theme.wallpaper;
 
   hyprlockConfig = ''
@@ -70,16 +71,16 @@ let
     }
   '';
 in
-pkgs.symlinkJoin {
-  name = "hyprlock-with-config";
-  paths = [ pkgs.hyprlock ];
-  buildInputs = [ pkgs.makeWrapper ];
+  pkgs.symlinkJoin {
+    name = "hyprlock-with-config";
+    paths = [pkgs.hyprlock];
+    buildInputs = [pkgs.makeWrapper];
 
-  postBuild = ''
-    mkdir -p $out/share/hyprlock
-    echo '${hyprlockConfig}' > $out/share/hyprlock/hyprlock.conf
+    postBuild = ''
+      mkdir -p $out/share/hyprlock
+      echo '${hyprlockConfig}' > $out/share/hyprlock/hyprlock.conf
 
-    wrapProgram $out/bin/hyprlock \
-      --add-flags "-c $out/share/hyprlock/hyprlock.conf"
-  '';
-}
+      wrapProgram $out/bin/hyprlock \
+        --add-flags "-c $out/share/hyprlock/hyprlock.conf"
+    '';
+  }

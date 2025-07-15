@@ -1,9 +1,8 @@
-{lib, ...}: 
-{
+{ ...}: {
   imports = [
     "${(import ../../npins).disko}/module.nix"
   ];
-  
+
   disko.devices = {
     disk = {
       main = {

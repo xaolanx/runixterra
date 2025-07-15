@@ -1,21 +1,22 @@
-{ config, lib, pkgs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  ...
+}: let
   inherit (pkgs) callPackage;
 
   wrappedPackages = {
-    hyprlock = callPackage ./wrapped/hyprlock.nix { inherit pkgs config; };
-    hyprpaper = callPackage ./wrapped/hyprpaper.nix { inherit pkgs config; };
-    
+    hyprlock = callPackage ./wrapped/hyprlock.nix {inherit pkgs config;};
+    hyprpaper = callPackage ./wrapped/hyprpaper.nix {inherit pkgs config;};
   };
 in {
   config = {
     environment.systemPackages = with pkgs; [
       anyrun
 
-      # Socmed    
+      # Socmed
       telegram-desktop
-      
+
       # Browsers
       brave
       zen-browser
@@ -25,14 +26,13 @@ in {
       playerctl
       audacious
 
-	  # Terminal
+      # Terminal
       micro
       git
       npins
       nvd
-      nix-output-monitor      
-      
+      nix-output-monitor
     ];
-    _module.args.wrappedPkgs = wrappedPackages;        
+    _module.args.wrappedPkgs = wrappedPackages;
   };
 }

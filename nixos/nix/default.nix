@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }: {
   imports = [
@@ -11,7 +9,7 @@
   ];
 
   # we need git for flakes
-  environment.systemPackages = with pkgs;[
+  environment.systemPackages = with pkgs; [
     git
     deadnix
     statix
@@ -41,7 +39,7 @@
 
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true; 
+    nix-direnv.enable = true;
     enableFishIntegration = true;
   };
 }

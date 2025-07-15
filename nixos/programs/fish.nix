@@ -1,9 +1,12 @@
 # stolen from Rexcrazy804
-{pkgs, config, ...}: let
+{
+  pkgs,
+  config,
+  ...
+}: let
   inherit (config.networking) hostName;
   rebuildCommand = "sudo nixos-rebuild --log-format bar --no-reexec --file ~/Documents/code/runixterra/default.nix -A ${hostName}";
-in 
-{
+in {
   programs.fish = {
     enable = true;
     useBabelfish = true;
