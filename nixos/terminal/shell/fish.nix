@@ -126,6 +126,11 @@ in {
     fishPlugins.sponge
     fishPlugins.hydro
     fishPlugins.z
+    fishPlugins.pure
+    fishPlugins.plugin-git
+    fishPlugins.humantime-fish
+    fishPlugins.fzf
+    fishPlugins.bass
     eza
     fish-lsp
   ];
