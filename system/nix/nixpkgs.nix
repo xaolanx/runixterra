@@ -50,7 +50,6 @@
       # External overlays
       inputs.niri.overlays.niri
       inputs.nix-yazi-flavors.overlay
-      inputs.nur.overlays.default
     ];
   };
 }
