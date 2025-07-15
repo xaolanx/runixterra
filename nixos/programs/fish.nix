@@ -147,6 +147,7 @@ in {
     fishPlugins.done
     fishPlugins.sponge
     fishPlugins.hydro
+    fishPlugins.z    
     eza
     fish-lsp
   ];
