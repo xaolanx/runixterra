@@ -29,6 +29,32 @@
       "url": "https://api.github.com/repos/nix-community/disko/tarball/v1.12.0",
       "hash": "sha256-eDoSOhxGEm2PykZFa/x9QG5eTH0MJdiJ9aR00VAofXE="
     },
+    "fish": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rose-pine",
+        "repo": "fish"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "b82982c55582cfaf6f220de1893c7c73dd0cb301",
+      "url": "https://github.com/rose-pine/fish/archive/b82982c55582cfaf6f220de1893c7c73dd0cb301.tar.gz",
+      "hash": "sha256-Dvaw1k7XOU2NUQbTJAXPgAOPN1zTLVrc7NZDY5/KHeM="
+    },
+    "foot": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "rose-pine",
+        "repo": "foot"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "fd30db031194d5905b9f5ab832ed770931036944",
+      "url": "https://github.com/rose-pine/foot/archive/fd30db031194d5905b9f5ab832ed770931036944.tar.gz",
+      "hash": "sha256-QGNKJqqP6dtihAU5sp6bRt5vcZzPSzdsBSgtSpbZ9k0="
+    },
     "hjem": {
       "type": "Git",
       "repository": {

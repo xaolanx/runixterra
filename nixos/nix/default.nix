@@ -39,4 +39,8 @@
     nix-direnv.enable = true;
     enableFishIntegration = true;
   };
+  documentation.man = {
+    man-db.enable = false;
+    man-db.manualPages = false;
+  };
 }

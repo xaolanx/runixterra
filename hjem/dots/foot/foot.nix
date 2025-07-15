@@ -1,28 +1,36 @@
-{
+{sources, ...}: {
+  ".config/foot/rose-pine.ini".source = sources.foot + "/rose-pine";
   ".config/foot/foot.ini".text = ''
-    [bell]
-    notify=yes
-    urgent=yes
-
-    [colors]
-    alpha=0.800000
-
-    [cursor]
-    beam-thickness=1
-    style=beam
-
     [main]
-    dpi-aware=no
-    font=Aporetic Serif Mono:size=12
-    horizontal-letter-offset=0
-    pad=4x4 center
-    selection-target=clipboard
-    vertical-letter-offset=0
+    gamma-correct-blending=false
+    dpi-aware=yes
+    initial-window-mode=maximized
+    font=Aporetic Serif Mono:size=11
+    font-bold=Aporetic Serif Mono:weight=bold:size=12
+    font-bold-italic=Aporetic Serif Mono Italic:weight=bold:slant=italic:size=12
+    font-italic=Aporetic Serif Mono Italic:slant=italic:size=11
+    pad=5x5 center
+    include=~/.config/foot/rose-pine.ini
+
+    [security]
+    osc52=enabled
 
     [scrollback]
+    lines=2000
+    multiplier=2.0
     indicator-format=line
-    indicator-position=relative
-    lines=10000
-    multiplier=3
+
+    [cursor]
+    unfocused-style=hollow
+    blink=yes
+
+    [mouse]
+    hide-when-typing=true
+
+    [key-bindings]
+    search-start=Control+Shift+f
+
+    [colors]
+    alpha = 0.79
   '';
 }
