@@ -29,6 +29,13 @@
             DIRENV_LOG_FORMAT = "";
             shellHook = ''
               ${config.pre-commit.installationScript}
+
+              if git rev-parse --git-dir > /dev/null 2>&1; then
+                if [ ! -f "$(git rev-parse --git-path hooks/pre-commit)" ]; then
+                  echo "[info] Installing pre-commit hook..."
+                  pre-commit install
+                fi
+              fi
             '';
           };
         };
