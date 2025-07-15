@@ -6,5 +6,6 @@
     ./services
     ./network
     ./specialisations.nix
+    ./terminal
   ];
 }

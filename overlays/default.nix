@@ -18,4 +18,5 @@
   nh = final.callPackage "${sources.nh}/package.nix" {
     rev = sources.nh.revision;
   };
+  yazi = final.callPackage (sources.yazi + "/nix/yazi.nix") {};
 }
