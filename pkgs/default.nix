@@ -25,6 +25,15 @@ in {
       youtube-music
       playerctl
       audacious
+      (mpv.override {
+        scripts = with pkgs.mpvScripts; [
+          uosc
+          mpris
+          thumbfast
+          sponsorblock
+          autoload
+        ];
+      })
 
       # Terminal
       micro
@@ -33,6 +42,7 @@ in {
       nvd
       nix-output-monitor
     ];
+
     _module.args.wrappedPkgs = wrappedPackages;
   };
 }
