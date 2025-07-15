@@ -1,4 +1,4 @@
-{ ...}: {
+{...}: {
   imports = [
     "${(import ../../npins).disko}/module.nix"
   ];
