@@ -40,53 +40,53 @@
     };
 
   inputs = {
-    systems.url = "git+https://github.com/nix-systems/default-linux?shallow=1";
-    flake-compat.url = "git+https://github.com/edolstra/flake-compat?shallow=1";
+    systems.url = "github:nix-systems/default-linux";
+    flake-compat.url = "github:edolstra/flake-compat";
 
     flake-utils = {
-      url = "git+https://github.com/numtide/flake-utils?shallow=1";
+      url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
 
     flake-parts = {
-      url = "git+https://github.com/hercules-ci/flake-parts?shallow=1";
+      url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    anyrun.url = "git+https://github.com/anyrun-org/anyrun?shallow=1";
+    anyrun.url = "github:anyrun-org/anyrun";
 
-    aporetic-nerd-patch.url = "git+https://github.com/xaolanx/aporetic-nerd-patch?shallow=1";
+    aporetic-nerd-patch.url = "github:xaolanx/aporetic-nerd-patch";
 
     betterfox = {
-      url = "git+https://github.com/yokoffing/Betterfox?shallow=1";
+      url = "github:yokoffing/Betterfox";
       flake = false;
     };
 
-    chaotic.url = "git+https://github.com/chaotic-cx/nyx?shallow=1&ref=nyxpkgs-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    colloid-icon.url = "git+https://github.com/xaolanx/Colloid-icon-theme?shallow=1";
+    colloid-icon.url = "github:xaolanx/Colloid-icon-theme";
 
     disko = {
-      url = "git+https://github.com/nix-community/disko?shallow=1";
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     erosanix = {
-      url = "git+https://github.com/emmanuelrosa/erosanix?shallow=1";
+      url = "github:emmanuelrosa/erosanix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hm = {
-      url = "git+https://github.com/nix-community/home-manager?shallow=1";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "git+https://github.com/hyprwm/hyprland?shallow=1";
+    hyprland.url = "github:hyprwm/hyprland";
 
     hypridle = {
-      url = "git+https://github.com/hyprwm/hypridle?shallow=1";
+      url = "github:hyprwm/hypridle";
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
@@ -96,17 +96,17 @@
     };
 
     hyprland-contrib = {
-      url = "git+https://github.com/hyprwm/contrib?shallow=1";
+      url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
 
     hyprland-plugins = {
-      url = "git+https://github.com/hyprwm/hyprland-plugins?shallow=1";
+      url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
 
     hyprlock = {
-      url = "git+https://github.com/hyprwm/hyprlock?shallow=1";
+      url = "github:hyprwm/hyprlock";
       inputs = {
         hyprgraphics.follows = "hyprland/hyprgraphics";
         hyprlang.follows = "hyprland/hyprlang";
@@ -117,7 +117,7 @@
     };
 
     hyprpaper = {
-      url = "git+https://github.com/hyprwm/hyprpaper?shallow=1";
+      url = "github:hyprwm/hyprpaper";
       inputs = {
         hyprgraphics.follows = "hyprland/hyprgraphics";
         hyprlang.follows = "hyprland/hyprlang";
@@ -128,73 +128,62 @@
     };
 
     niri = {
-      url = "git+https://github.com/sodiboo/niri-flake?shallow=1";
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-yazi-flavors.url = "git+https://github.com/aguirre-matteo/nix-yazi-flavors?shallow=1";
+    nix-yazi-flavors.url = "github:aguirre-matteo/nix-yazi-flavors";
 
     nix-index-db = {
-      url = "git+https://github.com/Mic92/nix-index-database?shallow=1";
+      url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-gaming = {
-      url = "git+https://github.com/fufexan/nix-gaming?shallow=1";
+      url = "github:fufexan/nix-gaming";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-parts.follows = "flake-parts";
       };
     };
 
-    nur = {
-      url = "git+https://github.com/nix-community/NUR?shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nvf = {
-      url = "git+https://github.com/notashelf/nvf?shallow=1";
+      url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # plasma-manager = {
-    #   url = "git+https://github.com/nix-community/plasma-manager?shallow=1";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   inputs.home-manager.follows = "hm";
-    # };
 
     pre-commit-hooks = {
-      url = "git+https://github.com/cachix/pre-commit-hooks.nix?shallow=1";
+      url = "github:cachix/pre-commit-hooks.nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         flake-compat.follows = "flake-compat";
       };
     };
 
-    yazi.url = "git+https://github.com/sxyazi/yazi?shallow=1";
+    yazi.url = "github:sxyazi/yazi";
 
     quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
-      url = "git+https://github.com/danth/stylix?shallow=1";
+      url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     tailray = {
-      url = "git+https://github.com/NotAShelf/tailray?shallow=1";
+      url = "github:NotAShelf/tailray";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     tidaluna = {
-      url = "git+https://github.com/Inrixia/TidaLuna?shallow=1";
+      url = "github:Inrixia/TidaLuna";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     zen-browser = {
-      url = "git+https://github.com/0xc000022070/zen-browser-flake?shallow=1";
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -27,7 +27,6 @@
           "${mod}/programs/hyprland"
           "${mod}/programs/games.nix"
           "${mod}/programs/gnome.nix"
-          #"${mod}/programs/kde"
           "${mod}/programs/uwsm.nix"
 
           "${mod}/network/spotify.nix"

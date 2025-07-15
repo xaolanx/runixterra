@@ -10,7 +10,6 @@
     ./browsers/firefox
     ./browsers/zen
     # ./browsers/floorp
-    # ./kde
     ./media
     ./gtk.nix
     ./office
