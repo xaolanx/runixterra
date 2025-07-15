@@ -10,8 +10,8 @@ in
 
     shellAbbrs = {
       # nix stuff
-      nsh = "nix shell nixpkgs#";
-      nrn = "nix run nixpkgs#";
+      ns = "nix shell nixpkgs#";
+      nr = "nix run nixpkgs#";
       "nuf --set-cursor" = "env NIXPKGS_ALLOW_UNFREE=1 nix % --impure";
 
       # see pkgs/default.nix
