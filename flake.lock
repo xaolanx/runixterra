@@ -197,10 +197,10 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1752446018,
-        "narHash": "sha256-5dj42G/lC8ZymYep/SwI/EE0mRYgcokh1lrtRANE1IU=",
+        "lastModified": 1752511627,
+        "narHash": "sha256-b8vYxLdVqIFIVa8GaAI50WAGqs37rl76zRMIsjP8/fU=",
         "ref": "nyxpkgs-unstable",
-        "rev": "5e7a7eebbd347ab8ca1a6112a6a5aba44ad3c505",
+        "rev": "26106678ea5170e9db5907bfd2992bdfc26ecd7b",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/chaotic-cx/nyx"
@@ -747,10 +747,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752449767,
-        "narHash": "sha256-P8mQIrgIImASTlNkHPfKwGTmyZgku8EUt6cF52s3N/Y=",
+        "lastModified": 1752467539,
+        "narHash": "sha256-4kaR+xmng9YPASckfvIgl5flF/1nAZOplM+Wp9I5SMI=",
         "ref": "refs/heads/master",
-        "rev": "1a4d8ffd320c2393b72e7ebc5b647122d5703056",
+        "rev": "1e54837569e0b80797c47be4720fab19e0db1616",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/home-manager"
@@ -913,10 +913,10 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1752337367,
-        "narHash": "sha256-kEumflYEdQSrZZQEr7kik2sBfFohEx0TsJB1rBVAQy4=",
+        "lastModified": 1752526483,
+        "narHash": "sha256-XbCDmM9uL5i88gPNcY+gU5JTWogFeNogxb+x09UWaH4=",
         "ref": "refs/heads/main",
-        "rev": "d0f58baf296a2cdd5df0f82212fe17dfbef8438e",
+        "rev": "bc764f7065c8e46b4e62cbb511b419034712c509",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/hyprwm/hyprland"
@@ -1395,10 +1395,10 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1752452487,
-        "narHash": "sha256-twcawp+dcfo79MU3b7LoCug0xdwA68iVtQ6s8wNS5bM=",
+        "lastModified": 1752499009,
+        "narHash": "sha256-GODcHAfq7IWgD+kLPwV2QU6H+iowUJcwijHKvNrSx/g=",
         "ref": "refs/heads/main",
-        "rev": "11b4d1e53016d5ea8ed4cc6fd650e385ce4b927e",
+        "rev": "61a97d3ee496bd5e29ec4c93eaf70a1bfc1fb326",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/sodiboo/niri-flake"
@@ -1429,11 +1429,11 @@
     "niri-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1752418007,
-        "narHash": "sha256-3DyujBgCewh7r5fz4L0ZRw28BJBqfqeDSVpeTud/aEU=",
+        "lastModified": 1752494307,
+        "narHash": "sha256-XLMw4kxrnuvz9BUfPE7DjAlcxS0FKHRnGPAwH5R/9Uw=",
         "owner": "YaLTeR",
         "repo": "niri",
-        "rev": "bb40a35ccf6edbe2c838686562cbdad1ef98ce72",
+        "rev": "56901eed5dbb51d9d669e8ea5a53868896ddeba4",
         "type": "github"
       },
       "original": {
@@ -1763,10 +1763,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752452046,
-        "narHash": "sha256-r+VhwGJqvFPlIiBKL0x0e4cJ/AWc7GonGscyooLIboE=",
+        "lastModified": 1752538836,
+        "narHash": "sha256-ZaWW5wtosFPbtwvnAzMLTjY1SdGhP637zzF40gzYhOs=",
         "ref": "refs/heads/main",
-        "rev": "adfccb9ee684b548be8dad404d8d374155847645",
+        "rev": "37f575164cbcc08e29470a9e4b961e58b882efab",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/nix-community/NUR"
@@ -1882,11 +1882,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752454217,
-        "narHash": "sha256-6/IicDJR9MthXrG3qR+u4uh1JghubVQDBnDGRzugSZ0=",
+        "lastModified": 1752486994,
+        "narHash": "sha256-/11zPRDdPPn61GXDyvDes9otFTP5lLqmETAtwMdeYWI=",
         "ref": "refs/heads/master",
-        "rev": "96043024159d0216d7a175a563302cce74c2b44c",
-        "revCount": 623,
+        "rev": "5ac9096c1c63f6940c6b95f1118b540dfe029278",
+        "revCount": 632,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
@@ -1994,10 +1994,10 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1752449117,
-        "narHash": "sha256-Cn24ySH/LN/Q/SsDhpOX4cTMYZa1JMOLNeNsoYqcZpY=",
+        "lastModified": 1752525684,
+        "narHash": "sha256-VmzzmgM0Cz73cYcy7qyOPTK7qj38/PvlR+bQRRDaLV0=",
         "ref": "refs/heads/master",
-        "rev": "d683e35fa5ec8bbfd45d52e4b53c7b91f7b38d06",
+        "rev": "7f7472cc908a65964fdcc541a978bf8fd1c488f9",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/danth/stylix"
@@ -2336,10 +2336,10 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1752195622,
-        "narHash": "sha256-KLDPuWRfrz4Ri4QRv+D1yFSE6cIZ50uDWSFDZ/lZL1I=",
+        "lastModified": 1752505691,
+        "narHash": "sha256-kc52obJrTpkXIjT/r0f4Be78gy0QqbrzX7sTyrETirk=",
         "ref": "refs/heads/main",
-        "rev": "6366e46c23da43f7aae7f083d00fd989321b9638",
+        "rev": "60a2382087f2327e4e48f662b71a862886a06423",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/sxyazi/yazi"
@@ -2358,10 +2358,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1752441511,
-        "narHash": "sha256-1CaGtMQ/UhlBfXzdDF2uK0yXPgzTy43qDYTQaV6GrjE=",
+        "lastModified": 1752488611,
+        "narHash": "sha256-z10DN88OItOH58fDuC7LsChdwRU6Ut/01fU6/IQt1sg=",
         "ref": "refs/heads/main",
-        "rev": "d9c8ac0065e977a6776bed89909d82d58b297c65",
+        "rev": "0af030205dcbc89c7de5ebc7fc4a10cbf1134c62",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/0xc000022070/zen-browser-flake"
