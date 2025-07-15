@@ -32,6 +32,7 @@ in {
       nvd
       nix-output-monitor      
       
-    ] ++ (builtins.attrValues wrappedPackages);
+    ];
+    _module.args.wrappedPkgs = wrappedPackages;        
   };
 }

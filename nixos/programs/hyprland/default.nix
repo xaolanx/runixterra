@@ -1,6 +1,7 @@
 {
   pkgs,
   sources,
+  wrappedPkgs,
   ...
 }: {
   imports = [
@@ -21,6 +22,8 @@
     quickshell
     wezterm
     kitty
+  ] ++ [
+    wrappedPkgs.hyprpaper
   ];
 
   environment.pathsToLink = ["/share/icons"];
@@ -31,9 +34,15 @@
       enable = true;
       withUWSM = true;
     };
+    hyprlock = {
+      enable = true;
+      package = wrappedPkgs.hyprlock;
+    };
   };
 
-  services.hypridle.enable = true;
+  systemd.user.services.hypridle.path = [
+    pkgs.brightnessctl
+  ];
   qt.enable = true;
 
   # tell Electron/Chromium to run on Wayland

@@ -11,7 +11,12 @@
   ];
 
   # we need git for flakes
-  environment.systemPackages = [pkgs.git];
+  environment.systemPackages = with pkgs;[
+    git
+    deadnix
+    statix
+    alejandra
+  ];
 
   nix = {
     package = pkgs.lixPackageSets.latest.lix;
@@ -32,5 +37,11 @@
 
       accept-flake-config = true;
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true; 
+    enableFishIntegration = true;
   };
 }
