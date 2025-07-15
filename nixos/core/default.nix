@@ -6,8 +6,6 @@
     ./users.nix
     ./boot.nix
     ../nix
-    ../programs/fish.nix
-    ../programs/zsh.nix
   ];
 
   documentation.dev.enable = true;

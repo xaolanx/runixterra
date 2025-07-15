@@ -4,7 +4,6 @@
     # ./qt.nix
     ./xdg.nix
     ./hyprland
-    ./fish.nix
     ./gnome.nix
     ./uwsm.nix
     ./games.nix

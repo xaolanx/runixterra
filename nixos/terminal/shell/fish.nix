@@ -121,33 +121,11 @@ in {
   programs.command-not-found.enable = false;
   programs.fzf.keybindings = true;
 
-  programs.starship = {
-    enable = true;
-    settings = {
-      character = {
-        error_symbol = "[›](bold red)";
-        success_symbol = "[›](bold green)";
-      };
-
-      git_status = {
-        deleted = " ";
-        modified = "* ";
-        staged = " ";
-        stashed = "≡ ";
-      };
-
-      nix_shell = {
-        heuristic = true;
-        symbol = " ";
-      };
-    };
-  };
-
   environment.systemPackages = with pkgs; [
     fishPlugins.done
     fishPlugins.sponge
     fishPlugins.hydro
-    fishPlugins.z    
+    fishPlugins.z
     eza
     fish-lsp
   ];
