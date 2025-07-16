@@ -1,6 +1,7 @@
 {
   inputs,
   pkgs,
+  wrappedPkgs,
   ...
 }: {
   imports = [
@@ -17,6 +18,9 @@
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
       inputs.quickshell.packages.${pkgs.system}.default
       inputs.self.packages.${pkgs.system}.bibata-hyprcursor
+    ]
+    ++ [
+      wrappedPkgs.hyprpaper
     ]
     ++ (with pkgs; [
       foot
@@ -45,9 +49,17 @@
 
   programs.hyprlock = {
     enable = true;
-    package = pkgs.hyprlock;
+    package = wrappedPkgs.hyprlock;
   };
+
+  services.hypridle.enable = true;
 
   # Tell Electron/Chromium to run on Wayland
   environment.variables.NIXOS_OZONE_WL = "1";
+
+  systemd.user.services.hypridle.path = [
+    pkgs.brightnessctl
+  ];
+
+  qt.enable = true;
 }

@@ -1,7 +1,6 @@
 {
   pkgs,
   config,
-  ...
 }: let
   wallpaperPath = config.theme.wallpaper;
 
@@ -80,7 +79,6 @@ in
     postBuild = ''
       mkdir -p $out/share/hyprlock
       echo '${hyprlockConfig}' > $out/share/hyprlock/hyprlock.conf
-
       wrapProgram $out/bin/hyprlock \
         --add-flags "-c $out/share/hyprlock/hyprlock.conf"
     '';

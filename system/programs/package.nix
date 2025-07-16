@@ -1,31 +1,44 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    anyrun
-    foot
+{
+  config,
+  pkgs,
+  ...
+}: let
+  inherit (pkgs) callPackage;
 
-    # Socmed
-    telegram-desktop
+  wrappedPackages = {
+    hyprlock = callPackage ./wrapped/hyprlock {inherit pkgs config;};
+    hyprpaper = callPackage ./wrapped/hyprpaper {inherit pkgs config;};
+  };
+in {
+  config = {
+    environment.systemPackages = with pkgs; [
+      anyrun
 
-    # Browsers
-    brave
-    # zen-browser
+      # Socmed
+      telegram-desktop
 
-    # Media
-    youtube-music
-    playerctl
-    audacious
-    (mpv.override {
-      scripts = with pkgs.mpvScripts; [
-        uosc
-        mpris
-        thumbfast
-        sponsorblock
-        autoload
-      ];
-    })
+      # Browsers
+      brave
+      # zen-browser
 
-    # Terminal
-    micro
-    git
-  ];
+      # Media
+      youtube-music
+      playerctl
+      audacious
+      (mpv.override {
+        scripts = with pkgs.mpvScripts; [
+          uosc
+          mpris
+          thumbfast
+          sponsorblock
+          autoload
+        ];
+      })
+
+      # Terminal
+      micro
+      git
+    ];
+    _module.args.wrappedPkgs = wrappedPackages;
+  };
 }
