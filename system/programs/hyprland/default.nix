@@ -12,14 +12,26 @@
     ./smartgaps.nix
   ];
 
-  environment.systemPackages = [
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-    inputs.self.packages.${pkgs.system}.bibata-hyprcursor
-  ];
+  environment.systemPackages =
+    [
+      inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+      inputs.quickshell.packages.${pkgs.system}.default
+      inputs.self.packages.${pkgs.system}.bibata-hyprcursor
+    ]
+    ++ (with pkgs; [
+      foot
+      wezterm
+      libnotify
+      ripgrep
+      ripdrag
+      cliphist
+      wl-clipboard
+      grimblast
+    ]);
 
   environment.pathsToLink = ["/share/icons"];
 
-  # enable hyprland and required options
+  # Enable Hyprland and required options
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -35,6 +47,6 @@
     package = pkgs.hyprlock;
   };
 
-  # tell Electron/Chromium to run on Wayland
+  # Tell Electron/Chromium to run on Wayland
   environment.variables.NIXOS_OZONE_WL = "1";
 }

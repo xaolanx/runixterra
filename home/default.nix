@@ -15,9 +15,7 @@
         file: let
           imported = import file;
         in
-          if builtins.isFunction imported
-          then imported {inherit sources;} # pass specialArgs like `sources`
-          else imported
+          imported
       )
       nixFiles);
 in {

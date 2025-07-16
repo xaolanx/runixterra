@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     anyrun
+    foot
 
     # Socmed
     telegram-desktop

@@ -6,6 +6,7 @@
   flake.nixosConfigurations = let
     inherit (inputs.nixpkgs.lib) nixosSystem;
     systemModule = import "${self}/system";
+    homeModule = import "${self}/home";
     specialArgs = {
       inherit inputs self;
     };
@@ -15,6 +16,7 @@
 
       modules = [
         systemModule
+        homeModule
         ./ionia
 
         inputs.chaotic.nixosModules.default
