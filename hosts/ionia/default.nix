@@ -32,7 +32,7 @@
       "hid_sensor_accel_3d"
       "hid_sensor_iio_common"
     ];
-    kernelPackages = lib.mkForce pkgs.linuxPackages_cachyos-lto;
+    kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
     kernelParams = [
       "i915.force_probe=0x5a85"
       "i915.enable_psr=1"
@@ -42,8 +42,8 @@
     ];
   };
 
-  services.scx.enable = true;
-  services.scx.scheduler = "scx_rusty";
+  #services.scx.enable = true;
+  #services.scx.scheduler = "scx_rusty";
 
   # nh default flake
   environment.variables.NH_FLAKE = "/home/xaolan/Documents/code/runixterra";
