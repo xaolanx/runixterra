@@ -7,7 +7,7 @@
       vaapiIntel
       libva
       intel-media-driver
-      intel-media-sdk
+      # intel-media-sdk
       intel-compute-runtime-legacy1
     ];
   };
