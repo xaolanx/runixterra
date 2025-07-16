@@ -25,7 +25,7 @@ in {
       youtube-music
       playerctl
       audacious
-      elisa
+      kdePackages.elisa
       (mpv.override {
         scripts = with pkgs.mpvScripts; [
           uosc
