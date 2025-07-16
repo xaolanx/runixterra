@@ -25,6 +25,7 @@ in {
       youtube-music
       playerctl
       audacious
+      elisa
       (mpv.override {
         scripts = with pkgs.mpvScripts; [
           uosc
