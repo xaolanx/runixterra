@@ -23,6 +23,7 @@ in {
       # set cursor for HL itself
       "hyprctl setcursor ${cursorName} ${toString 24}"
       # "hyprlock"
+      "hyprpaper"
       "quickshell -c kurukurubar"
     ];
 
