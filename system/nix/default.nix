@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./nh.nix
     ./nixpkgs.nix
@@ -12,23 +6,20 @@
   ];
 
   # we need git for flakes
-  environment.systemPackages = [pkgs.git];
+  environment.systemPackages = with pkgs; [
+    git
+    deadnix
+    statix
+    alejandra
+  ];
 
-  nix = let
-    flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
-  in {
+  nix = {
     package = pkgs.lixPackageSets.latest.lix;
-    # pin the registry to avoid downloading and evaling a new nixpkgs version every time
-    registry = lib.mapAttrs (_: v: {flake = v;}) flakeInputs;
-
-    # set the path for channels compat
-    nixPath = lib.mapAttrsToList (key: _: "${key}=flake:${key}") config.nix.registry;
 
     settings = {
       auto-optimise-store = true;
       builders-use-substitutes = true;
       experimental-features = ["nix-command" "flakes"];
-      flake-registry = "/etc/nix/registry.json";
       # cores = 2;
       # max-jobs = 2;
       # lazy-trees = true;
@@ -41,5 +32,15 @@
 
       accept-flake-config = true;
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableFishIntegration = true;
+  };
+  documentation.man = {
+    man-db.enable = false;
+    man-db.manualPages = false;
   };
 }

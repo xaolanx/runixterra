@@ -1,13 +1,17 @@
 {
   imports = [
     ./fonts.nix
-    ./home-manager.nix
     # ./qt.nix
     ./xdg.nix
+    ./hyprland
+    ./gnome.nix
+    ./uwsm.nix
+    ./games.nix
+    ./niri.nix
+    ./package.nix
   ];
 
   programs = {
-    # make HM-managed GTK stuff work
     dconf.enable = true;
 
     kdeconnect.enable = true;

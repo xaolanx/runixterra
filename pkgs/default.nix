@@ -6,6 +6,11 @@
       inherit (pkgs) python3Packages stdenv makeWrapper fetchFromGitHub buildEnv writeShellApplication lib fetchPypi kdePackages;
     };
   in {
+    _module.args = {
+      nixpkgs = {
+        overlays = [(import ./overlay.nix)];
+      };
+    };
     packages = {
       repl = pkgs.callPackage ./repl {};
       bibata-hyprcursor = pkgs.callPackage ./bibata-hyprcursor {};

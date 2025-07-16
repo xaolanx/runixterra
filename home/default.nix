@@ -1,32 +1,25 @@
-{
-  self,
-  inputs,
-  ...
-}: {
-  imports = [
-    ./specialisations.nix
-    ./terminal
-    ./theme/stylix.nix
-    inputs.nix-index-db.homeModules.nix-index
-    inputs.tailray.homeManagerModules.default
-    self.nixosModules.theme
-  ];
+{lib, ...}: let
+  username = "xaolan";
+  configDir = ./dots;
 
-  home = {
-    username = "xaolan";
-    homeDirectory = "/home/xaolan";
-    stateVersion = "23.11";
-    extraOutputsToInstall = ["doc" "devdoc"];
-    shell.enableFishIntegration = true;
-  };
+  nixFiles =
+    builtins.filter (file: lib.hasSuffix ".nix" (toString file))
+    (lib.filesystem.listFilesRecursive configDir);
 
-  # disable manuals as nmd fails to build often
-  manual = {
-    html.enable = false;
-    json.enable = false;
-    manpages.enable = false;
-  };
-
-  # let HM manage itself when in standalone mode
-  programs.home-manager.enable = true;
+  # Import and apply files if they are functions, or use as-is if they are sets
+  userFiles =
+    lib.foldl'
+    lib.recursiveUpdate
+    {}
+    (map (
+        file: let
+          imported = import file;
+        in
+          if builtins.isFunction imported
+          then imported {inherit sources;} # pass specialArgs like `sources`
+          else imported
+      )
+      nixFiles);
+in {
+  hjem.users.${username}.files = userFiles;
 }

@@ -30,6 +30,11 @@
     ];
   };
 
+  programs.hyprlock = {
+    enable = true;
+    package = pkgs.hyprlock;
+  };
+
   # tell Electron/Chromium to run on Wayland
   environment.variables.NIXOS_OZONE_WL = "1";
 }

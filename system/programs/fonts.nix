@@ -10,6 +10,7 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       roboto
+      aporetic
       (google-fonts.override {fonts = ["Inter"];})
 
       # monospace fonts
@@ -27,7 +28,7 @@
     fontconfig.defaultFonts = {
       serif = ["Aporetic Serif"];
       sansSerif = ["Aporetic Sans"];
-      monospace = ["AporeticSerifMono Nerd Font"];
+      monospace = ["Aporetic Serif Mono"];
       emoji = ["Noto Color Emoji"];
     };
   };
