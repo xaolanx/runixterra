@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }: let
   makeCommand = command: {
@@ -73,8 +71,8 @@ in {
         border = {
           enable = true;
           width = 2;
-          active.color = "#${config.lib.stylix.colors.base0D}";
-          inactive.color = "#${config.lib.stylix.colors.base03}";
+          active.color = "#c4a7e7";
+          inactive.color = "#6e6a86";
         };
 
         preset-column-widths = [

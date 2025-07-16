@@ -11,7 +11,7 @@ in {
 
   # Stylix
   stylix = {
-    enable = true;
+    enable = false;
     autoEnable = true;
     image = config.theme.wallpaper;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";

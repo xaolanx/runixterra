@@ -9,10 +9,11 @@
     ./browsers/chromium
     ./browsers/firefox
     ./browsers/zen
-    # ./browsers/floorp
     ./media
+    ./games
     ./gtk.nix
     ./office
+    ./wayland
     ./qt.nix
   ];
 
@@ -43,7 +44,6 @@
     #media
     youtube-music
     inputs.tidaluna.packages.${pkgs.system}.default
-    inputs.erosanix.packages.${system}.foobar2000
     amberol
     audacious
   ];

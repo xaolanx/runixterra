@@ -8,6 +8,16 @@
   cursorName = "Bibata-Modern-Classic-Hyprcursor";
 in {
   programs.hyprland.settings = {
+    monitor = [
+      # "DP-1, preferred, auto-left, auto"
+      # "DP-2, preferred, auto-left, auto"
+      "eDP-1, 1600x900, 0x0, 1"
+    ];
+
+    "device[etps/2-elantech-touchpad]" = {
+      natural_scroll = true;
+    };
+  
     "$mod" = "SUPER";
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
@@ -30,8 +40,8 @@ in {
       gaps_in = 4;
       gaps_out = 8;
       border_size = 1;
-      "col.active_border" = "rgb(${config.lib.stylix.colors.base0D})";
-      "col.inactive_border" = "rgb(${config.lib.stylix.colors.base03})";
+      "col.active_border" = "rgb(c4a7e7)";
+      "col.inactive_border" = "rgb(6e6a86)";
 
       allow_tearing = true;
       resize_on_border = true;

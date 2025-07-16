@@ -33,11 +33,11 @@
 
           outline_thickness = 1;
 
-          font_color = "rgb(${config.lib.stylix.colors.base00})";
-          outer_color = "rgb(${config.lib.stylix.colors.base05})";
-          inner_color = "rgb(${config.lib.stylix.colors.base05})";
-          check_color = "rgb(${config.lib.stylix.colors.base0B})";
-          fail_color = "rgb(${config.lib.stylix.colors.base08})";
+          check_color = "rgb(31748f)";
+          fail_color = "rgb(eb6f92)";
+          font_color = "rgb(191724)";
+          inner_color = "rgb(e0def4)";
+          outer_color = "rgb(e0def4)";
 
           fade_on_empty = false;
           placeholder_text = "Enter Password";
@@ -46,7 +46,7 @@
           dots_center = true;
           dots_fade_time = 100;
 
-          shadow_color = "rgb(${config.lib.stylix.colors.base00})";
+          shadow_color = "rgb(191724)";
           shadow_size = 7;
           shadow_passes = 2;
         }
@@ -58,14 +58,14 @@
           text = "$TIME";
           font_size = 150;
           font_family = "Scientifica";
-          color = "rgb(${config.lib.stylix.colors.base05})";
+          color = "rgb(e0def4)";
 
           position = "0%, 30%";
 
           valign = "center";
           halign = "center";
 
-          shadow_color = "rgb(${config.lib.stylix.colors.base00})";
+          shadow_color = "rgb(191724)";
           shadow_size = 20;
           shadow_passes = 2;
           shadow_boost = 0.3;
@@ -74,14 +74,14 @@
           monitor = "";
           text = "cmd[update:3600000] date +'%a %b %d'";
           font_size = 20;
-          color = "rgb(${config.lib.stylix.colors.base05})";
+          color = "rgb(e0def4)";
 
           position = "0%, 15%";
 
           valign = "center";
           halign = "center";
 
-          shadow_color = "rgb(${config.lib.stylix.colors.base00})";
+          shadow_color = "rgb(191724)";
           shadow_size = 20;
           shadow_passes = 2;
           shadow_boost = 0.3;

@@ -1,7 +1,7 @@
 {
   programs.skim = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
 
     defaultCommand = "rg --files --hidden";
 

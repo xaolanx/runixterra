@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  config,
   ...
 }: let
   KvLibadwaita = pkgs.fetchFromGitHub {
@@ -15,18 +14,17 @@
   qtctConf = {
     Appearance = {
       custom_palette = false;
-      icon_theme = config.stylix.iconTheme.dark;
+      icon_theme = "Colloid-Pink-Rosepine-Dark";
       standard_dialogs = "xdgdesktopportal";
       style = "kvantum";
     };
   };
 
-  defaultFont = "${config.stylix.fonts.sansSerif.name},${builtins.toString config.stylix.fonts.sizes.applications}";
+  defaultFont = "Aporetic Sans,10";
 in {
   qt = {
     enable = true;
-    platformTheme.name = lib.mkDefault "kvantum";
-    style.name = "kvantum";
+    platformTheme.name = lib.mkDefault "qt5ct";
   };
 
   home.packages = [

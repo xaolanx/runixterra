@@ -1,8 +1,13 @@
 {
   imports = [
     ./fonts.nix
+    ./games.nix
+    ./gamemode.nix
+    ./gnome.nix
     ./home-manager.nix
+    ./hyprland
     # ./qt.nix
+    ./uwsm.nix
     ./xdg.nix
   ];
 

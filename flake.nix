@@ -73,11 +73,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    erosanix = {
-      url = "github:emmanuelrosa/erosanix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     hm = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -167,10 +162,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # stylix = {
+    #   url = "github:danth/stylix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     tailray = {
       url = "github:NotAShelf/tailray";

@@ -88,8 +88,8 @@
         theme = {
           enable = true;
           # base16-colors = config.stylix.base16Scheme;
-          name = lib.mkDefault "rose-pine";
-          style = "moon";
+          name = lib.mkForce "rose-pine";
+          style = "main";
         };
         utility = {
           icon-picker.enable = true;

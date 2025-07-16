@@ -2,11 +2,9 @@
 # default configuration shared by all hosts
 {
   imports = [
+    ./boot.nix
     ./security.nix
     ./users.nix
-    ../nix
-    ../programs/fish.nix
-    ../programs/zsh.nix
   ];
 
   documentation.dev.enable = true;

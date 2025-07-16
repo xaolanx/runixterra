@@ -6,7 +6,6 @@
     ./git.nix
     ./nix.nix
     ./skim.nix
-    ./yazi
     ./xdg.nix
   ];
 }

@@ -7,7 +7,6 @@
 # Wayland config
 {
   imports = [
-    # ./hyprland
     ./niri
     ./hyprlock.nix
     # ./swayosd.nix

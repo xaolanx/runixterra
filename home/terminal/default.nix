@@ -5,10 +5,6 @@
 in {
   imports = [
     ./programs
-    ./shell/starship.nix
-    ./shell/fish.nix
-    # ./shell/zsh.nix
-    ./shell/zoxide.nix
   ];
 
   # add environment variables
