@@ -27,6 +27,7 @@
       cliphist
       wl-clipboard
       grimblast
+      kitty
     ]);
 
   environment.pathsToLink = ["/share/icons"];
