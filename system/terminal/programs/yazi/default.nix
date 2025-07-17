@@ -18,7 +18,16 @@
         hash = "sha256-ly/cLKl2y3npoT2nX8ioGOFcRXI4UXbD9Es/5veUhOU=";
       };
     };
+
+    flavors = {
+      inherit (pkgs.yazi-flavors)
+		catppuccin-mocha
+		catppuccin-latte
+        ;
+    };
+     
     initLua = ./init.lua;
+    settings.theme = builtins.fromTOML (builtins.readFile ./theme.toml);
     settings.yazi = {
       mgr = {
         ratio = [

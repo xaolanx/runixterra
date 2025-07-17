@@ -29,7 +29,7 @@
       osc = "no";
       osd-bar = "no";
       osd-duration = 2000;
-      osd-font = "Aporetic Sans";
+      osd-font = "Aporetic Serif";
       osd-font-size = 30;
       osd-outline-size = 2;
       border = "no";

@@ -4,7 +4,7 @@
 
     settings = {
       main = {
-        font = "Aporetic Serif Mono:size=11";
+        font = "Aporetic Serif Mono:size=12";
         horizontal-letter-offset = 0;
         vertical-letter-offset = 0;
         pad = "4x4 center";

@@ -17,9 +17,9 @@
     enable = true;
 
     font = {
-      name = "Aporetic Sans";
+      name = "Aporetic Serif";
       package = pkgs.aporetic;
-      size = 10;
+      size = 11;
     };
 
     gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";

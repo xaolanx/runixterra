@@ -27,7 +27,7 @@
     fontconfig.defaultFonts = {
       serif = ["Aporetic Serif"];
       sansSerif = ["Aporetic Sans"];
-      monospace = ["AporeticSerifMono Nerd Font"];
+      monospace = ["Aporetic Serif Mono"];
       emoji = ["Noto Color Emoji"];
     };
   };
