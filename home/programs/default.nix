@@ -14,7 +14,7 @@
     ./gtk.nix
     ./office
     ./wayland
-    # ./qt.nix
+    ./qt
   ];
 
   home.packages = with pkgs; [

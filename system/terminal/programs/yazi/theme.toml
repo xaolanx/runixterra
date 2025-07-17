@@ -5,7 +5,7 @@ use = "catppuccn-mocha"
 
 # : Manager {{{
 
-[manager]
+[mgr]
 cwd = { fg = "#9ccfd8" }
 
 # Hovered

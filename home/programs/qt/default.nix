@@ -37,13 +37,13 @@ in {
   xdg.configFile = {
     # Kvantum config
     "Kvantum" = {
-      source = "${KvLibadwaita}/src";
+      source = ./rose-pine-iris;
       recursive = true;
     };
 
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=KvLibadwaitaDark
+      theme=rose-pine-iris
     '';
 
     # qtct config
