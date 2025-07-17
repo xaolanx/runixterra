@@ -17,7 +17,7 @@ in {
     "device[etps/2-elantech-touchpad]" = {
       natural_scroll = true;
     };
-  
+
     "$mod" = "SUPER";
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"

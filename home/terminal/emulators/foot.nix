@@ -1,4 +1,8 @@
-{ pkgs, lib, ... }: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   programs.foot = {
     enable = true;
 
@@ -42,25 +46,25 @@
         background = "191724";
         foreground = "e0def4";
 
-        regular0 = "26233a";  # black
-        regular1 = "eb6f92";  # red
-        regular2 = "9ccfd8";  # green
-        regular3 = "f6c177";  # yellow
-        regular4 = "31748f";  # blue
-        regular5 = "c4a7e7";  # magenta
-        regular6 = "ebbcba";  # cyan
-        regular7 = "e0def4";  # white
+        regular0 = "26233a"; # black
+        regular1 = "eb6f92"; # red
+        regular2 = "9ccfd8"; # green
+        regular3 = "f6c177"; # yellow
+        regular4 = "31748f"; # blue
+        regular5 = "c4a7e7"; # magenta
+        regular6 = "ebbcba"; # cyan
+        regular7 = "e0def4"; # white
 
-        bright0 = "47435d";   # bright black
-        bright1 = "ff98ba";   # bright red
-        bright2 = "c5f9ff";   # bright green
-        bright3 = "ffeb9e";   # bright yellow
-        bright4 = "5b9ab7";   # bright blue
-        bright5 = "eed0ff";   # bright magenta
-        bright6 = "ffe5e3";   # bright cyan
-        bright7 = "fefcff";   # bright white
+        bright0 = "47435d"; # bright black
+        bright1 = "ff98ba"; # bright red
+        bright2 = "c5f9ff"; # bright green
+        bright3 = "ffeb9e"; # bright yellow
+        bright4 = "5b9ab7"; # bright blue
+        bright5 = "eed0ff"; # bright magenta
+        bright6 = "ffe5e3"; # bright cyan
+        bright7 = "fefcff"; # bright white
 
-        flash = "f6c177";     # visual bell (yellow / Gold)
+        flash = "f6c177"; # visual bell (yellow / Gold)
       };
     };
   };

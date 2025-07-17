@@ -1,7 +1,7 @@
 {
   imports = [
-  	./foot.nix
-  	# ./kitty.nix
-  	./wezterm.nix
+    ./foot.nix
+    # ./kitty.nix
+    ./wezterm.nix
   ];
 }

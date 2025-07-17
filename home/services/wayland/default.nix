@@ -1,7 +1,7 @@
 {
   imports = [
-  	./gammastep.nix
-  	./hypridle.nix
-  	./hyprpaper.nix
+    ./gammastep.nix
+    ./hypridle.nix
+    ./hyprpaper.nix
   ];
 }

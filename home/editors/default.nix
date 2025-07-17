@@ -1,6 +1,6 @@
 {
   imports = [
-  	./nvf.nix
-  	./micro.nix
+    ./nvf.nix
+    ./micro.nix
   ];
 }

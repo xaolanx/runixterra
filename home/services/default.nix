@@ -1,8 +1,8 @@
 {
   imports = [
-  	./media
-  	./quickshell
-  	./system
-  	./wayland
+    ./media
+    ./quickshell
+    ./system
+    ./wayland
   ];
 }

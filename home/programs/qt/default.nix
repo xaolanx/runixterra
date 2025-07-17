@@ -3,13 +3,6 @@
   pkgs,
   ...
 }: let
-  KvLibadwaita = pkgs.fetchFromGitHub {
-    owner = "GabePoel";
-    repo = "KvLibadwaita";
-    rev = "87c1ef9f44ec48855fd09ddab041007277e30e37";
-    hash = "sha256-K/2FYOtX0RzwdcGyeurLXAh3j8ohxMrH2OWldqVoLwo=";
-    sparseCheckout = ["src"];
-  };
 
   qtctConf = {
     Appearance = {

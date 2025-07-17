@@ -15,7 +15,7 @@
   in {
     ionia = nixosSystem {
       inherit specialArgs;
-      modules =  [
+      modules = [
         ./io
         mod
 

@@ -20,12 +20,13 @@
     };
 
     flavors = {
-      inherit (pkgs.yazi-flavors)
-		catppuccin-mocha
-		catppuccin-latte
+      inherit
+        (pkgs.yazi-flavors)
+        catppuccin-mocha
+        catppuccin-latte
         ;
     };
-     
+
     initLua = ./init.lua;
     settings.theme = builtins.fromTOML (builtins.readFile ./theme.toml);
     settings.yazi = {
