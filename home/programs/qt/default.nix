@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: let
-
   qtctConf = {
     Appearance = {
       custom_palette = false;
