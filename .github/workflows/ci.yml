@@ -3,7 +3,7 @@ name: ci
 on:
   pull_request:
   push:
-    branches: [master]
+    branches: [hm]
   workflow_dispatch:
     inputs:
       dry_run:
@@ -51,7 +51,7 @@ jobs:
         with:
           name: xaolan
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-          skipPush: ${{ github.ref != 'refs/heads/master' || github.event_name != 'push' }}
+          skipPush: ${{ github.ref != 'refs/heads/hm' || github.event_name != 'push' }}
 
       # Flake checker
       - uses: DeterminateSystems/flake-checker-action@main
