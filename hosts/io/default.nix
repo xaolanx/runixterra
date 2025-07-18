@@ -42,7 +42,7 @@
   };
 
   services.scx.enable = true;
-  services.scx.scheduler = "scx_rusty";
+  # services.scx.scheduler = "scx_rusty";
 
   # nh default flake
   environment.variables.NH_FLAKE = "/home/xaolan/Documents/code/runixterra";
