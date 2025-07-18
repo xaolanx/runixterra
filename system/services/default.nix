@@ -2,7 +2,7 @@
   imports = [
     ./backlight.nix
     ./gnome-services.nix
-    # ./greetd.nix
+    ./greetd.nix
     ./location.nix
     ./pipewire.nix
     ./power.nix

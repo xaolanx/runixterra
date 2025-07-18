@@ -1,21 +1,16 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{...}: {
   # greetd display manager
   services.greetd = let
-    session-niri = {
-      command = "${lib.getExe config.programs.uwsm.package} start ${pkgs.niri}/share/wayland-sessions/niri.desktop";
+    session = {
+      command = "$(lib.getExe config.programs.uwsm.package) start hyprland-uwsm.desktop";
       user = "xaolan";
     };
   in {
     enable = true;
     settings = {
       terminal.vt = 1;
-      default_session = session-niri;
-      initial_session = session-niri;
+      default_session = session;
+      initial_session = session;
     };
   };
 

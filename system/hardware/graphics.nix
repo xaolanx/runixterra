@@ -4,10 +4,8 @@
     enable = true;
 
     extraPackages = with pkgs; [
-      vaapiIntel
       libva
       intel-media-driver
-      intel-media-sdk
       intel-compute-runtime-legacy1
     ];
   };
