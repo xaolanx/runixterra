@@ -29,6 +29,7 @@
     pkgs.micro
     pkgs.ripgrep
     pkgs.telegram-desktop
+    pkgs.zen-browser
     braveWithFlags
 
     # from internal overlay

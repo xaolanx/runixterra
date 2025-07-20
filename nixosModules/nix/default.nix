@@ -16,12 +16,6 @@
       keep-outputs = true;
       builders-use-substitutes = true;
     };
-    gc = {
-      persistent = true;
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
   };
   documentation.man = {
     man-db.enable = false;
