@@ -1,6 +1,9 @@
-{ pkgs, lib, config, ... }:
-
-let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   braveWithFlags = pkgs.brave.override {
     commandLineArgs = [
       "--enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,CanvasOopRasterization,DefaultANGLEVulkan,EnableDrDc,SkiaGraphite,Vulkan,VulkanFromANGLE,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo,UseOzonePlatform,VaapiIgnoreDriverChecks"
@@ -33,7 +36,7 @@ let
     discord
   ];
 in {
-  imports = [ ../../nixosModules/external/matugen ];
+  imports = [../../nixosModules/external/matugen];
 
   users.users."xaolan" = {
     inherit packages;
@@ -52,15 +55,16 @@ in {
     enable = true;
     wallpaper = let
       image = config.programs.booru-flake.images."6887138";
-    in pkgs.stdenv.mkDerivation {
-      name = "cropped-${image.name}";
-      src = image;
-      dontUnpack = true;
-      nativeBuildInputs = [ pkgs.imagemagick ];
-      installPhase = ''
-        magick $src -crop 1920x1080+600+1200 - > $out
-      '';
-    };
+    in
+      pkgs.stdenv.mkDerivation {
+        name = "cropped-${image.name}";
+        src = image;
+        dontUnpack = true;
+        nativeBuildInputs = [pkgs.imagemagick];
+        installPhase = ''
+          magick $src -crop 1920x1080+600+1200 - > $out
+        '';
+      };
   };
 
   hjem.users."xaolan".files = {
@@ -70,12 +74,13 @@ in {
         name = "cropped-${image.name}";
         src = image;
         dontUnpack = true;
-        nativeBuildInputs = [ pkgs.imagemagick ];
+        nativeBuildInputs = [pkgs.imagemagick];
         installPhase = ''
           magick $src -crop 450x450+640+25 - > $out
         '';
       };
-    in lib.mkForce face;
+    in
+      lib.mkForce face;
 
     "Pictures/booru".source = config.programs.booru-flake.imageFolder;
   };
