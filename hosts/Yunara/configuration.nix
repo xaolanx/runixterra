@@ -36,7 +36,7 @@ in {
     services = {
       enable = true;
       tailscale = {
-        enable = true;
+        enable = false;
         exitNode.enable = false;
       };
       openssh.enable = true;
