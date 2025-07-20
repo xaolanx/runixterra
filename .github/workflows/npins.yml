@@ -10,6 +10,8 @@ on:
   schedule:
     - cron: "0 0 * * 0" # Sunday
     - cron: "0 0 * * 1-6" # Monday–Saturday
+  push:
+    branches: [snowy]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
