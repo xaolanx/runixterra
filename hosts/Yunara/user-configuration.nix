@@ -1,9 +1,6 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: let
+{ pkgs, lib, config, ... }:
+
+let
   braveWithFlags = pkgs.brave.override {
     commandLineArgs = [
       "--enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,CanvasOopRasterization,DefaultANGLEVulkan,EnableDrDc,SkiaGraphite,Vulkan,VulkanFromANGLE,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo,UseOzonePlatform,VaapiIgnoreDriverChecks"
@@ -20,25 +17,23 @@
     ];
   };
 
-  packages = [
-    pkgs.wineWowPackages.stable
-    pkgs.bottles
-    pkgs.winetricks
-    pkgs.foot
-    pkgs.audacious
-    pkgs.micro
-    pkgs.ripgrep
-    pkgs.telegram-desktop
-    pkgs.zen-browser
+  packages = with pkgs; [
+    wineWowPackages.stable
+    bottles
+    winetricks
+    foot
+    audacious
+    micro
+    ripgrep
+    telegram-desktop
+    zen-browser
     braveWithFlags
-
-    # from internal overlay
-    pkgs.mpv-wrapped
-    pkgs.scripts.wallcrop
-    pkgs.discord # yes this is vesktop
+    mpv-wrapped
+    scripts.wallcrop
+    discord
   ];
 in {
-  imports = [../../nixosModules/external/matugen];
+  imports = [ ../../nixosModules/external/matugen ];
 
   users.users."xaolan" = {
     inherit packages;
@@ -55,19 +50,17 @@ in {
 
   programs.matugen = {
     enable = true;
-    # wallpaper = config.programs.booru-flake.images."8827425";
     wallpaper = let
       image = config.programs.booru-flake.images."6887138";
-    in
-      pkgs.stdenv.mkDerivation {
-        name = "cropped-${image.name}";
-        src = image;
-        dontUnpack = true;
-        nativeBuildInputs = [pkgs.imagemagick];
-        installPhase = ''
-          magick $src -crop 1920x1080+600+1200 - > $out
-        '';
-      };
+    in pkgs.stdenv.mkDerivation {
+      name = "cropped-${image.name}";
+      src = image;
+      dontUnpack = true;
+      nativeBuildInputs = [ pkgs.imagemagick ];
+      installPhase = ''
+        magick $src -crop 1920x1080+600+1200 - > $out
+      '';
+    };
   };
 
   hjem.users."xaolan".files = {
@@ -77,13 +70,12 @@ in {
         name = "cropped-${image.name}";
         src = image;
         dontUnpack = true;
-        nativeBuildInputs = [pkgs.imagemagick];
+        nativeBuildInputs = [ pkgs.imagemagick ];
         installPhase = ''
           magick $src -crop 450x450+640+25 - > $out
         '';
       };
-    in
-      lib.mkForce face;
+    in lib.mkForce face;
 
     "Pictures/booru".source = config.programs.booru-flake.imageFolder;
   };
