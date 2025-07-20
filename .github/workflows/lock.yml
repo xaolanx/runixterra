@@ -50,7 +50,10 @@ jobs:
         id: nightly
         uses: getchoo/update-npins@v0.1.2
         with:
+          token: ${{ secrets.GH_TOKEN }}
           commit-message: "chore(lockfile): nightly update"
+          pr-branch: "npins-nightly"
+          pr-target: "snowy"
           pr-labels: |
             dependencies
             automated
@@ -61,7 +64,10 @@ jobs:
         id: weekly
         uses: getchoo/update-npins@v0.1.2
         with:
-          commit-message: "chore(lockfile): nightly update"
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: "chore(lockfile): weekly update"
+          pr-branch: "npins-weekly"
+          pr-target: "snowy"
           pr-labels: |
             dependencies
             automated
