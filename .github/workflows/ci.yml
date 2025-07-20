@@ -43,7 +43,7 @@ jobs:
       # Cachix
       - uses: cachix/cachix-action@master
         with:
-          name: xaolan
+          name: yunara
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
           skipPush: ${{ github.ref != 'refs/heads/snowy' || github.event_name != 'push' }}
 
