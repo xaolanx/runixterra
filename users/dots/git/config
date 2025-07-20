@@ -79,4 +79,4 @@
     [user]
     	email = "ah0199004@gmail.com"
     	name = "xaolan"
-    	signingKey = "/home/xaolan/.ssh/id_ed25519"
+    	signingKey = "/home/xaolan/.ssh/id_ed25519.pub"
