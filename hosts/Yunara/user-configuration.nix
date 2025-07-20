@@ -26,6 +26,8 @@
     winetricks
     foot
     audacious
+    tidal-hifi
+    youtube-music
     micro
     ripgrep
     telegram-desktop
