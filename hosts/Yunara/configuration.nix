@@ -41,11 +41,6 @@ in {
       };
       openssh = {
         enable = true;
-        settings.UseDns = true;
-      };
-      resolved = {
-        enable = true;
-        dnsovertls = "opportunistic";
       };
     };
   };
