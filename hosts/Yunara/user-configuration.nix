@@ -56,8 +56,8 @@ in {
   programs.matugen = {
     enable = true;
     wallpaper = let
-      url = "https://github.com/rose-pine/wallpapers/blob/main/bay.JPG?raw=true";
-      sha256 = "YLHsj9SKuJNwiYxCQ5zFDrdEfTSEH89ue95yBvQZ+MI=";
+      url = "https://konachan.net/image/84b87b18c439e814bce2e67e159a5d2c/Konachan.com%20-%20390718%20animal%20barefoot%20blonde_hair%20blue_eyes%20breasts%20clouds%20czk%20dark%20dress%20fish%20flowers%20headdress%20leaves%20long_hair%20night%20ruins%20sideboob%20sky%20tree%20wristwear.jpg";
+      sha256 = "sha256-hqNm19vxlLYvaVNe6i1Ogs1FHmGb7HiYywHzxQlE6xU=";
       ext = "jpg";
     in
       builtins.fetchurl {
