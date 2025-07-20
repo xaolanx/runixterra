@@ -9,12 +9,12 @@ require('lz.n').load {
           {
             name = "owocle",
             type = "oracle",
-            url = "oracle://system:rexies@0.0.0.0:1521/FREEPDB1"
+            url = "oracle://system:xaolan@0.0.0.0:1521/FREEPDB1"
           },
           {
             name = "sales_history",
             type = "oracle",
-            url = "oracle://HR:rexies@0.0.0.0:1521/FREEPDB1"
+            url = "oracle://HR:xaolan@0.0.0.0:1521/FREEPDB1"
           },
         })
       }

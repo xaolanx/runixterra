@@ -9,7 +9,7 @@ in {
   imports = [(sources.hjem + "/modules/nixos")];
 
   options = {
-    zaphkiel.data.users = mkOption {
+    ionia.data.users = mkOption {
       type = listOf str;
       default = [];
       description = "list of users (duh)";

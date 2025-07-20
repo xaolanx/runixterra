@@ -7,6 +7,7 @@ let
 
   src = import ./npins;
   pkgs = import src.nixpkgs {};
+  sources = mapAttrs (_k: v: v {inherit pkgs;}) src;
 
   # you can only do the below if you have npins v6 format (i.e. a more recent git revision of npins till nixpks updates)
   # https://github.com/andir/npins?tab=readme-ov-file#using-the-nixpkgs-fetchers
@@ -30,12 +31,12 @@ let
       modules = [
         {nixpkgs.overlays = overlays;}
         ./hosts/${hostName}/configuration.nix
-        ./users/rexies.nix
+        ./users/xaolan.nix
         ./nixosModules
       ];
     };
 in {
-  Persephone = nixosConfig "Persephone";
+  Yunara = nixosConfig "Yunara";
   Seraphine = nixosConfig "Seraphine";
   Aphrodite = nixosConfig "Aphrodite";
 }

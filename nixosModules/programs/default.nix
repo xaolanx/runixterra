@@ -38,7 +38,7 @@
     execWheelOnly = true;
     extraRules = [
       {
-        users = ["rexies"];
+        users = ["xaolan"];
         # lets me rebuild without having to enter the password
         commands = [
           {

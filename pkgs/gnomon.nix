@@ -3,7 +3,7 @@
   fetchFromGitHub,
   python313Packages,
 }:
-stdenvNoCC.mkDerivation (final: {
+stdenvNoCC.mkDerivation (_final: {
   pname = "Gnomon";
   version = "1.2";
   src = fetchFromGitHub {

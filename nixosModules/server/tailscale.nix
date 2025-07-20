@@ -5,9 +5,9 @@
   ...
 }: let
   inherit (lib) mkEnableOption mkOption types mkIf optional mkForce getExe;
-  cfg = config.zaphkiel.services.tailscale;
+  cfg = config.ionia.services.tailscale;
 in {
-  options.zaphkiel.services.tailscale = {
+  options.ionia.services.tailscale = {
     enable = mkEnableOption "Enable Tailscale Service";
     exitNode = {
       enable = mkEnableOption "Enable use as exit node";
@@ -21,7 +21,7 @@ in {
     };
   };
 
-  config = mkIf (cfg.enable && config.zaphkiel.services.enable) {
+  config = mkIf (cfg.enable && config.ionia.services.enable) {
     services.tailscale = {
       enable = true;
       openFirewall = true;

@@ -9,8 +9,6 @@
     pkgs.bottles
     pkgs.winetricks
     pkgs.foot
-    pkgs.cbonsai
-    pkgs.cowsay
 
     # from internal overlay
     pkgs.mpv-wrapped
@@ -20,9 +18,17 @@
 in {
   imports = [../../nixosModules/external/matugen];
 
-  users.users."rexies" = {
+  users.users."xaolan" = {
     inherit packages;
-    extraGroups = ["video" "input"];
+    extraGroups = [
+      "video"
+      "input"
+      "transmission"
+      "plugdev"
+      "wheel"
+      "libvirt"
+      "networkmanager"
+    ];
   };
 
   programs.matugen = {
@@ -44,7 +50,7 @@ in {
       };
   };
 
-  hjem.users."rexies".files = {
+  hjem.users."xaolan".files = {
     ".face.icon".source = let
       image = config.programs.booru-flake.images."6885267";
       face = pkgs.stdenv.mkDerivation {

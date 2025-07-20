@@ -67,7 +67,7 @@
     inherit (final) fetchurl runCommandWith ffmpeg;
   });
 
-  # nix build github:Rexcrazy804/Zaphkiel#booru-images."i<imageid>"
+  # nix build github:Rexcrazy804/Ionia#booru-images."i<imageid>"
   booru-images = let
     imgBuilder = final.callPackage ((sources.booru-flake {pkgs = final;}) + "/nix/imgBuilder.nix");
   in (final.lib.attrsets.mergeAttrsList (

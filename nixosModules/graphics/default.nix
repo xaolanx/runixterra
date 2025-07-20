@@ -9,9 +9,9 @@
     ./intel.nix
   ];
 
-  options.zaphkiel.graphics.enable = lib.mkEnableOption "graphics";
+  options.ionia.graphics.enable = lib.mkEnableOption "graphics";
 
-  config = lib.mkIf (config.zaphkiel.graphics.enable) {
+  config = lib.mkIf (config.ionia.graphics.enable) {
     hardware.graphics = {
       enable = true;
       enable32Bit = true;

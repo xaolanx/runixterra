@@ -4,8 +4,8 @@
   config,
   ...
 }: {
-  options.zaphkiel.graphics.intel.enable = lib.mkEnableOption "intel graphics";
-  config = lib.mkIf (config.zaphkiel.graphics.intel.enable && config.zaphkiel.graphics.enable) {
+  options.ionia.graphics.intel.enable = lib.mkEnableOption "intel graphics";
+  config = lib.mkIf (config.ionia.graphics.intel.enable && config.ionia.graphics.enable) {
     # WARN too lazy to futher modularize this maybe re use nixos-hardware's module
     hardware.graphics.extraPackages = with pkgs; [
       intel-media-driver

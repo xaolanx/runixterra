@@ -3,15 +3,15 @@
   config,
   ...
 }: {
-  options.zaphkiel.services.fail2ban.enable = lib.mkEnableOption "fail2ban service";
+  options.ionia.services.fail2ban.enable = lib.mkEnableOption "fail2ban service";
 
-  config = lib.mkIf (config.zaphkiel.services.fail2ban.enable && config.zaphkiel.services.enable) {
+  config = lib.mkIf (config.ionia.services.fail2ban.enable && config.ionia.services.enable) {
     services.fail2ban = {
       enable = true;
       maxretry = 3;
       ignoreIP = [
         "seraphine.fell-rigel.ts.net"
-        "zaphkiel.fell-rigel.ts.net"
+        "ionia.fell-rigel.ts.net"
         "aria.fell-rigel.ts.net"
       ];
 

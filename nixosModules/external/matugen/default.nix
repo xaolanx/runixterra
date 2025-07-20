@@ -10,18 +10,12 @@
   osCfg = args.osConfig.programs.matugen or {};
 
   hexColorRegex = ''#([0-9a-fA-F]{3}){1,2}'';
-  hexStrippedColorRegex = ''([0-9a-fA-F]{3}){1,2}'';
   rgbColorRegex = ''rgb\([0-9]{1,3}, ?[0-9]{1,3}, ?[0-9]{1,3}\)'';
-  rgbaColorRegex = ''rgba\([0-9]{1,3}, ?[0-9]{1,3}, ?[0-9]{1,3}, ?[0-9]{1,3}\)'';
   hslColorRegex = ''hsl\([0-9]{1,3}(\.[0-9]*)?, ?[0-9]{1,3}(\.[0-9]*)?%, ?[0-9]{1,3}(\.[0-9]*)?%\)'';
-  hslaColorRegex = ''hsla\([0-9]{1,3}(\.[0-9]*)?, ?[0-9]{1,3}(\.[0-9]*)?%, ?[0-9]{1,3}(\.[0-9]*)?%, ?[0,1](\.[0-9]*)?\)'';
 
   hexColor = lib.types.strMatching hexColorRegex;
-  hexStrippedColor = lib.types.strMatching hexStrippedColorRegex;
   rgbColor = lib.types.strMatching rgbColorRegex;
-  rgbaColor = lib.types.strMatching rgbaColorRegex;
   hslColor = lib.types.strMatching hslColorRegex;
-  hslaColor = lib.types.strMatching hslaColorRegex;
 
   sourceColorType = lib.types.oneOf [hexColor rgbColor hslColor];
   customColorType = hexColor; # Only hexColor is currently supported for custom_colors.
@@ -58,22 +52,6 @@
 
   # takes in a source color string and returns the subcommand needed to generate
   # a color scheme using that color type.
-  sourceColorTypeMatcher = color:
-    (lib.lists.findSingle (p: null != builtins.match p.regex color) {} {} [
-      {
-        regex = hexColorRegex;
-        code = "hex";
-      }
-      {
-        regex = rgbColorRegex;
-        code = "rgb";
-      }
-      {
-        regex = hslColorRegex;
-        code = "hsl";
-      }
-    ])
-    .code;
 
   # implies no color support
   # command =

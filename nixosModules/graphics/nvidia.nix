@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  options.zaphkiel.graphics.nvidia = {
+  options.ionia.graphics.nvidia = {
     enable = lib.mkEnableOption "nVidia graphics";
     hybrid = {
       enable = lib.mkEnableOption "optimus prime";
@@ -26,9 +26,9 @@
   };
 
   config = let
-    cfg = config.zaphkiel.graphics.nvidia;
+    cfg = config.ionia.graphics.nvidia;
   in
-    lib.mkIf (cfg.enable && config.zaphkiel.graphics.enable) {
+    lib.mkIf (cfg.enable && config.ionia.graphics.enable) {
       nix.settings = {
         extra-substituters = [
           "https://cuda-maintainers.cachix.org"

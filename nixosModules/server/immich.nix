@@ -3,9 +3,9 @@
   config,
   ...
 }: {
-  options.zaphkiel.services.immich.enable = lib.mkEnableOption "immich service";
+  options.ionia.services.immich.enable = lib.mkEnableOption "immich service";
 
-  config = lib.mkIf (config.zaphkiel.services.immich.enable && config.zaphkiel.services.enable) {
+  config = lib.mkIf (config.ionia.services.immich.enable && config.ionia.services.enable) {
     services.immich = {
       enable = true;
       openFirewall = true;

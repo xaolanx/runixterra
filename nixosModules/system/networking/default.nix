@@ -8,7 +8,7 @@
     ./dnsproxy2.nix
   ];
 
-  config = lib.mkIf (!config.zaphkiel.data.headless) {
+  config = lib.mkIf (!config.ionia.data.headless) {
     networking = {
       nftables.enable = true;
       networkmanager = {

@@ -6,9 +6,9 @@
 }: let
   multimediaDir = "/home/multimedia";
 in {
-  options.zaphkiel.services.jellyfin.enable = lib.mkEnableOption "jellyfin service";
+  options.ionia.services.jellyfin.enable = lib.mkEnableOption "jellyfin service";
 
-  config = lib.mkIf (config.zaphkiel.services.jellyfin.enable && config.zaphkiel.services.enable) {
+  config = lib.mkIf (config.ionia.services.jellyfin.enable && config.ionia.services.enable) {
     services.jellyfin = {
       enable = true;
       openFirewall = false;
@@ -72,7 +72,7 @@ in {
         "transmission"
         "sonarr"
       ]
-      ++ config.zaphkiel.data.users;
+      ++ config.ionia.data.users;
 
     # Transmission configuration
     age.secrets.transJson = {

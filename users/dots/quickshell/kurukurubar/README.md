@@ -34,11 +34,11 @@ using [this template](../../../../nixosModules/external/matugen/templates/quicks
 ### Live running on nix
 This rice is exposed as a package in the toplevel flake and can be used to run the rice as follows
 ```
-nix run github:Rexcrazy804/Zaphkiel#kurukurubar
+nix run github:Rexcrazy804/Ionia#kurukurubar
 ```
 
 ### Known Issues
-- `org.Hyprland.style is not installed`: see [#21](https://github.com/Rexcrazy804/Zaphkiel/issues/21#issuecomment-2906546939)
+- `org.Hyprland.style is not installed`: see [#21](https://github.com/Rexcrazy804/Ionia/issues/21#issuecomment-2906546939)
 - Herta faceIcon: symlink an image (of any image type) to ~/.face.icon
 
 ## Acknowledgement

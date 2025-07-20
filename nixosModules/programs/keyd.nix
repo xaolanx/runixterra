@@ -3,8 +3,8 @@
   config,
   ...
 }: {
-  options.zaphkiel.programs.keyd.enable = lib.mkEnableOption "keyd";
-  config = lib.mkIf config.zaphkiel.programs.keyd.enable {
+  options.ionia.programs.keyd.enable = lib.mkEnableOption "keyd";
+  config = lib.mkIf config.ionia.programs.keyd.enable {
     services.keyd = {
       enable = true;
       keyboards.default = {

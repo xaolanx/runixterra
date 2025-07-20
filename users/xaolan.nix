@@ -5,10 +5,10 @@
   lib,
   ...
 }: let
-  username = "rexies";
+  username = "xaolan";
   description = "Rexiel Scarlet";
 in {
-  zaphkiel.data.users = [username];
+  ionia.data.users = [username];
   users.users.${username} = {
     inherit description;
 
@@ -16,7 +16,7 @@ in {
     # shell = pkgs.nushell;
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "multimedia"];
-    hashedPasswordFile = config.age.secrets.rexiesPass.path;
+    hashedPasswordFile = config.age.secrets.xaolanPass.path;
 
     # only declare common packages here
     # others: hosts/<hostname>/user-configuration.nix
@@ -30,15 +30,15 @@ in {
     ];
 
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICELSL45m4ptWDZwQDi2AUmCgt4n93KsmZtt69fyb0vy rexies@Zaphkiel"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZTLQQzgCvdaAPdxUkpytDHgwd8K1N1IWtriY4tWSvn rexies@Raphael"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICZvsZTvR5wQedjnuSoz9p7vK7vLxCdfOdRFmbfQ7GUd rexies@Seraphine"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH8XCGfozlovdRKSzI8mRL7Bkexk+GoK+WCTWxVmBmDA rexies@Persephone"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICELSL45m4ptWDZwQDi2AUmCgt4n93KsmZtt69fyb0vy xaolan@Ionia"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZTLQQzgCvdaAPdxUkpytDHgwd8K1N1IWtriY4tWSvn xaolan@Raphael"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICZvsZTvR5wQedjnuSoz9p7vK7vLxCdfOdRFmbfQ7GUd xaolan@Seraphine"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH8XCGfozlovdRKSzI8mRL7Bkexk+GoK+WCTWxVmBmDA xaolan@Yunara"
     ];
   };
 
   # define secrets
-  age.secrets.rexiesPass = {
+  age.secrets.xaolanPass = {
     file = ../secrets/secret1.age;
     owner = username;
   };
@@ -57,7 +57,7 @@ in {
 
       # replacing hardcoded paths
       qt6ct = let
-        from = ["/home/rexies"];
+        from = ["/home/xaolan"];
         to = ["${config.users.users.${username}.home}"];
       in
         builtins.replaceStrings from to (builtins.readFile ./dots/qt6ct/qt6ct.conf);

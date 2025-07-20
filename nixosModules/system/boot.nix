@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf (!config.zaphkiel.data.headless) {
+  config = lib.mkIf (!config.ionia.data.headless) {
     boot = {
       loader.systemd-boot.enable = true;
       loader.efi.canTouchEfiVariables = true;
