@@ -16,7 +16,7 @@ in {
     # shell = pkgs.nushell;
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "multimedia"];
-    # hashedPasswordFile = config.age.secrets.xaolanPass.path;
+    hashedPasswordFile = config.age.secrets.xaolanPass.path;
 
     # only declare common packages here
     # others: hosts/<hostname>/user-configuration.nix
@@ -30,16 +30,13 @@ in {
     ];
 
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICELSL45m4ptWDZwQDi2AUmCgt4n93KsmZtt69fyb0vy xaolan@Ionia"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZTLQQzgCvdaAPdxUkpytDHgwd8K1N1IWtriY4tWSvn xaolan@Raphael"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICZvsZTvR5wQedjnuSoz9p7vK7vLxCdfOdRFmbfQ7GUd xaolan@Seraphine"
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH8XCGfozlovdRKSzI8mRL7Bkexk+GoK+WCTWxVmBmDA xaolan@Yunara"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvbECt/Gs84TqIJgnAlO9tWm2xMKu6w6duDXEt9I8Ar xaolan@Yunara"
     ];
   };
 
   # define secrets
   age.secrets.xaolanPass = {
-    file = ../secrets/secret1.age;
+    file = ../secrets/secret2.age;
     owner = username;
   };
 
@@ -109,6 +106,8 @@ in {
     in {
       # git
       ".config/git/config".source = ./dots/git/config;
+      ".config/git/allowed_signers".source = ./dots/git/allowed_signers;
+      ".config/git/ignore".source = ./dots/git/ignore;
 
       # face Icon
       ".face.icon".source = faceIcon;
