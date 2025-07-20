@@ -12,6 +12,10 @@
   };
   kurukurubar = final.callPackage ../kurukurubar.nix {inherit (prev) quickshell;};
   kokCursor = final.callPackage ../kokCursor.nix {};
+  zen-browser = ((import sources.zen-browser-flake) {pkgs = final;}).zen-browser;
+  nh = final.callPackage "${sources.nh}/package.nix" {
+    rev = sources.nh.revision;
+  };
   nixvim-minimal = import ../nvim.nix {
     inherit (sources) mnw;
     pkgs = final;
