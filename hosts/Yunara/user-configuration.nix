@@ -9,6 +9,11 @@
     pkgs.bottles
     pkgs.winetricks
     pkgs.foot
+    pkgs.audacious
+    pkgs.micro
+    pkgs.ripgrep
+    pkgs.telegram-desktop
+    pkgs.brave
 
     # from internal overlay
     pkgs.mpv-wrapped

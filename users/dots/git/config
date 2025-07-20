@@ -1,116 +1,82 @@
-# adapted from https://gist.githubusercontent.com/pksunkara/988716/raw/13f2fb121abb94f5a87eebb104821832d56e48d7/config
-[user]
-name = Rexiel Scarlet
-email = 37258415+Rexcrazy804@users.noreply.github.com
-github = Rexcrazy804
+    [alias]
+    	a = "add --patch"
+    	ad = "add"
+    	b = "branch"
+    	ba = "branch -a"
+    	bd = "branch --delete"
+    	bdd = "branch -D"
+    	c = "commit"
+    	ca = "commit --amend"
+    	cb = "checkout -b"
+    	cl = "clone"
+    	cm = "commit --message"
+    	co = "checkout"
+    	d = "diff"
+    	ds = "diff --staged"
+    	forgor = "commit --amend --no-edit"
+    	h = "show"
+    	h1 = "show HEAD^"
+    	h2 = "show HEAD^^"
+    	h3 = "show HEAD^^^"
+    	h4 = "show HEAD^^^^"
+    	h5 = "show HEAD^^^^^"
+    	l = "log --show-notes='*' --abbrev-commit --pretty=format:'%Cred%h %Cgreen(%aD)%Creset -%C(bold red)%d%Creset %s %C(bold blue)<%an>% %Creset' --graph"
+    	la = "log --show-notes='*' --abbrev-commit --pretty=format:'%Cred%h %Cgreen(%aD)%Creset -%C(bold red)%d%Creset %s %C(bold blue)<%an>% %Creset' --graph --all"
+    	lp = "log --show-notes='*' --abbrev-commit --pretty=format:'%Cred%h %Cgreen(%aD)%Creset -%C(bold red)%d%Creset %s %C(bold blue)<%an>% %Creset' --graph --patch"
+    	oops = "checkout --"
+    	p = "push"
+    	pc = "checkout --patch"
+    	pf = "push --force-with-lease"
+    	pl = "pull"
+    	r = "rebase"
+    	ra = "rebase --abort"
+    	rc = "rebase --continue"
+    	ri = "rebase --interactive"
+    	rs = "reset"
+    	rsh = "reset --hard"
+    	s = "status --short --branch"
+    	ss = "status"
+    	st = "stash"
+    	stc = "stash clear"
+    	sth = "stash show --patch"
+    	stl = "stash list"
+    	stp = "stash pop"
 
-[core]
-editor = nvim
-whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-pager = delta
+    [commit]
+    	gpgSign = true
 
-[column]
-ui = auto
+    [core]
+    	pager = "delta"
 
-[branch]
-sort = -committerdate
+    [credential]
+    	helper = "store"
 
-[tag]
-sort = version:refname
+    [delta]
+    	dark = true
 
-[init]
-defaultBranch = master
+    [diff]
+    	colorMoved = "default"
 
-[rerere]
-enabled = 1
-autoupdate = 1
+    [gpg]
+    	format = "ssh"
 
-[diff]
-algorithm = histogram
-colorMoved = plain
-renames = true
+    [gpg "ssh"]
+    	allowedSignersFile = "/home/xaolan/.config/git/allowed_signers"
+    	program = "ssh-keygen"
 
-[difftool]
-prompt = false
+    [interactive]
+    	diffFilter = "delta --color-only"
 
-[push]
-autoSetupRemote = true
-followTags = true
+    [merge]
+    	conflictstyle = "diff3"
 
-[fetch]
-prune = true
-pruneTags = true
-all = true
+    [pull]
+    	rebase = true
 
+    [tag]
+    	gpgSign = true
 
-[rebase]
-autoSquash = true
-updateRefs = true
-
-[color]
-ui = auto
-
-[color "branch"]
-current = yellow bold
-local = green bold
-remote = cyan bold
-
-[color "diff"]
-meta = yellow bold
-frag = magenta bold
-old = red bold
-new = green bold
-whitespace = red reverse
-
-[color "status"]
-added = green bold
-changed = yellow bold
-untracked = red bold
-
-[delta]
-features = catppuccin-mocha
-line-numbers = false
-dark = true
-
-[trim]
-bases = master,main
-protected = *production
-
-[filter "lfs"]
-clean = git-lfs clean -- %f
-smudge = git-lfs smudge -- %f
-process = git-lfs filter-process
-required = true
-
-# the below code is from https://github.com/catppuccin/delta/blob/main/catppuccin.gitconfig
-# with the following MIT license https://github.com/catppuccin/delta/blob/main/LICENSE
-# with modifications to some header hunk style
-[delta "catppuccin-mocha"]
-	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
-	dark = true
-	file-decoration-style = "#6c7086"
-	file-style = "#cdd6f4"
-	hunk-header-decoration-style = "#6c7086" ul
-	hunk-header-file-style = bold
-	hunk-header-line-number-style = bold "#a6adc8"
-	hunk-header-style = file line-number syntax
-	line-numbers-left-style = "#6c7086"
-	line-numbers-minus-style = bold "#f38ba8"
-	line-numbers-plus-style = bold "#a6e3a1"
-	line-numbers-right-style = "#6c7086"
-	line-numbers-zero-style = "#6c7086"
-	# 25% red 75% base
-	minus-emph-style = bold syntax "#53394c"
-	# 10% red 90% base
-	minus-style = syntax "#34293a"
-	# 25% green 75% base
-	plus-emph-style = bold syntax "#404f4a"
-	# 10% green 90% base
-	plus-style = syntax "#2c3239"
-	map-styles = \
-		bold purple => syntax "#494060", \
-		bold blue => syntax "#384361", \
-		bold cyan => syntax "#384d5d", \
-		bold yellow => syntax "#544f4e"
-	# Should match the name of the bat theme
-	syntax-theme = Catppuccin Mocha
+    [user]
+    	email = "ah0199004@gmail.com"
+    	name = "xaolan"
+    	signingKey = "/home/xaolan/.ssh/id_ed25519"

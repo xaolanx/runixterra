@@ -1,5 +1,8 @@
 {sources, ...}: {
-  imports = [./activation.nix];
+  imports = [
+    ./activation.nix
+    ./substituters.nix
+  ];
   nixpkgs.config.allowUnfree = true;
   nixpkgs.flake.source = sources.nixpkgs;
   nix = {
