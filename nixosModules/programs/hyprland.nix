@@ -27,9 +27,9 @@
             cursor-theme = "Kokomi_Cursor";
             gtk-theme = "rose-pine";
             icon-theme = "rose-pine";
-            document-font-name = "DejaVu Serif";
-            font-name = "DejaVu Sans";
-            monospace-font-name = "CaskaydiaMono NF";
+            document-font-name = "Aporetic Serif";
+            font-name = "Aporetic Sans";
+            monospace-font-name = "Aporetic Serif Mono";
             accent-color = "purple";
             color-scheme = "prefer-dark";
           };
