@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf (!config.zaphkiel.data.headless) {
+  config = lib.mkIf (!config.ionia.data.headless) {
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {

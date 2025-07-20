@@ -19,7 +19,7 @@ WlrLayershell {
   focusable: false
   implicitHeight: 28
   layer: WlrLayer.Bottom
-  namespace: "rexies.notch.background"
+  namespace: "xaolan.notch.background"
   screen: modelData
   surfaceFormat.opaque: false
 

@@ -74,7 +74,7 @@ in
 
       dev.myconfig = {
         pure = ../users/dots/nvim;
-        impure = "/home/rexies/nixos/users/dots/nvim";
+        impure = "/home/xaolan/nixos/users/dots/nvim";
       };
     };
   }

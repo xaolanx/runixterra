@@ -2,7 +2,7 @@
   lib,
   callPackage,
 }:
-lib.makeExtensible (final: {
+lib.makeExtensible (_final: {
   wallcrop = callPackage ./wallcrop.nix {};
   cowask = callPackage ./cowask.nix {};
   gpurecording = callPackage ./gpurecording.nix {};

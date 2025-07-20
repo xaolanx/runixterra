@@ -4,9 +4,9 @@
   lib,
   ...
 }: {
-  options.zaphkiel.graphics.amd.enable = lib.mkEnableOption "amd graphics";
+  options.ionia.graphics.amd.enable = lib.mkEnableOption "amd graphics";
 
-  config = lib.mkIf (config.zaphkiel.graphics.amd.enable && config.zaphkiel.graphics.enable) {
+  config = lib.mkIf (config.ionia.graphics.amd.enable && config.ionia.graphics.enable) {
     environment.systemPackages = [pkgs.radeontop];
     hardware.graphics = {
       extraPackages = with pkgs; [

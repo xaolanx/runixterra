@@ -4,8 +4,8 @@
   pkgs,
   ...
 }: {
-  options.zaphkiel.programs.firefox.enable = lib.mkEnableOption "firefox";
-  config = lib.mkIf config.zaphkiel.programs.firefox.enable {
+  options.ionia.programs.firefox.enable = lib.mkEnableOption "firefox";
+  config = lib.mkIf config.ionia.programs.firefox.enable {
     environment.systemPackages = [pkgs.firefoxpwa];
     programs.firefox = {
       enable = true;

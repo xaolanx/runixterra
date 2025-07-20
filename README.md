@@ -21,9 +21,9 @@ https://github.com/user-attachments/assets/d11e9823-eb62-470c-9f0d-cb175bb60cbc
 > the generated matugen `theme.json`.
 
 > For nix users new to [hjem](https://github.com/feel-co/hjem),
-> the entry point for planting my dotfiles in place is [here](users/rexies.nix).
+> the entry point for planting my dotfiles in place is [here](users/xaolan.nix).
 
-> Last revision where Zaphkiel was flake based: [0eee46d1e](https://github.com/Rexcrazy804/Zaphkiel/tree/0eee46d1e5d98c3b94d39795b73a39270fc61ad7)
+> Last revision where Ionia was flake based: [0eee46d1e](https://github.com/Rexcrazy804/Ionia/tree/0eee46d1e5d98c3b94d39795b73a39270fc61ad7)
 
 ## What the heck is going on here?
 - npins based non flake nixos configuration
@@ -113,7 +113,7 @@ The following packages are exported by this flake:
 you may run any of the above with the following command (ofc you can't run a
 cursor, `nix build` it instead) replacing `nixvim` with your desired package
 ```bash
-nix run github:Rexcrazy804/Zaphkiel#nixvim
+nix run github:Rexcrazy804/Ionia#nixvim
 ```
 
 ## Structure overview
@@ -154,7 +154,7 @@ users/                  # user specific configuration imported by hosts hosting 
 - - - kurukurubar/      # adorable bar for kuru kuru maxxing
 - - - kurumibar/        # my first now unmainted rectangle bar
 - - - shell.nix         # devshell for qml development with quickshell
-- rexies.nix            # my user, leverages hjem the most
+- xaolan.nix            # my user, leverages hjem the most
 - <others>.nix          # other users
 
 README.md               # are you reading me yet?

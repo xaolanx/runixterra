@@ -3,7 +3,7 @@
   lib,
   ...
 }: {
-  config = lib.mkIf (!config.zaphkiel.data.headless) {
+  config = lib.mkIf (!config.ionia.data.headless) {
     # uncategorized
     services.thermald.enable = true;
     services.fwupd.enable = true;

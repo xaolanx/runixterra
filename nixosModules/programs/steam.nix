@@ -4,8 +4,8 @@
   config,
   ...
 }: {
-  options.zaphkiel.programs.steam.enable = lib.mkEnableOption "steam";
-  config = lib.mkIf config.zaphkiel.programs.steam.enable {
+  options.ionia.programs.steam.enable = lib.mkEnableOption "steam";
+  config = lib.mkIf config.ionia.programs.steam.enable {
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true;

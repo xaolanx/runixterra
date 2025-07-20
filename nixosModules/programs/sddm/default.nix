@@ -4,7 +4,7 @@
   config,
   ...
 }: {
-  options.zaphkiel.programs.sddm-custom-theme = {
+  options.ionia.programs.sddm-custom-theme = {
     enable = lib.mkEnableOption "Enable custom sddm theme";
     # left in here for not breaking things, will include it in later
     wallpaper = lib.mkOption {
@@ -13,7 +13,7 @@
   };
 
   config = let
-    cfg = config.zaphkiel.programs.sddm-custom-theme;
+    cfg = config.ionia.programs.sddm-custom-theme;
     # the theme is overriden via the internal overlay
     # its done this way to be able to export it onto the flake
     sddm-theme = pkgs.sddm-silent-custom;
@@ -45,7 +45,7 @@
       systemd.tmpfiles.rules = let
         iconPath = user: config.hjem.users.${user}.files.".face.icon".source or "";
       in
-        lib.pipe config.zaphkiel.data.users [
+        lib.pipe config.ionia.data.users [
           (builtins.filter (user: (iconPath user) != null))
           (builtins.map (user: [
             "f+ /var/lib/AccountsService/users/${user}  0600 root root -  [User]\\nIcon=/var/lib/AccountsService/icons/${user}\\n"

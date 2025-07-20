@@ -11,8 +11,8 @@
     ./backupservice.nix
   ];
 
-  options.zaphkiel.services.minecraft.enable = lib.mkEnableOption "minecraft service";
-  config = lib.mkIf (config.zaphkiel.services.minecraft.enable && config.zaphkiel.services.enable) {
+  options.ionia.services.minecraft.enable = lib.mkEnableOption "minecraft service";
+  config = lib.mkIf (config.ionia.services.minecraft.enable && config.ionia.services.enable) {
     users.users.minecraft.packages = [pkgs.rconc];
     nixpkgs.overlays = [(import "${sources.nix-minecraft}/overlay.nix")];
 

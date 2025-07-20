@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  config,
   ...
 }: {
   # don't resolve dns over dhcpd or networkmanager
@@ -32,7 +31,7 @@
 
         seraphine fd7a:115c:a1e0::eb01:7412
         aphrodite fd7a:115c:a1e0::6e01:5604
-        zaphkiel fd7a:115c:a1e0::5d01:ae12
+        ionia fd7a:115c:a1e0::5d01:ae12
         raphael fd7a:115c:a1e0::5801:e445
         persephone fd7a:115c:a1e0::6a01:4614
 

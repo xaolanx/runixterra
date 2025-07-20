@@ -10,5 +10,5 @@
     # ./minecraft
   ];
 
-  options.zaphkiel.services.enable = lib.mkEnableOption "services";
+  options.ionia.services.enable = lib.mkEnableOption "services";
 }

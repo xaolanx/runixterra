@@ -1,7 +1,5 @@
 {
-  sources ? import ./npins,
   system ? builtins.currentSystem or "unknown-system",
-  pkgs ? import sources.nixpkgs {inherit system;},
   modulesPath,
   ...
 }: {
@@ -23,7 +21,7 @@
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  users.users.rexies = {
+  users.users.xaolan = {
     enable = true;
     initialPassword = "kokomi";
     createHome = true;

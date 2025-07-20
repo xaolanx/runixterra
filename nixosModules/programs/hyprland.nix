@@ -4,8 +4,8 @@
   config,
   ...
 }: {
-  options.zaphkiel.programs.hyprland.enable = lib.mkEnableOption "hyprland";
-  config = lib.mkIf config.zaphkiel.programs.hyprland.enable {
+  options.ionia.programs.hyprland.enable = lib.mkEnableOption "hyprland";
+  config = lib.mkIf config.ionia.programs.hyprland.enable {
     programs.hyprland = {
       enable = true;
       withUWSM = true;

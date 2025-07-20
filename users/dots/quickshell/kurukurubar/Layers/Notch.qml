@@ -19,7 +19,7 @@ WlrLayershell {
   focusable: false
   implicitHeight: screen.height * 0.65
   layer: WlrLayer.Top
-  namespace: "rexies.notch.quickshell"
+  namespace: "xaolan.notch.quickshell"
   screen: modelData
   surfaceFormat.opaque: false
 

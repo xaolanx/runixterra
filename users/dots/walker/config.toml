@@ -95,9 +95,9 @@ url = "https://github.com/NixOS/nixpkgs"
 keywords = ["nixpkgs"]
 
 [[builtins.bookmarks.entries]]
-label = "zaphkiel"
-url = "https://github.com/Rexcrazy804/Zaphkiel"
-keywords = ["git", "zaphkiel", "kurukurubar"]
+label = "ionia"
+url = "https://github.com/Rexcrazy804/Ionia"
+keywords = ["git", "ionia", "kurukurubar"]
 
 [[builtins.bookmarks.entries]]
 label = "quickshell"
