@@ -42,43 +42,30 @@ jobs:
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
 
-      - name: Nightly flake.lock update
+      - name: Install npins
+        run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
+
+      - name: Nightly npins update
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
         id: nightly
-        uses: DeterminateSystems/update-flake-lock@v27
+        uses: getchoo/update-npins@v0.1.2
         with:
-          token: ${{ secrets.GH_TOKEN }}
-          branch: nightly-update
-          git-author-name: "xaolanx"
-          git-author-email: "ah0199004@gmail.com"
-          git-committer-name: "xaolanx"
-          git-committer-email: "ah0199004@gmail.com"
-          commit-msg: "chore(lockfile): nightly update"
-          pr-title: "chore(lockfile): nightly update"
+          commit-message: "chore(lockfile): nightly update"
           pr-labels: |
             dependencies
             automated
             nightly
 
-      - name: Weekly flake.lock update
+      - name: Weekly npins update
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
         id: weekly
-        uses: DeterminateSystems/update-flake-lock@v27
+        uses: getchoo/update-npins@v0.1.2
         with:
-          token: ${{ secrets.GH_TOKEN }}
-          branch: weekly-update
-          git-author-name: "xaolanx"
-          git-author-email: "ah0199004@gmail.com"
-          git-committer-name: "xaolanx"
-          git-committer-email: "ah0199004@gmail.com"
-          commit-msg: "chore(lockfile): weekly update"
-          pr-title: "chore(lockfile): weekly update"
+          commit-message: "chore(lockfile): nightly update"
           pr-labels: |
             dependencies
             automated
             weekly
-
-      - uses: DeterminateSystems/flake-checker-action@main
 
       # - name: Auto-merge PR
       #   if: steps.nightly.outputs.pull-request-number || steps.weekly.outputs.pull-request-number
