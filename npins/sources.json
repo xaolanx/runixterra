@@ -183,8 +183,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre832220.c87b95e25065/nixexprs.tar.xz",
-      "hash": "sha256-MYLpXXTsSuRa0I4sA+Xg1WR/SlurOqrLRPwF9/+WHOQ="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre831064.6e987485eb2c/nixexprs.tar.xz",
+      "hash": "sha256-okomYyezDlua8/ssPHEdE2/gC1r+MElosWlZQuFrIdQ="
     },
     "pre-commit-hooks.nix": {
       "type": "Git",
