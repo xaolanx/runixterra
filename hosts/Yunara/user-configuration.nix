@@ -54,16 +54,13 @@ in {
   programs.matugen = {
     enable = true;
     wallpaper = let
-      image = config.programs.booru-flake.images."6887138";
+      url = "https://github.com/rose-pine/wallpapers/blob/main/bay.JPG?raw=true";
+      sha256 = "YLHsj9SKuJNwiYxCQ5zFDrdEfTSEH89ue95yBvQZ+MI=";
+      ext = "jpg";
     in
-      pkgs.stdenv.mkDerivation {
-        name = "cropped-${image.name}";
-        src = image;
-        dontUnpack = true;
-        nativeBuildInputs = [pkgs.imagemagick];
-        installPhase = ''
-          magick $src -crop 1920x1080+600+1200 - > $out
-        '';
+      builtins.fetchurl {
+        name = "wallpaper-${sha256}.${ext}";
+        inherit url sha256;
       };
   };
 
