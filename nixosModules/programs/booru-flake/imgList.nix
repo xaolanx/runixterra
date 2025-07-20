@@ -856,7 +856,7 @@
   }
   {
     id = "6981315";
-    jsonHash = "sha256-ibNAdmp0bQRIQpOwjy2qWmOoAAdvXSXlkBSLeoRYKyc=";
+    jsonHash = "sha256-6fLqeojQMA30h2KaiNmmqUB/pGXnbHHMhOKVnMpcEBA=";
     imgHash = "sha256-fwH9A291vA3UzI3Sx8TLmxYm6/UvPyvksUHbvgWf1WI=";
   }
   {
