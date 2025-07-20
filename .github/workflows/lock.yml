@@ -1,4 +1,4 @@
-name: lock updater
+name: npins updater
 
 on:
   workflow_dispatch:
