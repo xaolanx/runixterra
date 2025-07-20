@@ -47,9 +47,6 @@ jobs:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
           skipPush: ${{ github.ref != 'refs/heads/snowy' || github.event_name != 'push' }}
 
-      # Flake checker
-      - uses: DeterminateSystems/flake-checker-action@main
-
       # Build NixOS config
       - name: Build NixOS configuration
         run: nix run nixpkgs#nixos-rebuild build --file default.nix -A Yunara
