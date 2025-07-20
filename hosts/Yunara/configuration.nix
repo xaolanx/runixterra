@@ -39,7 +39,14 @@ in {
         enable = false;
         exitNode.enable = false;
       };
-      openssh.enable = true;
+      openssh = {
+        enable = true;
+        settings.UseDns = true;
+      };
+      resolved = {
+        enable = true;
+        dnsovertls = "opportunistic";
+      };
     };
   };
 
