@@ -9,7 +9,7 @@
       deadnix.enable = true;
       prettier = {
         enable = true;
-        excludes = [".js" ".md" ".ts"];
+        excludes = [".js" ".md" ".ts"]; # adjust as needed
       };
     };
   };
@@ -21,5 +21,11 @@ in
       nodePackages.prettier
     ];
 
-    inherit (pre-commit) shellHook;
+    shellHook = ''
+      ${pre-commit.shellHook}
+      if [ ! -f .git/hooks/pre-commit ]; then
+        echo "Installing pre-commit hook..."
+        pre-commit install
+      fi
+    '';
   }
