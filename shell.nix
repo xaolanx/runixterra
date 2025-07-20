@@ -15,7 +15,7 @@
   };
 in
   pkgs.mkShell {
-    default = with pkgs; [
+    packages = with pkgs; [
       alejandra
       deadnix
       nodePackages.prettier
