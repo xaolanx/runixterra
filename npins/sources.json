@@ -150,6 +150,22 @@
       "url": "https://github.com/Gerg-L/mnw/archive/cff958a4e050f8d917a6ff3a5624bc4681c6187d.tar.gz",
       "hash": "sha256-eZu2yH3Y2eA9DD3naKWy/sTxYS5rPK2hO7vj8tvUCSU="
     },
+    "nh": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "nh"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v4.1.2",
+      "revision": "33f3dc39ccabf2a82f02cb4ce17b2dbd9e4b5613",
+      "url": "https://api.github.com/repos/nix-community/nh/tarball/refs/tags/v4.1.2",
+      "hash": "sha256-v02NsZ589zzPq5xsCxyrG1/ZkFbbMkUthly50QdmYKo="
+    },
     "nix-minecraft": {
       "type": "Git",
       "repository": {
@@ -264,6 +280,19 @@
       "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/cc6d5cf12ae824e6945cc2599a2650d5fe054ffe.tar.gz",
       "hash": "sha256-u1yJ9JCLlQzmMNQSLZ/zWJTMLDcMDfLYpY/7cPtQuWU=",
       "frozen": true
+    },
+    "zen-browser-flake": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "2276ddce91a949e0819d9e8c4b171c40ce770390",
+      "url": "https://github.com/youwen5/zen-browser-flake/archive/2276ddce91a949e0819d9e8c4b171c40ce770390.tar.gz",
+      "hash": "sha256-kjpmc7Y164ajPdscAZLFQTtzXP5sEE2dR30NuHe5lQY="
     }
   },
   "version": 6

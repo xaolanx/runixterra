@@ -2,6 +2,7 @@
   imports = [
     ./activation.nix
     ./substituters.nix
+    ./nh.nix
   ];
   nixpkgs.config.allowUnfree = true;
   nixpkgs.flake.source = sources.nixpkgs;

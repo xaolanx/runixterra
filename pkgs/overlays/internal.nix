@@ -26,6 +26,9 @@
   kurukurubar-unstable = final.kurukurubar.override {
     inherit (final) quickshell;
     configPath = ../../users/dots/quickshell/kurukurubar;
+  zen-browser = ((import sources.zen-browser-flake) {pkgs = final;}).zen-browser;
+  nh = final.callPackage "${sources.nh}/package.nix" {
+    rev = sources.nh.revision;
   };
 
   # example to use npins to for nvim plugins
