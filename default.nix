@@ -9,10 +9,6 @@ let
   pkgs = import src.nixpkgs {};
   sources = mapAttrs (_k: v: v {inherit pkgs;}) src;
 
-  # you can only do the below if you have npins v6 format (i.e. a more recent git revision of npins till nixpks updates)
-  # https://github.com/andir/npins?tab=readme-ov-file#using-the-nixpkgs-fetchers
-  sources = mapAttrs (k: v: v {inherit pkgs;}) src;
-
   overlays = attrValues {
     internal = import ./pkgs/overlays/internal.nix {sources = src;};
     lix = import ./pkgs/overlays/lix.nix {lix = null;};
