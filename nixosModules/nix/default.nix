@@ -4,8 +4,14 @@
     ./substituters.nix
     ./nh.nix
   ];
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.flake.source = sources.nixpkgs;
+  nixpkgs = {
+    config.permittedInsecurePackages = [
+      "intel-media-sdk-23.2.2"
+    ];
+    config.allowUnfree = true;
+    flake.source = sources.nixpkgs;
+  };
+
   nix = {
     channel.enable = false;
     settings = {
