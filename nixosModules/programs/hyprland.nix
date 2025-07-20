@@ -65,6 +65,7 @@
       pkgs.networkmanagerapplet
       pkgs.yazi
       pkgs.ripdrag
+      pkgs.playerctl
 
       # quickshell dep
       pkgs.quickshell
