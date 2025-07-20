@@ -48,5 +48,8 @@ jobs:
           skipPush: ${{ github.ref != 'refs/heads/snowy' || github.event_name != 'push' }}
 
       # Build NixOS config
+      - name: Install nr
+        run: nix profile add nixpkgs#nixos-rebuild
+
       - name: Build NixOS configuration
-        run: nix run nixpkgs#nixos-rebuild build --file default.nix -A Yunara
+        run: nixos-rebuild build --file default.nix -A Yunara
