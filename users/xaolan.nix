@@ -16,7 +16,7 @@ in {
     # shell = pkgs.nushell;
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "multimedia"];
-    hashedPasswordFile = config.age.secrets.xaolanPass.path;
+    # hashedPasswordFile = config.age.secrets.xaolanPass.path;
 
     # only declare common packages here
     # others: hosts/<hostname>/user-configuration.nix
