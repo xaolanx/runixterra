@@ -1,4 +1,5 @@
 # My NixOS Configuration
+> This is Rexcrazy804 configs. just rename modules,user, and hosts so i'm not confused
 
 https://github.com/user-attachments/assets/d11e9823-eb62-470c-9f0d-cb175bb60cbc
 
@@ -23,7 +24,7 @@ https://github.com/user-attachments/assets/d11e9823-eb62-470c-9f0d-cb175bb60cbc
 > For nix users new to [hjem](https://github.com/feel-co/hjem),
 > the entry point for planting my dotfiles in place is [here](users/xaolan.nix).
 
-> Last revision where Ionia was flake based: [0eee46d1e](https://github.com/Rexcrazy804/Ionia/tree/0eee46d1e5d98c3b94d39795b73a39270fc61ad7)
+> Last revision where Zaphkiel was flake based: [0eee46d1e](https://github.com/Rexcrazy804/Zaphkiel/tree/0eee46d1e5d98c3b94d39795b73a39270fc61ad7)
 
 ## What the heck is going on here?
 - npins based non flake nixos configuration
