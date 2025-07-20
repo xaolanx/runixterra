@@ -16,6 +16,7 @@ in {
   config = mkIf (cfg.enable && config.ionia.graphics.enable) {
     hardware.graphics.extraPackages = [
       cfg.intelQSVprovider
+      pkgs.intel-media-sdk
       pkgs.intel-vaapi-driver
       pkgs.libvdpau-va-gl
       pkgs.intel-ocl
