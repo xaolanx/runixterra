@@ -183,8 +183,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre831064.6e987485eb2c/nixexprs.tar.xz",
-      "hash": "sha256-okomYyezDlua8/ssPHEdE2/gC1r+MElosWlZQuFrIdQ="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre832220.c87b95e25065/nixexprs.tar.xz",
+      "hash": "sha256-MYLpXXTsSuRa0I4sA+Xg1WR/SlurOqrLRPwF9/+WHOQ="
     },
     "pre-commit-hooks.nix": {
       "type": "Git",
@@ -209,9 +209,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "fcffbbced889717e09115e22fd181341746bf6e6",
-      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/fcffbbced889717e09115e22fd181341746bf6e6.tar.gz",
-      "hash": "sha256-+OVLmsSFN8Q1DracUlzb++q8aUf//ZipslyRQUR9Il0="
+      "revision": "db77c71c216530159c2dcf5b269ebb4706b2e2dd",
+      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/db77c71c216530159c2dcf5b269ebb4706b2e2dd.tar.gz",
+      "hash": "sha256-QG14m53ZGp2Gk7xD2Q+Tf7RYCKfk/BYRaBtX3X4IKbc="
     },
     "rosep-fish": {
       "type": "Git",
