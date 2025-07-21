@@ -17,10 +17,20 @@
       path = shadderConfig;
     })
   );
+  mpvscripts = pkgs.mpv.override {
+    scripts = with pkgs.mpvScripts; [
+      uosc
+      mpris
+      thumbfast
+      sponsorblock
+      autoload
+      smart-copy-paste-2
+    ];
+  };
 in
   pkgs.symlinkJoin {
     name = "mpv";
-    paths = [pkgs.mpv];
+    paths = [mpvscripts];
 
     buildInputs = [pkgs.makeWrapper];
 
