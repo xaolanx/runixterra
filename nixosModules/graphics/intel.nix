@@ -4,14 +4,11 @@
   config,
   ...
 }: let
-  inherit (lib) mkEnableOption mkIf mkPackageOption getExe;
+  inherit (lib) mkEnableOption mkIf getExe;
   cfg = config.ionia.graphics.intel;
 in {
   options.ionia.graphics.intel = {
     enable = mkEnableOption "intel graphics";
-    intelQSVprovider = mkPackageOption pkgs "QSV provider" {
-      default = "intel-media-driver";
-    };
   };
   config = mkIf (cfg.enable && config.ionia.graphics.enable) {
     hardware.graphics.extraPackages = [
@@ -23,6 +20,7 @@ in {
       pkgs.libva
       pkgs.vpl-gpu-rt
     ];
+
     environment.sessionVariables = {
       LIBVA_DRIVER_NAME = "iHD";
       LIBVA_DRIVERS_PATH = "${pkgs.intel-media-driver}/lib/dri";
