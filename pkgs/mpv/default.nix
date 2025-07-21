@@ -2,7 +2,7 @@
   pkgs,
   lib,
   # enable anime 4k shadders
-  anime ? false,
+  anime ? true,
 }: let
   shadderConfig = pkgs.callPackage ./bindings.nix {};
   mpvconf = pkgs.linkFarm "mpvConfDir" (
