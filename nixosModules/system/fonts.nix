@@ -16,6 +16,7 @@
         pkgs.noto-fonts-cjk-serif
         pkgs.material-symbols
         pkgs.aporetic
+        pkgs.aporetic-nerd
 
         # from internal overlay
         pkgs.librebarcode

@@ -57,6 +57,7 @@
       ];
   });
 
+  aporetic-nerd = final.callPackage ../aporeticnerd.nix {};
   mpv-wrapped = final.callPackage ../mpv {};
   sddm-silent = final.callPackage (sources.silent-sddm {pkgs = final;}) {gitRev = sources.silent-sddm.revision;};
   wallcrop = final.callPackage ../wallcrop.nix {};
