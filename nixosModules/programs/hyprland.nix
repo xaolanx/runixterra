@@ -26,7 +26,7 @@
           "org/gnome/desktop/interface" = {
             cursor-theme = "Kokomi_Cursor";
             gtk-theme = "rose-pine";
-            icon-theme = "Colloid-Pink-Rosepine";
+            icon-theme = "Colloid-Pink-Rosepine-Dark";
             document-font-name = "Aporetic Serif";
             font-name = "Aporetic Sans";
             monospace-font-name = "Aporetic Serif Mono";
