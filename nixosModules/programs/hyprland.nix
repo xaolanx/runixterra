@@ -16,6 +16,7 @@
       pkgs.procps
       pkgs.brightnessctl
       pkgs.quickshell
+      pkgs.systemd
     ];
 
     qt.enable = true;
@@ -91,14 +92,14 @@
     # turn the darn thing off if its right on my face
     systemd.user.timers.hyprsunset = {
       description = "Start hyprsunset after sunset";
-      enable = true;
+      enable = false;
       wantedBy = ["timers.target"];
       timerConfig = {
         OnCalendar = "*-*-* 17:30:00";
       };
     };
     systemd.user.services.hyprsunset = {
-      enable = true;
+      enable = false;
       description = "starts hyprsunset for blue light filtering";
       after = ["graphical.target"];
       serviceConfig = {

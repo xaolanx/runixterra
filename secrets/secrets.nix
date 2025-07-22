@@ -1,13 +1,13 @@
 let
   users = {
     xaolan = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvbECt/Gs84TqIJgnAlO9tWm2xMKu6w6duDXEt9I8Ar xaolan@Yunara"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZjHWTqLOqwSWwv2XRNqRoflnJ0UoIB2SMvkBfdQFKM xaolan@Yunara"
     ];
   };
 
   hosts = {
     Yunara = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB+BG/rB/QPW5gDjouZnrWKPuRUeKzfAGG1xzZHLCHNs"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAhnOhARXjo+jagLOi5Qah3P8G10K8Lfe3ZfXL8VSyU+"
     ];
   };
 in {

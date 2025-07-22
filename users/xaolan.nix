@@ -6,7 +6,7 @@
   ...
 }: let
   username = "xaolan";
-  description = "Rexiel Scarlet";
+  description = "Unforgiven";
 in {
   ionia.data.users = [username];
   users.users.${username} = {
@@ -30,13 +30,13 @@ in {
     ];
 
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvbECt/Gs84TqIJgnAlO9tWm2xMKu6w6duDXEt9I8Ar xaolan@Yunara"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZjHWTqLOqwSWwv2XRNqRoflnJ0UoIB2SMvkBfdQFKM xaolan@Yunara"
     ];
   };
 
   # define secrets
   age.secrets.xaolanPass = {
-    file = ../secrets/secret2.age;
+    file = ../secrets/secret1.age;
     owner = username;
   };
 
