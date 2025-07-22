@@ -28,6 +28,7 @@
     audacious
     tidal-hifi
     youtube-music
+    fooyin
     micro
     ripgrep
     telegram-desktop
