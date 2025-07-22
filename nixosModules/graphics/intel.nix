@@ -12,12 +12,13 @@ in {
   };
   config = mkIf (cfg.enable && config.ionia.graphics.enable) {
     hardware.graphics.extraPackages = [
-      pkgs.intel-vaapi-driver
+      pkgs.intel-media-driver
       pkgs.libvdpau-va-gl
       pkgs.intel-ocl
       pkgs.intel-compute-runtime-legacy1
       pkgs.libva
       pkgs.vpl-gpu-rt
+      pkgs.vulkan-tools
     ];
 
     environment.sessionVariables = {
@@ -25,6 +26,8 @@ in {
       LIBVA_DRIVERS_PATH = "${pkgs.intel-media-driver}/lib/dri";
       VKD_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/intel_icd/x86_64.json";
       OCL_ICD_VENDORS = "${pkgs.intel-compute-runtime-legacy1}/etc/OpenCL/vendors";
+      ANV_DEBUG = "video-decode";
+      ANV_VIDEO_DECODE = "1";
     };
 
     security.wrappers.btop = {

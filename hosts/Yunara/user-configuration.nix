@@ -24,6 +24,7 @@
     wineWowPackages.stable
     bottles
     winetricks
+    vulkan-tools
     foot
     audacious
     tidal-hifi
