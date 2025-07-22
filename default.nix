@@ -12,7 +12,6 @@ let
   overlays = attrValues {
     internal = import ./pkgs/overlays/internal.nix {sources = src;};
     lix = import ./pkgs/overlays/lix.nix {lix = null;};
-    npins = import ./pkgs/overlays/npins.nix; # temporary
   };
 
   # here to remind me of the meaningless of the universe

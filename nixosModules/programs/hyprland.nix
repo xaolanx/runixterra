@@ -76,6 +76,7 @@
       pkgs.scripts.kde-send
       pkgs.scripts.gpurecording
       pkgs.scripts.cowask
+      pkgs.scripts.npins-show
     ];
 
     # required when kde plasma is not installed .w.
