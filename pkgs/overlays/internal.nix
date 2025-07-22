@@ -34,6 +34,11 @@
     rev = sources.nh.revision;
   };
 
+  colloid-icon-rosepink = final.callPackage (sources.colloid + "/colloid-icon-theme.nix") {
+    schemeVariants = ["rosepine"];
+    colorVariants = ["pink"];
+  };
+
   # example to use npins to for nvim plugins
   # vimPlugins = prev.vimPlugins.extend (final': prev': {
   #   flash-nvim = prev'.flash-nvim.overrideAttrs (_old: {

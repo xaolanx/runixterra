@@ -53,6 +53,19 @@
       "url": "https://github.com/catppuccin/bat/archive/6810349b28055dce54076712fc05fc68da4b8ec0.tar.gz",
       "hash": "sha256-lJapSgRVENTrbmpVyn+UQabC9fpV1G1e+CdlJ090uvg="
     },
+    "colloid": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "xaolanx",
+        "repo": "Colloid-icon-theme"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "c42cb358cc7e804136a5cf5e334e73255e16332a",
+      "url": "https://github.com/xaolanx/Colloid-icon-theme/archive/c42cb358cc7e804136a5cf5e334e73255e16332a.tar.gz",
+      "hash": "sha256-4L9X00VnwhN5+e+HSB572pCl/aV9F4Fnsffb7wOHGkQ="
+    },
     "crane": {
       "type": "Git",
       "repository": {
