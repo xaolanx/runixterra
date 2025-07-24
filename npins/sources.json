@@ -146,9 +146,9 @@
       },
       "branch": "release-2.93",
       "submodules": false,
-      "revision": "8b1094356f4723d6e89d3f8a95b333ee16d9ab02",
-      "url": "https://git.lix.systems/lix-project/nixos-module/archive/8b1094356f4723d6e89d3f8a95b333ee16d9ab02.tar.gz",
-      "hash": "sha256-SXUAlxpjPRkArRMHy5+Hdi+PiC+ND9yzzIjiaHmTvQU="
+      "revision": "46a9e8fcfe4be72b4c7c8082ee11d2c42da1e873",
+      "url": "https://git.lix.systems/lix-project/nixos-module/archive/46a9e8fcfe4be72b4c7c8082ee11d2c42da1e873.tar.gz",
+      "hash": "sha256-KYMUrTV7H/RR5/HRnjV5R3rRIuBXMemyJzTLi50NFTs="
     },
     "mnw": {
       "type": "Git",
@@ -196,8 +196,8 @@
     "nixpkgs": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre832220.c87b95e25065/nixexprs.tar.xz",
-      "hash": "sha256-MYLpXXTsSuRa0I4sA+Xg1WR/SlurOqrLRPwF9/+WHOQ="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-25.11pre833752.fc02ee70efb8/nixexprs.tar.xz",
+      "hash": "sha256-kKSZJAdp/nw+4lsKQzLmwz/oHXe5xsiE0MtXIwdnso0="
     },
     "npins": {
       "type": "Git",
@@ -235,9 +235,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "db77c71c216530159c2dcf5b269ebb4706b2e2dd",
-      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/db77c71c216530159c2dcf5b269ebb4706b2e2dd.tar.gz",
-      "hash": "sha256-QG14m53ZGp2Gk7xD2Q+Tf7RYCKfk/BYRaBtX3X4IKbc="
+      "revision": "f90bef2d994c88f075dbc2fcd81140e160351328",
+      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/f90bef2d994c88f075dbc2fcd81140e160351328.tar.gz",
+      "hash": "sha256-XpegouCfuzYNECDpH0+J3UEdearlYhRkRgOZ97l16E8="
     },
     "rosep-fish": {
       "type": "Git",
@@ -288,9 +288,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "d6800ae791ed48834ac53ccbd2ee2b8a63f4aa8c",
-      "url": "https://github.com/uiriansan/SilentSDDM/archive/d6800ae791ed48834ac53ccbd2ee2b8a63f4aa8c.tar.gz",
-      "hash": "sha256-cOEqnqVGuNLje/3kttVfu5gxpIVBDZ2SBhL6sh2XB2U="
+      "revision": "61a3a96f85d757f812b2f182b04432e68fdc95c1",
+      "url": "https://github.com/uiriansan/SilentSDDM/archive/61a3a96f85d757f812b2f182b04432e68fdc95c1.tar.gz",
+      "hash": "sha256-Ehqdgi8GCIT05PuMm2viWwO1Mcdfl0bQ43tef/N2+2o="
     },
     "zaphkiel": {
       "type": "Git",
