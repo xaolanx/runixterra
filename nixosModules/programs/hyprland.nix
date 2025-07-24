@@ -93,14 +93,14 @@
     # turn the darn thing off if its right on my face
     systemd.user.timers.hyprsunset = {
       description = "Start hyprsunset after sunset";
-      enable = false;
+      enable = true;
       wantedBy = ["timers.target"];
       timerConfig = {
         OnCalendar = "*-*-* 17:30:00";
       };
     };
     systemd.user.services.hyprsunset = {
-      enable = false;
+      enable = true;
       description = "starts hyprsunset for blue light filtering";
       after = ["graphical.target"];
       serviceConfig = {
