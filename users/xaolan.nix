@@ -105,7 +105,7 @@ in {
       '';
     in {
       # git
-      ".config/git/config".source = ./dots/git/config;
+      # ".config/git/config".source = ./dots/git/config;
       ".config/git/allowed_signers".source = ./dots/git/allowed_signers;
       ".config/git/ignore".source = ./dots/git/ignore;
 
