@@ -1,25 +1,20 @@
-{config, ...}: {
+{config, pkgs, ...}: {
   hardware.graphics.enable = true;
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    open = true;
-    modesetting.enable = true;
-    powerManagement.enable = true;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
-  };
-
-  programs.coolercontrol.nvidiaSupport = true;
-  hj.environment.sessionVariables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    XDG_SESSION_TYPE = "wayland";
-    GBM_BACKEND = "nvidia-drm";
-  };
-
-  # https://wiki.hyprland.org/Nvidia/#suspendwakeup-issues
-  boot.kernelParams = [
-    "nvidia_drm.fbdev=1"
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+  hardware.graphics.extraPackages = [
+    pkgs.intel-media-driver
+    pkgs.libvdpau-va-gl
+    pkgs.intel-ocl
+    pkgs.intel-compute-runtime-legacy1
+    pkgs.libva
+    pkgs.vpl-gpu-rt
+    pkgs.vulkan-tools
   ];
+  hj.environment.sessionVariables = {
+      LIBVA_DRIVER_NAME = "iHD";
+      LIBVA_DRIVERS_PATH = "${pkgs.intel-media-driver}/lib/dri";
+      VKD_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/intel_icd/x86_64.json";
+      OCL_ICD_VENDORS = "${pkgs.intel-compute-runtime-legacy1}/etc/OpenCL/vendors";
+      ANV_DEBUG = "video-decode";
+      ANV_VIDEO_DECODE = "1";
+  };
 }
