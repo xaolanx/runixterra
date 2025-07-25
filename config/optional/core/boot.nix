@@ -1,12 +1,12 @@
 _: {
   boot = {
     loader = {
-      timeout = 0;
-      systemd-boot = {
+      grub = {
         enable = true;
-        consoleMode = "2";
+        device = "nodev";
+        efiSupport = true;
+        efiInstallAsRemovable = true;
       };
-      efi.canTouchEfiVariables = true;
     };
 
     plymouth = {
