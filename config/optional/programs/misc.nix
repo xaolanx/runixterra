@@ -20,7 +20,6 @@ in {
           entr
           fastfetch
           fzf
-          geary
           hyfetch
           obsidian
           playerctl
