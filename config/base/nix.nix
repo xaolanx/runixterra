@@ -34,9 +34,9 @@ in {
       self.flake = inputs.self;
     };
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-    extraOptions = ''
-      !include ${config.age.secrets.nix-access-tokens-github.path}
-    '';
+    #extraOptions = ''
+    #  !include ${config.age.secrets.nix-access-tokens-github.path}
+    #'';
   };
 
   nixpkgs = {
