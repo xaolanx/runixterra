@@ -1,6 +1,6 @@
 {
- inputs,
+ inputs',
  ...
 }: {
-  hj.packages = [inputs.quickshell.packages.default]; 	
+  hj.packages = [inputs'.quickshell.packages.default]; 	
 }
