@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        host: [ionia]
+        host: [yunara]
         config-type:
-          - type: "ionia"
+          - type: "yunara"
             path: ".#nixosConfigurations.{host}.config.system.build.toplevel"
 
     steps:
