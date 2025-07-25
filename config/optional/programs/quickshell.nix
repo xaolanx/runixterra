@@ -2,5 +2,5 @@
  inputs,
  ...
 }: {
-  hj.packages = [inputs.quickshell.packages.${pkgs.system}.default]; 	
+  hj.packages = [inputs.quickshell.packages.default]; 	
 }
