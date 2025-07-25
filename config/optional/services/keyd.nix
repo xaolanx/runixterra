@@ -1,6 +1,6 @@
 _: {
   services.keyd = {
-    enable = true;
+    enable = false;
     keyboards.default = {
       ids = ["*"];
       settings.main = {

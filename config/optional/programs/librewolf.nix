@@ -24,9 +24,9 @@
           SearchEngines.Add = [
             {
               Name = "SearxNG";
-              URLTemplate = "https://search.nezia.dev/search?q={searchTerms}";
+              URLTemplate = "https://search.xaolan.dev/search?q={searchTerms}";
               Method = "GET";
-              SuggestURLTemplate = "https://search.nezia.dev/autocompleter?q={searchTerms}";
+              SuggestURLTemplate = "https://search.xaolan.dev/autocompleter?q={searchTerms}";
             }
             {
               Name = "Nix Packages";

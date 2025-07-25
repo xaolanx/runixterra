@@ -24,6 +24,7 @@
     ../config/base
     ../modules/internal
     inputs.agenix.nixosModules.default
+    inputs.disko.nixosModules.default
   ];
 
   workstation = [
@@ -33,7 +34,6 @@
     ../config/optional/core/security.nix
 
     ../config/optional/hardware/bluetooth.nix
-    ../config/optional/hardware/mcuxpresso.nix
     ../config/optional/hardware/printing.nix
 
     ../config/optional/programs/editors
@@ -75,37 +75,29 @@
   ];
 in {
   flake.nixosConfigurations = {
-    vamos = mkNixosSystem {
+    ionia = mkNixosSystem {
       system = "x86_64-linux";
       modules =
         base
         ++ workstation
         ++ hyprland
         ++ [
-          ./vamos
+          ./ionia
           ../config/optional/programs/games.nix
           inputs.nixos-hardware.nixosModules.framework-13-7040-amd
         ];
     };
 
-    solaire = mkNixosSystem {
+    yunara = mkNixosSystem {
       system = "x86_64-linux";
       modules =
         base
         ++ workstation
         ++ hyprland
         ++ [
-          ./solaire
+          ./yunara
           ../config/optional/programs/games.nix
         ];
-    };
-
-    anastacia = mkNixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ../modules/internal # since we do not want to be using base for the server, but we still want the local options
-        ./anastacia
-      ];
     };
   };
 }

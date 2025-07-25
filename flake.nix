@@ -1,5 +1,5 @@
 {
-  description = "nezia's nixos configuration";
+  description = "xaolan's nixos configuration";
 
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -64,6 +64,11 @@
       };
     };
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };    
+
     hjem = {
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -124,11 +129,6 @@
         nixpkgs.follows = "nixpkgs";
         flake-utils.follows = "flake-utils";
       };
-    };
-
-    nezia_dev = {
-      url = "github:nezia1/nezia.dev";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-gaming = {

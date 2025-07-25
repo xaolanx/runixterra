@@ -28,8 +28,8 @@ in {
           enable = true;
           settings = {
             user = {
-              name = "Anthony Rodriguez";
-              email = "anthony@nezia.dev";
+              name = "Xaolan";
+              email = "ah0199004@gmail.com";
               inherit signingKey;
             };
             init.defaultBranch = "main";

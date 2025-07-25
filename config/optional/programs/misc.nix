@@ -11,7 +11,6 @@ in {
         inherit
           (self'.packages)
           app2unit
-          mcuxpressoide
           ;
 
         inherit
@@ -23,8 +22,6 @@ in {
           fzf
           geary
           hyfetch
-          imhex
-          logisim-evolution
           obsidian
           playerctl
           proton-pass
