@@ -155,6 +155,11 @@
       };
     };
 
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };    
+
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -44,6 +44,7 @@
     ../config/optional/programs/media.nix
     ../config/optional/programs/misc.nix
     ../config/optional/programs/pcmanfm.nix
+    ../config/optional/programs/quickshell.nix    
     ../config/optional/programs/xdg.nix
 
     ../config/optional/services/documentation.nix
