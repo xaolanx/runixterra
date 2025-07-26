@@ -97,6 +97,9 @@ in {
             max_width = 400;
             min_width = 400;
             width = 400;
+            margins = {
+              top = 8;
+            };
           };
 
           item.activation_label = {
@@ -109,10 +112,6 @@ in {
 
           item.icon = {
             pixel_size = 26;
-          };
-
-          margins = {
-            top = 8;
           };
 
           search = {
