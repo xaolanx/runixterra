@@ -4,6 +4,7 @@
   config,
   options,
   inputs',
+  self',
   ...
 }: let
   inherit (builtins) pathExists toString;
@@ -35,10 +36,10 @@ in {
           description = ''
             Name of the Xcursor theme.
           '';
-          default = "phinger-cursors-dark";
+          default = "Kokomi_Cursor";
         };
         package = mkOption {
-          default = pkgs.phinger-cursors;
+          default = self'.packages.kokCursor;
           description = ''
             Package providing the Xcursor theme.
           '';
@@ -50,10 +51,10 @@ in {
           description = ''
             Name of the hyprcursor theme.
           '';
-          default = "phinger-cursors-dark-hyprcursor";
+          default = "Kokomi_Cursor";
         };
         package = mkOption {
-          inherit (inputs'.hyprcursor-phinger.packages) default;
+          default = self'.packages.kokCursor;
           description = ''
             Package providing the hyprcursor theme.
           '';

@@ -16,8 +16,8 @@ in {
       rum.misc.gtk.settings.cursor-theme-name = styleCfg.cursors.xcursor.name;
 
       environment.sessionVariables = {
-        HYPRCURSOR_THEME = styleCfg.cursors.hyprcursor.name;
-        HYPRCURSOR_SIZE = styleCfg.cursors.size;
+        #HYPRCURSOR_THEME = styleCfg.cursors.hyprcursor.name;
+        #HYPRCURSOR_SIZE = styleCfg.cursors.size;
         XCURSOR_THEME = styleCfg.cursors.xcursor.name;
         XCURSOR_SIZE = styleCfg.cursors.size;
         XCURSOR_PATH = "${styleCfg.cursors.xcursor.package}/share/icons";
