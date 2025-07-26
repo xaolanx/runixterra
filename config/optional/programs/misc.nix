@@ -29,6 +29,7 @@ in {
           resources
           simple-scan
           wl-clipboard
+          telegram-desktop
           ;
       };
 
