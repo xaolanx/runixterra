@@ -7,7 +7,6 @@
 }: let
   inherit (builtins) concatStringsSep toString;
   inherit (lib.attrsets) optionalAttrs;
-  inherit (lib.modules) mkIf;
 
   toMonitorConf = m: let
     toResolutionString = res: rr: "${toString res.width}x${toString res.height}@${toString rr}";

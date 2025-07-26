@@ -3,7 +3,6 @@
   pkgs,
   config,
   options,
-  inputs',
   self',
   ...
 }: let

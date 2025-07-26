@@ -2,9 +2,7 @@
   pkgs,
   config,
   ...
-}: let
-  inherit (config.networking) hostName;
-in {
+}: {
   config = {
     programs.fish = {
       enable = true;
