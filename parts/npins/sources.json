@@ -1,21 +1,5 @@
 {
   "pins": {
-    "MoreWaita": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "somepaulo",
-        "repo": "MoreWaita"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": null,
-      "submodules": false,
-      "version": "v48.3.1",
-      "revision": "33b08b85b062027d621f4463c42a3ada0d3d00b2",
-      "url": "https://api.github.com/repos/somepaulo/MoreWaita/tarball/v48.3.1",
-      "hash": "1z5hq40qq6zkm1vq9x7jcic9lxxq467pds49whwqvh65gw5gfbhs"
-    },
     "base16-discord": {
       "type": "Git",
       "repository": {
