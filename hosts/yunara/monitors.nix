@@ -4,8 +4,8 @@ _: {
       name = "eDP-1";
       refreshRate = 60;
       resolution = {
-        width = 1366;
-        height = 736;
+        width = 1600;
+        height = 900;
       };
       primary = true;
       position = {
