@@ -2,14 +2,11 @@
   lib,
   myLib,
   inputs',
-  config,
   ...
 }: let
-  inherit (lib.meta) getExe;
   inherit (myLib.generators) toHyprConf;
 
   inherit (inputs'.hypridle.packages) hypridle;
-
 in {
   hj = {
     packages = [hypridle];
@@ -42,20 +39,18 @@ in {
     };
   };
 
-  hm.systemd.user.services.hypridle = {
-    Unit = {
-      Name = "hypridle";
-      After = ["graphical-session.target"];
-      Description = "Hyprland's Idle Daemon";
-    };
+  systemd.user.services.hypridle = {
+    name = "hypridle";
+    after = ["graphical-session.target"];
+    description = "Hyprland's Idle Daemon";
 
-    Service = {
+    serviceConfig = {
       Type = "simple";
       ExecStart = "${hypridle}/bin/hypridle";
       Restart = "on-failure";
       Slice = "background-graphical.slice";
     };
 
-    Install.WantedBy = ["graphical-session.target"];
+    wantedBy = ["graphical-session.target"];
   };
 }

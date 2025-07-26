@@ -12,18 +12,16 @@
     ${swaybg}/bin/swaybg -i "$(${pkgs.uutils-coreutils-noprefix}/bin/shuf -e ${concatStringsSep " " config.local.style.wallpapers} -n 1)"
   '';
 in {
-  hm.systemd.user.services = {
+  systemd.user.services = {
     swaybg = {
-      Unit = {
-        Description = "swaybg service";
-        PartOf = ["graphical-session.target"];
-        After = ["graphical-session.target"];
-        Requires = ["graphical-session.target"];
-      };
-      Service = {
+      description = "swaybg service";
+      partOf = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      requires = ["graphical-session.target"];
+      serviceConfig = {
         ExecStart = "${swaybgStart}";
       };
-      Install.WantedBy = ["graphical-session.target"];
+      wantedBy = ["graphical-session.target"];
     };
   };
 }

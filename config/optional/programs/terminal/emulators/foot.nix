@@ -60,23 +60,21 @@ in {
       };
     };
 
-    hm.systemd.user.services.foot-server = {
-      Unit = {
-        Name = "foot-server";
-        Description = "foot terminal service";
-        PartOf = ["graphical-session.target"];
-        After = ["graphical-session.target"];
-        # Path = lib.mkForce [];
-      };
+    systemd.user.services.foot-server = {
+      name = "foot-server";
+      description = "foot terminal service";
+      partOf = ["graphical-session.target"];
+      after = ["graphical-session.target"];
+      # Path = lib.mkForce [];
 
-      Service = {
+      serviceConfig = {
         Type = "simple";
         ExecStart = "${foot}/bin/foot --server";
         Restart = "on-failure";
         Slice = "background-graphical.slice";
       };
 
-      Install.WantedBy = ["graphical-session.target"];
+      wantedBy = ["graphical-session.target"];
     };
   };
 }

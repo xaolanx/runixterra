@@ -19,14 +19,13 @@ in {
       };
     };
 
-    hm.systemd.user.services.gammastep = {
-      Unit = {
-        Description = "Gammastep colour temperature adjuster";
-        After = ["graphical-session.target"];
-        Wants = ["geoclue-agent.service"];
-      };
+    systemd.user.services.gammastep = {
+      enable = true;
+      description = "Gammastep colour temperature adjuster";
+      after = ["graphical-session.target"];
+      wants = ["geoclue-agent.service"];
 
-      Service = {
+      serviceConfig = {
         Type = "simple";
         ExecStart = "${pkgs.gammastep}/bin/gammastep-indicator";
         Restart = "on-failure";
@@ -34,7 +33,7 @@ in {
         Slice = "background-graphical.slice";
       };
 
-      Install.WantedBy = ["graphical-session.target"];
+      wantedBy = ["graphical-session.target"];
     };
   };
 }
