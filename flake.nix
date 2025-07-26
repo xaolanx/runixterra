@@ -38,15 +38,6 @@
       };
     };
 
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
-        flake-parts.follows = "flake-parts";
-      };
-    };
-
     base16.url = "github:SenchoPens/base16.nix";
 
     basix = {
@@ -137,6 +128,11 @@
 
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

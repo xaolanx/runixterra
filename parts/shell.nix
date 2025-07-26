@@ -10,6 +10,8 @@ _: {
       packages = [
         inputs'.agenix.packages.default
         pkgs.npins
+        pkgs.cz-cli
+        pkgs.commitizen
         self'.formatter
       ];
 

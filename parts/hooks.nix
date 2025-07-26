@@ -10,6 +10,7 @@
           enable = true;
           package = config.treefmt.build.wrapper;
         };
+        commitizen.enable = true;
       };
     };
   };

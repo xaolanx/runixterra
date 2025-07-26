@@ -38,15 +38,15 @@
 
     ../config/optional/programs/editors
     ../config/optional/programs/terminal
-    ../config/optional/programs/mpv    
-    ../config/optional/programs/brave.nix    
+    ../config/optional/programs/mpv
+    ../config/optional/programs/browsers
     ../config/optional/programs/comma.nix
     ../config/optional/programs/discord.nix
     ../config/optional/programs/librewolf.nix
     ../config/optional/programs/media.nix
     ../config/optional/programs/misc.nix
     ../config/optional/programs/pcmanfm.nix
-    ../config/optional/programs/quickshell.nix    
+    ../config/optional/programs/quickshell.nix
     ../config/optional/programs/xdg.nix
 
     ../config/optional/services/documentation.nix
