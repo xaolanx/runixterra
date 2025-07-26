@@ -38,6 +38,7 @@
 
     ../config/optional/programs/editors
     ../config/optional/programs/terminal
+    ../config/optional/programs/mpv    
     ../config/optional/programs/comma.nix
     ../config/optional/programs/discord.nix
     ../config/optional/programs/librewolf.nix

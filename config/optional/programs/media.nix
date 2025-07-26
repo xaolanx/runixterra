@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, self', ...}: {
   config = {
     hj.packages = builtins.attrValues {
       inherit
