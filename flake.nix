@@ -101,15 +101,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # manage wi-fi through launcher
-    iwmenu = {
-      url = "github:e-tho/iwmenu";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-utils.follows = "flake-utils";
-      };
-    };
-
     nix-gaming = {
       url = "github:fufexan/nix-gaming";
       inputs.nixpkgs.follows = "nixpkgs";
