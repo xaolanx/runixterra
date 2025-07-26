@@ -43,7 +43,8 @@ jobs:
             -d ''
 
       - name: Install npins
-        run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
+        #run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
+        run: nix profile add nixpkgs#npins
 
       - name: Nightly npins update
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 5 * * 1-6')
