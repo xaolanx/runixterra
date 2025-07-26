@@ -11,10 +11,10 @@
       "version_upper_bound": null,
       "release_prefix": null,
       "submodules": false,
-      "version": "v48.1",
-      "revision": "3a40e0dedd3e363d1cdcab506137949177907c16",
-      "url": "https://api.github.com/repos/somepaulo/MoreWaita/tarball/v48.1",
-      "hash": "119nw9hc3ipdjkz14js66gb9j6sl7r84x319b2zp0m0323icij6p"
+      "version": "v48.3.1",
+      "revision": "33b08b85b062027d621f4463c42a3ada0d3d00b2",
+      "url": "https://api.github.com/repos/somepaulo/MoreWaita/tarball/v48.3.1",
+      "hash": "1z5hq40qq6zkm1vq9x7jcic9lxxq467pds49whwqvh65gw5gfbhs"
     },
     "base16-discord": {
       "type": "Git",
