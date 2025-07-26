@@ -23,9 +23,9 @@
     fontconfig = {
       enable = true;
       defaultFonts = {
-        serif = ["Noto Serif"];
-        sansSerif = ["Inter Variable"];
-        monospace = ["0xProto" "Symbols Nerd Font Mono"];
+        serif = ["Aporetic Serif"];
+        sansSerif = ["Aporetic Sans"];
+        monospace = ["Aporetic Serif Mono" "Symbols Nerd Font Mono"];
         emoji = ["Noto Color Emoji"];
       };
     };
