@@ -31,7 +31,7 @@ in {
         settings = {
           main = {
             term = "xterm-256color";
-            font = concatStringsSep "," ["monospace:size=10"];
+            font = concatStringsSep "," ["monospace:size=12"];
             bold-text-in-bright = "no";
             horizontal-letter-offset = 0;
             vertical-letter-offset = 0;
