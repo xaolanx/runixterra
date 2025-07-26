@@ -37,7 +37,7 @@ jobs:
         run: |
           echo "Clearing Cachix cache"
           curl -X 'POST' \
-            'https://app.cachix.org/api/v1/cache/xaolan/clear' \
+            'https://app.cachix.org/api/v1/cache/yunara/clear' \
             -H 'accept: application/json;charset=utf-8' \
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''

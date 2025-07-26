@@ -8,16 +8,15 @@ on:
         required: false
         default: "false"
   schedule:
-    - cron: "0 0 * * 0" # Sunday
-    - cron: "0 0 * * 1-6" # Monday–Saturday
+    - cron: "0 5 * * 0" # Sunday
+    - cron: "0 5 * * 1-6" # Monday–Saturday
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  chore:
-    if: github.ref == 'refs/heads/snowy'
+  chore-npins:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -38,7 +37,7 @@ jobs:
         run: |
           echo "Clearing Cachix cache"
           curl -X 'POST' \
-            'https://app.cachix.org/api/v1/cache/xaolan/clear' \
+            'https://app.cachix.org/api/v1/cache/yunara/clear' \
             -H 'accept: application/json;charset=utf-8' \
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
@@ -47,30 +46,30 @@ jobs:
         run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
 
       - name: Nightly npins update
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 5 * * 1-6')
         id: nightly
         uses: getchoo/update-npins@v0.1.2
         with:
           token: ${{ secrets.GH_TOKEN }}
           commit-message: "chore(lockfile): nightly update"
-          npins-directory: "./npins"
+          npins-directory: "./parts/npins"
           pr-branch: "npins-nightly"
-          pr-target: "snowy"
+          pr-target: "rum"
           pr-labels: |
             dependencies
             automated
             nightly
 
       - name: Weekly npins update
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+        if: github.event_name == 'schedule' && github.event.schedule == '0 5 * * 0'
         id: weekly
         uses: getchoo/update-npins@v0.1.2
         with:
           token: ${{ secrets.GH_TOKEN }}
           commit-message: "chore(lockfile): weekly update"
-          npins-directory: "./npins"
+          npins-directory: "./parts/npins"
           pr-branch: "npins-weekly"
-          pr-target: "snowy"
+          pr-target: "rum"
           pr-labels: |
             dependencies
             automated
