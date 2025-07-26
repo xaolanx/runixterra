@@ -1068,6 +1068,7 @@
         "nvf": "nvf",
         "pre-commit-hooks": "pre-commit-hooks_2",
         "quickshell": "quickshell",
+        "silentSDDM": "silentSDDM",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "systems": "systems_3",
         "treefmt-nix": "treefmt-nix_2"
@@ -1092,6 +1093,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "silentSDDM": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753337680,
+        "narHash": "sha256-Ehqdgi8GCIT05PuMm2viWwO1Mcdfl0bQ43tef/N2+2o=",
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
+        "rev": "61a3a96f85d757f812b2f182b04432e68fdc95c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uiriansan",
+        "repo": "SilentSDDM",
         "type": "github"
       }
     },
