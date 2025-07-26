@@ -1,4 +1,10 @@
-/* Stolen from https://github.com/jonvemo/nixos-config/blob/d519568858066387bae5afd75b5ee4a3c6b52213/common/modules/home-manager/programs/walker/gtk.css */
+@define-color error #ffb4ab;
+@define-color on_error #690005;
+@define-color on_surface #e3e1e9;
+@define-color surface #121318;
+@define-color surface_container #1f1f25;
+@define-color surface_container_highest #34343a;
+
 #window,
 #box,
 #aiScroll,
@@ -22,52 +28,80 @@ slider,
   all: unset;
 }
 
+#cfgerr {
+  background: @error;
+  color: @on_error;
+  margin-top: 20px;
+  padding: 8px;
+  font-size: 1.2em;
+}
+
+#window {
+  color: @on_surface;
+}
+
 #box {
-  background: @window_bg_color;
-  padding: 16px;
-  border-radius: 8px;
-}
-
-scrollbar {
-  padding-left: 8px;
-}
-
-slider {
-  min-width: 2px;
-  background: @scrollbar_outline_color;
+  border-radius: 15px;
+  background: @surface;
+  padding: 15px;
 }
 
 #search {
-  padding: 4px 16px;
-  background: @headerbar_bg_color;
-  border-radius: 32px;
+  background: @surface_container;
+  color: @on_surface_container;
+  padding: 8px;
+  border-radius: 15px;
 }
 
-#typeahead > *,
-#input > * {
-  color: @headerbar_fg_color;
-  margin-left: 8px;
+#prompt {
+  margin-left: 4px;
+  margin-right: 12px;
+  opacity: 0.2;
 }
 
-#prompt,
-#spinner,
 #clear {
-  color: @headerbar_fg_color;
+  color: @on_surface;
+  opacity: 0.8;
+}
+
+#password,
+#input,
+#typeahead {
+  border-radius: 2px;
+}
+
+#input {
+  background: none;
+}
+
+#password {
+}
+
+#spinner {
+  padding: 8px;
+}
+
+#typeahead {
+  color: @on_surface;
+  opacity: 0.8;
+}
+
+#input placeholder {
+  opacity: 0.5;
 }
 
 #list {
-  margin-top: 16px;
 }
 
 child {
-  border-radius: 8px;
-  color: @card_fg_color;
-  padding: 4px 8px;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 child:selected,
 child:hover {
-  background: @shade_color;
+  background: @surface_container_highest;
+  color: @on_surface_container;
 }
 
 #item {
@@ -81,40 +115,43 @@ child:hover {
 }
 
 #label {
-  font-weight: bold;
-  color: @card_fg_color;
+  font-weight: 500;
 }
 
 #sub {
-  opacity: 0.5;
-  color: @card_fg_color;
+  font-size: g.8em;
 }
 
 #activationlabel {
-  text-transform: uppercase;
-  font-weight: bold;
-  opacity: 0.5;
 }
+
+#bar {
+}
+
+.barentry {
+}
+
 .activation #activationlabel {
-  color: @accent_bg_color;
-  opacity: 1;
 }
 
 .activation #text,
 .activation #icon,
 .activation #search {
+  opacity: 0.5;
 }
 
 .aiItem {
-  padding: 4px 8px;
-  border-radius: 8px;
-  color: @card_fg_color;
+  padding: 10px;
+  border-radius: 2px;
+  color: @on_surface;
+  background: @surface;
 }
 
 .aiItem.user {
-  padding: auto 0 auto 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .aiItem.assistant {
-  background: @headerbar_bg_color;
+  background: @surface_container;
 }
