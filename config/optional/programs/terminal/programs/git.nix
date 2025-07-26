@@ -1,0 +1,82 @@
+{
+  pkgs,
+  config,
+  ...
+}: let
+  inherit (config.local.vars.home) signingKey;
+in {
+  config = {
+    hj = {
+      files = {
+        ".config/lazygit/config.yml".source = pkgs.writers.writeYAML "lazygit-config" {
+          git = {
+            overrideGpg = true;
+          };
+        };
+      };
+      packages = builtins.attrValues {
+        inherit
+          (pkgs)
+          gh
+          lazygit
+          mergiraf
+          difftastic
+          ;
+      };
+      rum = {
+        programs.git = {
+          enable = true;
+          settings = {
+            user = {
+              name = "Xaolan";
+              email = "ah0199004@gmail.com";
+              inherit signingKey;
+            };
+            init.defaultBranch = "main";
+            commit.gpgsign = true;
+            tag.gpgsign = true;
+            gpg.format = "ssh";
+            "gpg.ssh" = {
+              allowedSignersFile = "/home/xaolan/.config/git/allowed_signers";
+              program = "ssh-keygen";
+            };
+            push.autoSetupRemote = true;
+            pull.rebase = true;
+            tag.gpgSign = true;
+            pull.ff = "only";
+            rebase = {
+              autoSquash = true;
+              autoStash = true;
+            };
+            core.pager = "delta";
+            delta = {
+              dark = true;
+            };
+
+            diff.colorMoved = "default";
+            rerere.enabled = true;
+            merge = {
+              mergiraf = {
+                name = "mergiraf";
+                driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L";
+              };
+              ff = false;
+              conflictstyle = "diff3";
+            };
+            diff.external = "difft diff";
+
+            core = {
+              attributesfile = "~/.gitattributes";
+              untrackedCache = true;
+              fsmonitor = "${pkgs.rs-git-fsmonitor}/bin/rs-git-fsmonitor";
+            };
+            index.threads = true;
+          };
+        };
+      };
+      files.".gitattributes".text = ''
+        * merge=mergiraf
+      '';
+    };
+  };
+}

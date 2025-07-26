@@ -1,0 +1,99 @@
+{
+  "pins": {
+    "MoreWaita": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "somepaulo",
+        "repo": "MoreWaita"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v48.1",
+      "revision": "3a40e0dedd3e363d1cdcab506137949177907c16",
+      "url": "https://api.github.com/repos/somepaulo/MoreWaita/tarball/v48.1",
+      "hash": "119nw9hc3ipdjkz14js66gb9j6sl7r84x319b2zp0m0323icij6p",
+      "frozen": true
+    },
+    "base16-discord": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "imbypass",
+        "repo": "base16-discord"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "7dffeb4e9da416e2857b4ee3349ec533b70418c8",
+      "url": "https://github.com/imbypass/base16-discord/archive/7dffeb4e9da416e2857b4ee3349ec533b70418c8.tar.gz",
+      "hash": "1pfn2aypm395wx7rgchcdr7w652gvwr2i1j18sm33rx7ix09wpx6"
+    },
+    "base16-helix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "tinted-theming",
+        "repo": "base16-helix"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "27cf1e66e50abc622fb76a3019012dc07c678fac",
+      "url": "https://github.com/tinted-theming/base16-helix/archive/27cf1e66e50abc622fb76a3019012dc07c678fac.tar.gz",
+      "hash": "1hxsda3swj2qynh81k80vdz39grlm09il37v7g74gjqqb7w0q96h"
+    },
+    "base16-zellij": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "ralsina",
+        "repo": "base16-zellij"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "943eedbbcdfd6764267332d713ff4ca2de6f3d66",
+      "url": "https://github.com/ralsina/base16-zellij/archive/943eedbbcdfd6764267332d713ff4ca2de6f3d66.tar.gz",
+      "hash": "17gcv3z621sqhqvzxhvlx86x5wy9l14dgfh0n7x7262js7hsl1is"
+    },
+    "foot": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://codeberg.org/dnkl/foot"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "fcde74a18150a1722f2be2b7990c2f9b45268854",
+      "url": null,
+      "hash": "16h4mklkcxp7jyg7irfd2fdq7an1i5miqgsf8h3xnzpmriwrd2rz"
+    },
+    "tinted-terminal": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "tinted-theming",
+        "repo": "tinted-terminal"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "99053fb01c9087daaf97ae9b1fb797b8fc6e6608",
+      "url": "https://github.com/tinted-theming/tinted-terminal/archive/99053fb01c9087daaf97ae9b1fb797b8fc6e6608.tar.gz",
+      "hash": "0hm51na7fma7fak4c3yirznizizml58zp5pviic3a9r3vm0092zv"
+    },
+    "tt-schemes": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "tinted-theming",
+        "repo": "schemes"
+      },
+      "branch": "spec-0.11",
+      "submodules": false,
+      "revision": "5a775c6ffd6e6125947b393872cde95867d85a2a",
+      "url": "https://github.com/tinted-theming/schemes/archive/5a775c6ffd6e6125947b393872cde95867d85a2a.tar.gz",
+      "hash": "09niwd8wc1a7z1s1r554q58h05i15vbxvppngnv1cd853afq33rc"
+    }
+  },
+  "version": 5
+}
