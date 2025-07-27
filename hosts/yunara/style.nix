@@ -7,5 +7,7 @@ in {
   local.style = {
     enable = true;
     wallpapers = [wallpaper];
+    colors.schemeName = "woodland";
+    colors.system = "base16";
   };
 }
