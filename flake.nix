@@ -66,8 +66,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprcursor-phinger.url = "github:jappie3/hyprcursor-phinger";
-
     hyprland.url = "github:hyprwm/Hyprland";
 
     split-monitor-workspaces = {

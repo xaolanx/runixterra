@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   config,
+  lib,
   ...
 }: let
   inherit (config.local.vars.system) username;
@@ -13,8 +14,16 @@ in {
     owner = username;
   };
 
-  nix = {
+  nix = let
+    flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
+  in {
     package = pkgs.lixPackageSets.latest.lix;
+    # pin the registry to avoid downloading and evaling a new nixpkgs version every time
+    registry = lib.mapAttrs (_: v: {flake = v;}) flakeInputs;
+
+    # set the path for channels compat
+    nixPath = lib.mapAttrsToList (key: _: "${key}=flake:${key}") config.nix.registry;
+
     settings = {
       accept-flake-config = true;
       warn-dirty = false;
@@ -28,10 +37,7 @@ in {
         "flakes"
       ];
     };
-    registry = {
-      self.flake = inputs.self;
-    };
-    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
     extraOptions = ''
       !include ${config.age.secrets.nix-access-tokens-github.path}
     '';
