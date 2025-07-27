@@ -60,7 +60,7 @@ in {
       kvantum = {
         enable = true;
         theme = {
-          name = "Gruvbox_Light_Green";
+          name = "Gruvbox-Dark-Green";
           package = kvantumTheme;
         };
       };
