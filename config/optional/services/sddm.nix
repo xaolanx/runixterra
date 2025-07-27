@@ -11,6 +11,7 @@ in {
     package = pkgs.kdePackages.sddm;
     enable = true;
     theme = sddm-theme.pname;
+    enableHidpi = true;
     wayland.enable = true;
     extraPackages = sddm-theme.propagatedBuildInputs;
     settings.Theme.CursorSize = 24;

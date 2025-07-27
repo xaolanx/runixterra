@@ -52,9 +52,10 @@
     ../config/optional/services/documentation.nix
     ../config/optional/services/flatpak.nix
     ../config/optional/services/keyd.nix
-    ../config/optional/services/kmscon.nix
+    #../config/optional/services/kmscon.nix
     ../config/optional/services/location.nix
     ../config/optional/services/pipewire.nix
+    ../config/optional/services/sddm.nix
     ../config/optional/services/ssh.nix
 
     ../config/optional/theming
@@ -70,7 +71,6 @@
 
     ../config/optional/services/gammastep.nix
     ../config/optional/services/gnome.nix
-    # ../config/optional/services/sddm.nix
     ../config/optional/services/greetd.nix
     ../config/optional/services/logind.nix
     ../config/optional/services/power.nix

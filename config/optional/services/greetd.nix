@@ -22,7 +22,7 @@
 in {
   config = {
     services.greetd = {
-      enable = true;
+      enable = false;
       settings = {
         terminal.vt = 1;
         default_session.command = toString [
@@ -35,7 +35,7 @@ in {
     };
 
     programs.regreet = {
-      enable = true;
+      enable = false;
       cageArgs = ["-s" "-m" "last"];
       cursorTheme = {
         inherit (styleCfg.cursors.xcursor) name package;
