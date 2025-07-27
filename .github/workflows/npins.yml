@@ -32,16 +32,6 @@ jobs:
           extra-conf: |
             lazy-trees = true
 
-      - name: Clear Cachix
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
-        run: |
-          echo "Clearing Cachix cache"
-          curl -X 'POST' \
-            'https://app.cachix.org/api/v1/cache/yunara/clear' \
-            -H 'accept: application/json;charset=utf-8' \
-            -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
-            -d ''
-
       - name: Install npins
         #run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
         run: nix profile add nixpkgs#npins
