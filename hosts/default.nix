@@ -42,6 +42,7 @@
     ../config/optional/programs/browsers
     ../config/optional/programs/comma.nix
     ../config/optional/programs/discord.nix
+    ../config/optional/programs/kdeconnect.nix
     ../config/optional/programs/librewolf.nix
     ../config/optional/programs/media.nix
     ../config/optional/programs/misc.nix

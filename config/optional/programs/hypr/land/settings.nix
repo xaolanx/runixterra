@@ -57,6 +57,8 @@ in {
           exec-once = [
             "${pkgs.xorg.xrandr}/bin/xrandr --output 'DP-1' --primary"
             "qs -c kurukurubar"
+            "uwsm app -t service kdeconnectd"
+            "uwsm app kdeconnect-indicator"
           ];
 
           cursor = {
