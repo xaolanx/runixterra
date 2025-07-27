@@ -247,7 +247,7 @@ in {
             gaps_in = 4;
             gaps_out = 8;
             border_size = 4;
-            "col.active_border" = "rgb(${styleCfg.colors.scheme.base0E})";
+            "col.active_border" = "rgb(${styleCfg.colors.scheme.base0D})";
             "col.inactive_border" = "rgb(${styleCfg.colors.scheme.base03})";
           };
           decoration = {
