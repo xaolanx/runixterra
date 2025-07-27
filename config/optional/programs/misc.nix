@@ -30,7 +30,6 @@ in {
           simple-scan
           wl-clipboard
           telegram-desktop
-          audacious
           ;
       };
 

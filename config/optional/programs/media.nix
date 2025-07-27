@@ -9,6 +9,7 @@
         celluloid
         gthumb
         papers
+        audacious
         ;
     };
   };
