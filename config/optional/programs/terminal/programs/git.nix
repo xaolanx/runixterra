@@ -21,6 +21,7 @@ in {
           lazygit
           mergiraf
           difftastic
+          delta
           ;
       };
       rum = {
