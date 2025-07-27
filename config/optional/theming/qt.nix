@@ -2,21 +2,28 @@
   pkgs,
   config,
   self,
+  pins,
   ...
 }: let
-  # TODO: add global state for kvantum/qtct themes
-  kvantumTheme = pkgs.catppuccin-kvantum.override {
-    variant = "mocha";
-    accent = "lavender";
+  kvantumTheme = pkgs.gruvbox-kvantum.overrideAttrs {
+    pname = "gruvbox-kvantum";
+    version = "0-unstable-${pins.gruvbox-kvantum.revision}";
+    src = pins.gruvbox-kvantum;
+
+    installPhase = ''
+      runHook preInstall
+      mkdir -p $out/share/Kvantum
+      cp -a Gruvbox* $out/share/Kvantum
+      runHook postInstall
+    '';
   };
-  qtctTheme = pkgs.catppuccin-qt5ct;
+
   qtctConf = {
     Appearance = {
       custom_palette = true;
       icon_theme = config.local.style.gtk.iconTheme.name;
       standard_dialogs = "xdgdesktopportal";
       style = "kvantum-dark";
-      color_scheme_path = "${qtctTheme}/share/qt5ct/colors/Catppuccin-Mocha.conf";
     };
 
     Fonts = {
@@ -53,7 +60,7 @@ in {
       kvantum = {
         enable = true;
         theme = {
-          name = "catppuccin-mocha-lavender";
+          name = "Gruvbox_Light_Green";
           package = kvantumTheme;
         };
       };

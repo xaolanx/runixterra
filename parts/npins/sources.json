@@ -51,6 +51,22 @@
       "url": null,
       "hash": "1jb44y7nxc5hyi1zb6ydy7ja7n206kkywxxlqiv05vg7kcmg4nkl"
     },
+    "gruvbox-kvantum": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sachnr",
+        "repo": "gruvbox-kvantum-themes"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "1.1",
+      "revision": "f47670be407c1f07c64890ad53884ee9977a7db1",
+      "url": "https://api.github.com/repos/sachnr/gruvbox-kvantum-themes/tarball/1.1",
+      "hash": "12zjcv1jzmpbrk2vxnzdbyv35ybx0jc5dsnx1b6wif27zxjphqmv"
+    },
     "tinted-terminal": {
       "type": "Git",
       "repository": {
