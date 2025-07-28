@@ -1,4 +1,10 @@
-_: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  inherit (config.local.vars.system) username;
+in {
   boot = {
     loader = {
       grub = {
@@ -27,5 +33,14 @@ _: {
       "rd.udev.log_level=3"
     ];
   };
+  system.nixos.distroName = "Runixterra";
+  environment.etc.issue = {
+    # a disgusting mess of escape codes to make it look nice. extra line on purpose for spacing.
+    source = pkgs.writeText "issue" ''
+      \e[32mWelcome to the fold of Runixterra, \e[36m${username}\e[1;32m. \e[2m(\l)\e[0m
+
+    '';
+  };
+
   systemd.tpm2.enable = false;
 }
