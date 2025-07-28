@@ -1,5 +1,18 @@
 {
   "pins": {
+    "ayu-yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "kmlupreti",
+        "repo": "ayu-dark.yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "5f600aae96523937504d67fcc1ad17d37409a482",
+      "url": "https://github.com/kmlupreti/ayu-dark.yazi/archive/5f600aae96523937504d67fcc1ad17d37409a482.tar.gz",
+      "hash": "0zlk68n6b1x326z46mjwhpd3yxp1z3xk7nw8cafnz3yj2miqr3j5"
+    },
     "base16-discord": {
       "type": "Git",
       "repository": {
@@ -66,6 +79,19 @@
       "revision": "f47670be407c1f07c64890ad53884ee9977a7db1",
       "url": "https://api.github.com/repos/sachnr/gruvbox-kvantum-themes/tarball/1.1",
       "hash": "12zjcv1jzmpbrk2vxnzdbyv35ybx0jc5dsnx1b6wif27zxjphqmv"
+    },
+    "kanagawa-lotus-yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "muratoffalex",
+        "repo": "kanagawa-lotus.yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "d84d61a0b19de7b13faf9f2f27e2a1070de0790e",
+      "url": "https://github.com/muratoffalex/kanagawa-lotus.yazi/archive/d84d61a0b19de7b13faf9f2f27e2a1070de0790e.tar.gz",
+      "hash": "1r1irbfij4sfkcpjadia7712qzdh57l0lfy1zz1m2km9f9labn5q"
     },
     "tinted-terminal": {
       "type": "Git",

@@ -12,7 +12,6 @@
           fd
           file
           ripgrep
-          yazi
           ;
       };
     };
