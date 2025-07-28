@@ -118,6 +118,19 @@
       "revision": "5a775c6ffd6e6125947b393872cde95867d85a2a",
       "url": "https://github.com/tinted-theming/schemes/archive/5a775c6ffd6e6125947b393872cde95867d85a2a.tar.gz",
       "hash": "09niwd8wc1a7z1s1r554q58h05i15vbxvppngnv1cd853afq33rc"
+    },
+    "zaphkiel": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Rexcrazy804",
+        "repo": "Zaphkiel"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "be4c864fbe4abab224dc4252737d5975f0ae9bf3",
+      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/be4c864fbe4abab224dc4252737d5975f0ae9bf3.tar.gz",
+      "hash": "1vjldq58zlcr73p72q706c6hn3292a41czglncfjpjzg46n014dx"
     }
   },
   "version": 5

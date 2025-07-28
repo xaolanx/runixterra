@@ -2,11 +2,23 @@ _: {
   perSystem = {
     pkgs,
     lib,
+    inputs',
     ...
-  }: {
-    packages = lib.packagesFromDirectoryRecursive {
+  }: let
+    quickshellPkg = inputs'.quickshell.packages.default;
+
+    basePackages = lib.packagesFromDirectoryRecursive {
       inherit (pkgs) callPackage;
       directory = ./packages;
     };
+  in {
+    packages =
+      basePackages
+      // {
+        kurukurubar = basePackages.kurukurubar.override {
+          configPath = ./../../assets/kurukurubar;
+          quickshell = quickshellPkg;
+        };
+      };
   };
 }

@@ -1,5 +1,4 @@
 {
-  lib,
   myLib,
   inputs',
   ...
@@ -14,7 +13,7 @@ in {
       ".config/hypr/hypridle.conf".text = toHyprConf {
         attrs = {
           general = {
-            lock_cmd = "qs -c kurukurubar ipc call lockscreen lock";
+            lock_cmd = "kurukurubar ipc call lockscreen lock";
             before_sleep_cmd = "loginctl lock-session";
             after_sleep_cmd = "hyprctl dispatch dpms on";
           };
