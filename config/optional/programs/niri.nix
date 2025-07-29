@@ -80,7 +80,7 @@
           TERMINAL "foot"
       }
       binds {
-          Ctrl+Alt+L { spawn "uwsm" "app" "--" "sh -c pgrep hyprlock || hyprlock"; }
+          Ctrl+Alt+L { spawn "noctalia" "ipc" "call" "globalIPC" "toggleLock"; }
           Mod+1 { focus-workspace 1; }
           Mod+2 { focus-workspace 2; }
           Mod+3 { focus-workspace 3; }
@@ -95,7 +95,8 @@
           Mod+BracketRight { consume-or-expel-window-right; }
           Mod+C { center-window; }
           Mod+Ctrl+R { reset-window-height; }
-          Mod+D { spawn "uwsm" "app" "--" "anyrun"; }
+          Mod+D { spawn "uwsm" "app" "--" "walker"; }
+          Mod+A { spawn "noctalia" "ipc" "call" "globalIPC" "toggleLauncher"; }
           Mod+Down { focus-workspace-down; }
           Mod+E { spawn "uwsm" "app" "--" "nautilus"; }
           Mod+End { focus-column-last; }
@@ -134,8 +135,9 @@
           Mod+Shift+Right { move-column-right; }
           Mod+Shift+S { screenshot; }
           Mod+Shift+Up { move-column-to-workspace-up; }
-          Mod+Space { toggle-window-floating; }
-          Mod+Tab { switch-focus-between-floating-and-tiling; }
+          Mod+T { toggle-window-floating; }
+          Mod+Space { switch-focus-between-floating-and-tiling; }
+          Mod+Tab repeat=false { toggle-overview; }
           Mod+Up { focus-workspace-up; }
           Print { screenshot; }
           XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
@@ -151,7 +153,7 @@
       }
       spawn-at-startup "noctalia"
       spawn-at-startup "xwayland-satellite"
-      spawn-at-startup "telegram-desktop"
+      spawn-at-startup "Telegram"
       spawn-at-startup "wl-paste --type image --watch cliphist store"
       spawn-at-startup "wl-paste --type text --watch cliphist store"
       window-rule {
@@ -213,6 +215,10 @@
       window-rule {
           match app-id="^(notification)" title=""
           open-floating true
+      }
+      layer-rule {
+      	match namespace="wallpaper"
+      	place-within-backdrop true
       }
       animations { window-resize { custom-shader "vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {\n  vec3 coords_next_geo = niri_curr_geo_to_next_geo * coords_curr_geo;\n\n  vec3 coords_stretch = niri_geo_to_tex_next * coords_curr_geo;\n  vec3 coords_crop = niri_geo_to_tex_next * coords_next_geo;\n\n  // We can crop if the current window size is smaller than the next window\n  // size. One way to tell is by comparing to 1.0 the X and Y scaling\n  // coefficients in the current-to-next transformation matrix.\n  bool can_crop_by_x = niri_curr_geo_to_next_geo[0][0] <= 1.0;\n  bool can_crop_by_y = niri_curr_geo_to_next_geo[1][1] <= 1.0;\n\n  vec3 coords = coords_stretch;\n  if (can_crop_by_x)\n      coords.x = coords_crop.x;\n  if (can_crop_by_y)\n      coords.y = coords_crop.y;\n\n  vec4 color = texture2D(niri_tex_next, coords.st);\n\n  // However, when we crop, we also want to crop out anything outside the\n  // current geometry. This is because the area of the shader is unspecified\n  // and usually bigger than the current geometry, so if we don't fill pixels\n  // outside with transparency, the texture will leak out.\n  //\n  // When stretching, this is not an issue because the area outside will\n  // correspond to client-side decoration shadows, which are already supposed\n  // to be outside.\n  if (can_crop_by_x && (coords_curr_geo.x < 0.0 || 1.0 < coords_curr_geo.x))\n      color = vec4(0.0);\n  if (can_crop_by_y && (coords_curr_geo.y < 0.0 || 1.0 < coords_curr_geo.y))\n      color = vec4(0.0);\n\n  return color;\n}\n"; }; }
     '';
