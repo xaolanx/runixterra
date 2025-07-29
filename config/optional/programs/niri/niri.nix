@@ -76,6 +76,7 @@ in {
                 proportion 1.000000
             }
             center-focused-column "never"
+            background-color "transparent"
         }
         cursor {
             xcursor-theme "Kokomi_Cursor"
