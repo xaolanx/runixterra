@@ -115,9 +115,9 @@
       },
       "branch": "spec-0.11",
       "submodules": false,
-      "revision": "5a775c6ffd6e6125947b393872cde95867d85a2a",
-      "url": "https://github.com/tinted-theming/schemes/archive/5a775c6ffd6e6125947b393872cde95867d85a2a.tar.gz",
-      "hash": "09niwd8wc1a7z1s1r554q58h05i15vbxvppngnv1cd853afq33rc"
+      "revision": "c279b1efcd28f05109236fa66b6e153bda3148ff",
+      "url": "https://github.com/tinted-theming/schemes/archive/c279b1efcd28f05109236fa66b6e153bda3148ff.tar.gz",
+      "hash": "07jpxpgplzgf30g3vpg7jldm1x35y6gi2nrqgw0kkwrwjmxyvx1n"
     },
     "zaphkiel": {
       "type": "Git",
@@ -128,9 +128,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "be4c864fbe4abab224dc4252737d5975f0ae9bf3",
-      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/be4c864fbe4abab224dc4252737d5975f0ae9bf3.tar.gz",
-      "hash": "1vjldq58zlcr73p72q706c6hn3292a41czglncfjpjzg46n014dx"
+      "revision": "e35c986576bf83196355ac7c2827eb154fa41d7b",
+      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/e35c986576bf83196355ac7c2827eb154fa41d7b.tar.gz",
+      "hash": "0zfh7ckn821r34bj7z6yw08mcbwr017k62aab3qs04fzlshgya5k"
     }
   },
   "version": 5
