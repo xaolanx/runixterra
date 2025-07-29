@@ -47,7 +47,6 @@
     ../config/optional/programs/media.nix
     ../config/optional/programs/misc.nix
     ../config/optional/programs/pcmanfm.nix
-    ../config/optional/programs/quickshell.nix
     ../config/optional/programs/xdg.nix
 
     ../config/optional/services/documentation.nix
@@ -62,13 +61,13 @@
     ../config/optional/theming
   ];
 
-  hyprland = [
+  wm = [
     ../config/optional/services/brightness.nix
 
-    ../config/optional/programs/hypr
     ../config/optional/programs/walker
     ../config/optional/programs/swaybg.nix
     ../config/optional/programs/wlogout.nix
+    ../config/optional/programs/quickshell.nix
 
     ../config/optional/services/gammastep.nix
     ../config/optional/services/gnome.nix
@@ -80,6 +79,13 @@
   niri = [
     ../config/optional/programs/niri.nix
     ../config/optional/programs/uwsm.nix
+    ../config/optional/programs/noctalia.nix
+    ../config/optional/programs/hypr/idle.nix
+  ];
+
+  hyprland = [
+    ../config/optional/programs/hypr
+    ../config/optional/programs/kurukurubar.nix
   ];
 in {
   flake.nixosConfigurations = {
@@ -89,7 +95,7 @@ in {
         base
         ++ workstation
         ++ hyprland
-        ++ niri
+        ++ wm
         ++ [
           ./ionia
           ../config/optional/programs/games.nix
@@ -101,7 +107,7 @@ in {
       modules =
         base
         ++ workstation
-        ++ hyprland
+        ++ wm
         ++ niri
         ++ [
           ./yunara

@@ -26,6 +26,7 @@
           resources
           simple-scan
           wl-clipboard
+          cliphist
           telegram-desktop
           ;
       };
