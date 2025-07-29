@@ -1,4 +1,6 @@
-{...}: {
+{config, ...}: let
+  styleCfg = config.local.style;
+in {
   programs.niri = {
     enable = true;
   };
@@ -50,8 +52,8 @@
           focus-ring { off; }
           border {
               width 2
-              active-color "#c4a7e7"
-              inactive-color "#6e6a86"
+              active-color "#${styleCfg.colors.scheme.base0D}"
+              inactive-color "#${styleCfg.colors.scheme.base03}"
           }
           default-column-width { proportion 0.500000; }
           preset-column-widths {
