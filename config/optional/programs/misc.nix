@@ -2,9 +2,7 @@
   pkgs,
   self',
   ...
-}: let
-  inherit (builtins) toJSON;
-in {
+}: {
   config = {
     hj = {
       packages = builtins.attrValues {
@@ -21,7 +19,6 @@ in {
           entr
           fastfetch
           fzf
-          hyfetch
           obsidian
           playerctl
           proton-pass
@@ -31,15 +28,6 @@ in {
           wl-clipboard
           telegram-desktop
           ;
-      };
-
-      files = {
-        ".config/hyfetch.json".text = toJSON {
-          preset = "nonbinary";
-          mode = "rgb";
-          backend = "fastfetch";
-          color_align.mode = "horizontal";
-        };
       };
     };
   };

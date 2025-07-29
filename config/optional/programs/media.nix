@@ -4,7 +4,6 @@
       inherit
         (pkgs)
         spotify
-        stremio
         tidal-hifi
         celluloid
         gthumb
