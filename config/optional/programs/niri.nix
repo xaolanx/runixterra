@@ -164,8 +164,8 @@ in {
             XF86AudioPrev { spawn "playerctl" "previous"; }
             XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+"; }
             XF86AudioStop { spawn "playerctl" "pause"; }
-            XF86MonBrightnessDown { spawn "brightnessctl" "s" "5%-"; }
-            XF86MonBrightnessUp { spawn "brightnessctl" "s" "5%+"; }
+            XF86MonBrightnessUp { spawn "brillo" "-q" "-u" "300000" "-A" "5"; }
+            XF86MonBrightnessDown { spawn "brillo" "-q" "-u" "300000" "-U" "5"; }
         }
         spawn-at-startup "noctalia"
         spawn-at-startup "xwayland-satellite"
