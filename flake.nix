@@ -34,6 +34,9 @@
       inputs = {
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
+        # stop agenix from importing home-manager and darwin
+        home-manager.follows = "";
+        darwin.follows = "";
       };
     };
 
@@ -57,7 +60,11 @@
 
     hjem-rum = {
       url = "github:snugnug/hjem-rum";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        hjem.follows = "hjem";
+        treefmt-nix.follows = "treefmt-nix";
+      };
     };
 
     hyprland.url = "github:hyprwm/Hyprland";
