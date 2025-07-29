@@ -44,7 +44,7 @@
 in
   symlinkJoin {
     pname = "noctalia";
-    version = quickshell.version;
+    version = "v1.0.4";
 
     paths = [quickshell gpu-screen-recorder cava];
     nativeBuildInputs = [makeWrapper];
