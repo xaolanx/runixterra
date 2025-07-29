@@ -112,6 +112,7 @@
           Mod+Minus { set-column-width "-10%"; }
           Mod+Print { screenshot-window; }
           Mod+Q { close-window; }
+          Mod+Shift+E { spawn "wlogout"; }
           Mod+R { switch-preset-column-width; }
           Mod+Return { spawn "uwsm" "app" "--" "foot"; }
           Mod+Right { focus-column-right; }
