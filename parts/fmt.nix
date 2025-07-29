@@ -13,7 +13,7 @@
       };
 
       settings = {
-        formatter.deno.excludes = ["*.css"];
+        formatter.deno.excludes = ["*.css" "*.js"];
       };
     };
   };

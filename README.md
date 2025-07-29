@@ -37,6 +37,7 @@ People / repositories I have copied / learned from:
 - [nezia1/flocon](https://github.com/nezia1/flocon) i'm using this as base
   configuration
 - [Rexcrazy804](https://github.com/Rexcrazy804) the great kurkurubar creator
+- [Ly-sec/noctalia](https://github.com/Ly-sec/noctalia) amazing shell for niri
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles) for the configuration
   structure
 - [Lunarnovaa](https://github.com/Lunarnovaa) for her

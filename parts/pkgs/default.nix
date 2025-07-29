@@ -19,6 +19,11 @@ _: {
           configPath = ./../../assets/kurukurubar;
           quickshell = quickshellPkg;
         };
+
+        noctalia = basePackages.noctalia.override {
+          configPath = ./../../assets/noctalia;
+          quickshell = quickshellPkg;
+        };
       };
   };
 }

@@ -76,6 +76,11 @@
     ../config/optional/services/logind.nix
     ../config/optional/services/power.nix
   ];
+
+  niri = [
+    ../config/optional/programs/niri.nix
+    ../config/optional/programs/uwsm.nix
+  ];
 in {
   flake.nixosConfigurations = {
     ionia = mkNixosSystem {
@@ -84,10 +89,10 @@ in {
         base
         ++ workstation
         ++ hyprland
+        ++ niri
         ++ [
           ./ionia
           ../config/optional/programs/games.nix
-          inputs.nixos-hardware.nixosModules.framework-13-7040-amd
         ];
     };
 
@@ -97,6 +102,7 @@ in {
         base
         ++ workstation
         ++ hyprland
+        ++ niri
         ++ [
           ./yunara
           ../config/optional/programs/games.nix
