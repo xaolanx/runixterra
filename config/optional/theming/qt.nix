@@ -1,22 +1,10 @@
 {
-  pkgs,
   config,
   self,
-  pins,
+  self',
   ...
 }: let
-  kvantumTheme = pkgs.gruvbox-kvantum.overrideAttrs {
-    pname = "gruvbox-kvantum";
-    version = "0-unstable-${pins.gruvbox-kvantum.revision}";
-    src = pins.gruvbox-kvantum;
-
-    installPhase = ''
-      runHook preInstall
-      mkdir -p $out/share/Kvantum
-      cp -a Gruvbox* $out/share/Kvantum
-      runHook postInstall
-    '';
-  };
+  kvantumTheme = self'.packages.kvlibadwaita;
 
   qtctConf = {
     Appearance = {
@@ -60,7 +48,7 @@ in {
       kvantum = {
         enable = true;
         theme = {
-          name = "Gruvbox-Dark-Green";
+          name = "KvLibadwaita";
           package = kvantumTheme;
         };
       };

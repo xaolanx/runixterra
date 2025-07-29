@@ -93,6 +93,19 @@
       "url": "https://github.com/muratoffalex/kanagawa-lotus.yazi/archive/d84d61a0b19de7b13faf9f2f27e2a1070de0790e.tar.gz",
       "hash": "1r1irbfij4sfkcpjadia7712qzdh57l0lfy1zz1m2km9f9labn5q"
     },
+    "kvlibadwaita": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "MOIS3Y",
+        "repo": "kvlibadwaita"
+      },
+      "branch": "gradience",
+      "submodules": false,
+      "revision": "856ed01f26348d0f8a054b05c34c40f43a7bfbd4",
+      "url": "https://github.com/MOIS3Y/kvlibadwaita/archive/856ed01f26348d0f8a054b05c34c40f43a7bfbd4.tar.gz",
+      "hash": "09m8abhrrbwv3xqdqhpsqshpwmf7wnjgqb4c02bfq0zbykziy5hs"
+    },
     "tinted-terminal": {
       "type": "Git",
       "repository": {
