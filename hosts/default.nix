@@ -77,15 +77,12 @@
   ];
 
   niri = [
-    ../config/optional/programs/niri.nix
+    ../config/optional/programs/niri
     ../config/optional/programs/uwsm.nix
-    ../config/optional/programs/noctalia.nix
-    ../config/optional/programs/hypr/idle.nix
   ];
 
   hyprland = [
     ../config/optional/programs/hypr
-    ../config/optional/programs/kurukurubar.nix
   ];
 in {
   flake.nixosConfigurations = {
