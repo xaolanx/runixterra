@@ -13,10 +13,8 @@
 in {
   imports = [
     inputs.hjem.nixosModules.default
-    inputs.home-manager.nixosModules.default
     # avoid boilerplate in the configuration
     (mkAliasOptionModule ["hj"] ["hjem" "users" username])
-    (mkAliasOptionModule ["hm"] ["home-manager" "users" username])
   ];
 
   users.users.${username} = {
@@ -45,13 +43,5 @@ in {
     };
 
     linker = inputs'.hjem.packages.smfh;
-  };
-
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    users.${username} = {
-      home.stateVersion = "25.05";
-    };
   };
 }

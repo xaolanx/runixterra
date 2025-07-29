@@ -5,18 +5,6 @@
 }: let
   inherit (config.local.vars.system) username;
 in {
-  # TODO: switch to hjem when implemented
-  hm.xdg = {
-    userDirs = {
-      enable = true;
-      createDirectories = true;
-      desktop = "${config.hj.directory}/Desktop";
-      documents = "${config.hj.directory}/Documents";
-      music = "${config.hj.directory}/Music";
-      pictures = "${config.hj.directory}/Pictures";
-      videos = "${config.hj.directory}/Videos";
-    };
-  };
   hj.environment.sessionVariables = {
     XDG_SCREENSHOTS_DIR = "/home/${username}/Pictures/Screenshots";
   };

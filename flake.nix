@@ -32,7 +32,6 @@
     agenix = {
       url = "github:ryantm/agenix";
       inputs = {
-        home-manager.follows = "home-manager";
         nixpkgs.follows = "nixpkgs";
         systems.follows = "systems";
       };
@@ -58,11 +57,6 @@
 
     hjem-rum = {
       url = "github:snugnug/hjem-rum";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
