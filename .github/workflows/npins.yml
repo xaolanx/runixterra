@@ -9,7 +9,7 @@ on:
         default: "false"
   schedule:
     - cron: "0 5 * * 0" # Sunday
-    - cron: "0 5 * * 1-6" # Monday–Saturday
+    # - cron: "0 5 * * 1-6" # Monday–Saturday
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -35,21 +35,6 @@ jobs:
       - name: Install npins
         #run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
         run: nix profile add nixpkgs#npins
-
-      - name: Nightly npins update
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 5 * * 1-6')
-        id: nightly
-        uses: getchoo/update-npins@v0.1.2
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          commit-message: "chore(lockfile): nightly update"
-          npins-directory: "./parts/npins"
-          pr-branch: "npins-nightly"
-          pr-target: "rum"
-          pr-labels: |
-            dependencies
-            automated
-            nightly
 
       - name: Weekly npins update
         if: github.event_name == 'schedule' && github.event.schedule == '0 5 * * 0'

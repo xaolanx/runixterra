@@ -9,7 +9,7 @@ on:
         default: "false"
   schedule:
     - cron: "0 0 * * 0" # Sunday
-    - cron: "0 0 * * 1-6" # Monday–Saturday
+    # - cron: "0 0 * * 1-6" # Mon-Sat
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -42,23 +42,23 @@ jobs:
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
 
-      - name: Nightly flake.lock update
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
-        id: nightly
-        uses: DeterminateSystems/update-flake-lock@v27
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          branch: nightly-update
-          git-author-name: "xaolanx"
-          git-author-email: "ah0199004@gmail.com"
-          git-committer-name: "xaolanx"
-          git-committer-email: "ah0199004@gmail.com"
-          commit-msg: "chore(lockfile): nightly update"
-          pr-title: "chore(lockfile): nightly update"
-          pr-labels: |
-            dependencies
-            automated
-            nightly
+      # - name: Nightly flake.lock update
+      #   if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
+      #   id: nightly
+      #   uses: DeterminateSystems/update-flake-lock@v27
+      #   with:
+      #     token: ${{ secrets.GH_TOKEN }}
+      #     branch: nightly-update
+      #     git-author-name: "xaolanx"
+      #     git-author-email: "ah0199004@gmail.com"
+      #     git-committer-name: "xaolanx"
+      #     git-committer-email: "ah0199004@gmail.com"
+      #     commit-msg: "chore(lockfile): nightly update"
+      #     pr-title: "chore(lockfile): nightly update"
+      #     pr-labels: |
+      #       dependencies
+      #       automated
+      #       nightly
 
       - name: Weekly flake.lock update
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
