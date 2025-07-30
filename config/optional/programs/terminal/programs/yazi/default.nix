@@ -24,7 +24,7 @@
     };
 
     flavors = {
-      ayu-dark = pins.ayu-yazi;
+      everforest-medium = pins.everforest-yazi;
       kanagawa-lotus = pins.kanagawa-lotus-yazi;
     };
 
@@ -38,7 +38,7 @@
 
     settings.theme = {
       flavor = {
-        dark = "ayu-dark";
+        dark = "everforest-medium";
         light = "kanagwa-lotus";
       };
     };

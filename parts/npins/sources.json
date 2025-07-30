@@ -52,6 +52,19 @@
       "url": "https://github.com/ralsina/base16-zellij/archive/943eedbbcdfd6764267332d713ff4ca2de6f3d66.tar.gz",
       "hash": "17gcv3z621sqhqvzxhvlx86x5wy9l14dgfh0n7x7262js7hsl1is"
     },
+    "everforest-yazi": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Chromium-3-Oxide",
+        "repo": "everforest-medium.yazi"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "0158f0f6ce19c9bbc37550a7bed77d67b3fa4e7d",
+      "url": "https://github.com/Chromium-3-Oxide/everforest-medium.yazi/archive/0158f0f6ce19c9bbc37550a7bed77d67b3fa4e7d.tar.gz",
+      "hash": "02a437xiy6dqmp9minx9d9lh948kmdkvgs7fi9rn8l577pabd1rs"
+    },
     "foot": {
       "type": "Git",
       "repository": {
