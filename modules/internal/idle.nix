@@ -18,11 +18,11 @@
     {
       timeout = 330;
       on-timeout =
-        if config.programs.niri.enable
+        if (config.programs.niri.enable or false)
         then "niri msg action power-off-monitors"
         else "hyprctl dispatch dpms off";
       on-resume =
-        if config.programs.niri.enable
+        if (config.programs.niri.enable or false)
         then "niri msg action power-on-monitors"
         else "hyprctl dispatch dpms on";
     }
@@ -34,7 +34,7 @@
 
   # Conditional general config
   generalSettings =
-    if config.programs.niri.enable
+    if (config.programs.niri.enable or false)
     then {
       lock_cmd = "noctalia ipc call globalIPC toggleLock";
       before_sleep_cmd = "loginctl lock-session";
