@@ -23,7 +23,7 @@ in {
       description = ''
         Name of the tinted-theming color scheme to use.
       '';
-      default = "catppuccin-mocha";
+      default = "woodland";
       example = "";
     };
     system = mkOption {

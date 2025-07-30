@@ -53,6 +53,7 @@ in
       "tokyodark"
       "tokyonight"
       "yoru"
+      "woodland"
     ] [theme]
     stdenvNoCC.mkDerivation rec {
       inherit pname;
@@ -67,7 +68,7 @@ in
         patchShebangs kvctl.sh
 
         substituteInPlace kvctl.sh \
-          --replace '$HOME/.config/Kvantum' $out/share/Kvantum
+            --replace-warn '$HOME/.config/Kvantum' $out/share/Kvantum
       '';
 
       installPhase = ''
@@ -91,6 +92,6 @@ in
         '';
         homepage = "https://github.com/GabePoel/KvLibadwaita";
         license = lib.licenses.gpl3;
-        maintainers = with maintainers; [MOIS3Y];
+        maintainers = with maintainers; [];
       };
     }

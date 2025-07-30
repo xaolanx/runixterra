@@ -97,14 +97,14 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "MOIS3Y",
-        "repo": "kvlibadwaita"
+        "owner": "xaolanx",
+        "repo": "KvLibadwaita"
       },
       "branch": "gradience",
       "submodules": false,
-      "revision": "856ed01f26348d0f8a054b05c34c40f43a7bfbd4",
-      "url": "https://github.com/MOIS3Y/kvlibadwaita/archive/856ed01f26348d0f8a054b05c34c40f43a7bfbd4.tar.gz",
-      "hash": "09m8abhrrbwv3xqdqhpsqshpwmf7wnjgqb4c02bfq0zbykziy5hs"
+      "revision": "eade51d94c55e55db602bba1e8624085b2855901",
+      "url": "https://github.com/xaolanx/KvLibadwaita/archive/eade51d94c55e55db602bba1e8624085b2855901.tar.gz",
+      "hash": "0xjr18dwrxk6yv9an9lhz14y5dg5xsygzjmk7s3pyp37awxpka2r"
     },
     "tinted-terminal": {
       "type": "Git",

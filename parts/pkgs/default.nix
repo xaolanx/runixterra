@@ -27,7 +27,7 @@ _: {
         };
         kvlibadwaita = basePackages.kvlibadwaita.override {
           src = (pins.kvlibadwaita) + "/";
-          theme = "ayu_dark";
+          theme = "woodland";
         };
       };
   };

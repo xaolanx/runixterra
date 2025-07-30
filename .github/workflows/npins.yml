@@ -9,7 +9,7 @@ on:
         default: "false"
   schedule:
     - cron: "0 5 * * 0" # Sunday
-    # - cron: "0 5 * * 1-6" # Monday–Saturday
+# - cron: "0 5 * * 1-6" # Monday–Saturday
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
