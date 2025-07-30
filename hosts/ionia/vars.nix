@@ -2,7 +2,7 @@ _: {
   local = {
     vars = {
       system = {
-        hostName = "yunara";
+        hostName = "ionia";
         username = "xaolan";
       };
 
