@@ -92,6 +92,12 @@ in {
             "QT_QPA_PLATFORM" "wayland;xcb"
             "QT_WAYLAND_DISABLE_WINDOWDECORATION" "1"
             "SDL_VIDEODRIVER" "wayland"
+            "LIBVA_DRIVER_NAME" = "iHD"
+            "LIBVA_DRIVERS_PATH" = "${pkgs.intel-media-driver}/lib/dri"
+            "VKD_ICD_FILENAMES" = "/run/opengl-driver/share/vulkan/icd.d/intel_icd/x86_64.json"
+            "OCL_ICD_VENDORS" = "${pkgs.intel-compute-runtime-legacy1}/etc/OpenCL/vendors"
+            "ANV_DEBUG" = "video-decode"
+            "ANV_VIDEO_DECODE" = "1"
             TERM "foot"
             TERMINAL "foot"
         }
