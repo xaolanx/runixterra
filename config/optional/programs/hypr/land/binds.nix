@@ -14,7 +14,7 @@ in {
       "$mod, SUPER_L, exec, ${toggle "walker" false}"
     ];
     bind = [
-      "$mod, Return, exec, ${run "footclient"}"
+      "$mod, Return, exec, ${run "foot"}"
       "$mod, w, exec, ${run "librewolf"}"
       ", Print, exec, ${runOnce "grimblast"} --notify copysave output"
       "$mod, q, killactive"

@@ -2,6 +2,7 @@
   inputs,
   lib,
   config,
+  pkgs,
   inputs',
   self,
   ...
@@ -20,6 +21,7 @@ in {
   users.users.${username} = {
     isNormalUser = true;
     description = fullName;
+    shell = pkgs.fish;
     extraGroups = [
       "networkmanager"
       "audio"
