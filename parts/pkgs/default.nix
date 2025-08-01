@@ -16,10 +16,10 @@ _: {
     packages =
       basePackages
       // {
-        kurukurubar = basePackages.kurukurubar.override {
-          configPath = ./../../assets/kurukurubar;
-          quickshell = quickshellPkg;
-        };
+        # kurukurubar = basePackages.kurukurubar.override {
+        #   configPath = ./../../assets/kurukurubar;
+        #   quickshell = quickshellPkg;
+        # };
 
         noctalia = basePackages.noctalia.override {
           configPath = ./../../assets/noctalia;

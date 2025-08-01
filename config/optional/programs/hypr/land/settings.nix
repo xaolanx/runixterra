@@ -56,7 +56,8 @@ in {
 
           exec-once = [
             "${pkgs.xorg.xrandr}/bin/xrandr --output 'DP-1' --primary"
-            "kurukurubar"
+            # "kurukurubar"
+            "uwsm app noctalia"
             "uwsm app -t service kdeconnectd"
             "uwsm app kdeconnect-indicator"
           ];

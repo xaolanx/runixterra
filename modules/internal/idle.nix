@@ -41,7 +41,7 @@
       after_sleep_cmd = "niri msg action power-on-monitors";
     }
     else {
-      lock_cmd = "kurukurubar ipc call lockscreen lock";
+      lock_cmd = "noctalia ipc call globalIPC toggleLock";
       before_sleep_cmd = "loginctl lock-session";
       after_sleep_cmd = "hyprctl dispatch dpms on";
     };
