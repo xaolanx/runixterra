@@ -15,13 +15,13 @@
   fetchpatch,
 }:
 stdenv.mkDerivation rec {
-  pname = "intel-media-sdk";
-  version = "23.2.2";
+  pname = "intel-media-sdk-drv";
+  version = "23.2.2-1";
 
   src = fetchFromGitHub {
     owner = "Intel-Media-SDK";
     repo = "MediaSDK";
-    rev = "intel-mediasdk-${version}";
+    rev = "intel-mediasdk-23.2.2";
     hash = "sha256-wno3a/ZSKvgHvZiiJ0Gq9GlrEbfHCizkrSiHD6k/Loo=";
   };
 
@@ -62,7 +62,7 @@ stdenv.mkDerivation rec {
 
   env.NIX_CFLAGS_COMPILE = "-std=c++17";
 
-  doCheck = false;
+  doCheck = true;
 
   meta = with lib; {
     description = "Intel Media SDK";

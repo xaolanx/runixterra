@@ -11,7 +11,7 @@
     pkgs.intel-compute-runtime-legacy1
     pkgs.libva
     pkgs.vulkan-tools
-    self'.packages.intel-media-sdk
+    self'.packages.intel-media-sdk-drv
   ];
   hj.environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
