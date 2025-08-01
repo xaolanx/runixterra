@@ -7,10 +7,7 @@
     pkgs.intel-compute-runtime-legacy1
     pkgs.libva
     pkgs.vulkan-tools
-    (pkgs.intel-media-sdk.overrideAttrs (old: {
-      cmakeFlags = old.cmakeFlags ++ ["-DCMAKE_CXX_STANDARD=17"];
-      NIX_CFLAGS_COMPILE = "-std=c++17";
-    }))
+    pkgs.intel-media-sdk
   ];
   hj.environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";

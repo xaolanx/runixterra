@@ -43,6 +43,10 @@ in {
     '';
   };
 
+  nixpkgs.overlays = [
+    (import ./overlays/intel-media-sdk-override.nix)
+  ];
+
   nixpkgs = {
     config = {
       allowUnfree = true;
