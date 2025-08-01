@@ -50,9 +50,13 @@ in {
         hdr-contrast-recovery=0.300000
         hdr-peak-percentile=99.995000
         hls-bitrate=max
-        hwdec=vulkan
+        # hwdec=vulkan
+        # gpu-context=waylandvk
+        # gpu-api=vulkan
+        hwdec=vaapi
+        gpu-context=wayland
+        gpu-api=opengl
         hwdec-codecs=all
-        gpu-context=waylandvk
         keep-open=yes
         msg-color=yes
         msg-module=yes
