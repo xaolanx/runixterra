@@ -26,10 +26,7 @@ stdenv.mkDerivation rec {
   };
 
   patches = [
-    # Search oneVPL-intel-gpu in NixOS specific /run/opengl-driver/lib directory
-    # See https://github.com/NixOS/nixpkgs/pull/315425
     ./nixos-search-onevplrt-in-run-opengl-driver-lib.patch
-    # https://github.com/Intel-Media-SDK/MediaSDK/pull/3005
     (fetchpatch {
       name = "include-cstdint-explicitly.patch";
       url = "https://github.com/Intel-Media-SDK/MediaSDK/commit/a4f37707c1bfdd5612d3de4623ffb2d21e8c1356.patch";
@@ -63,16 +60,15 @@ stdenv.mkDerivation rec {
     "-DCMAKE_CXX_STANDARD=17"
   ];
 
+  env.NIX_CFLAGS_COMPILE = "-std=c++17";
+
   doCheck = true;
 
   meta = with lib; {
     description = "Intel Media SDK";
     mainProgram = "mfx-tracer-config";
     license = licenses.mit;
-    maintainers = with maintainers; [
-      midchildan
-      pjungkamp
-    ];
+    maintainers = with maintainers; [midchildan pjungkamp];
     platforms = ["x86_64-linux"];
   };
 }
