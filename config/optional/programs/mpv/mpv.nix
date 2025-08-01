@@ -11,13 +11,12 @@ in {
         ffmpeg = pkgs.ffmpeg.override {
           ffmpegVariant = "full";
           withMfx = true;
+          withVpl = false;
           withCuda = false;
           withCudaLLVM = false;
           withUnfree = true;
         };
       };
-    }).override
-    {
       scripts = with pkgs.mpvScripts; [
         uosc
         mpris
@@ -26,7 +25,7 @@ in {
         autoload
         smart-copy-paste-2
       ];
-    }
+    })
   ];
 
   hj = {
