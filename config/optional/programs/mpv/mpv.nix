@@ -5,9 +5,9 @@
 }: let
   shaderFolder = ./shaders;
 in {
-  hj = {
-    packages = [
-      (pkgs.mpv.override {
+  environment.systemPackages = [
+    (pkgs.mpv-unwrapped.wrapper {
+      mpv = pkgs.mpv-unwrapped.override {
         ffmpeg = pkgs.ffmpeg.override {
           ffmpegVariant = "full";
           withMfx = true;
@@ -15,16 +15,21 @@ in {
           withCudaLLVM = false;
           withUnfree = true;
         };
-        scripts = with pkgs.mpvScripts; [
-          uosc
-          mpris
-          thumbfast
-          sponsorblock
-          autoload
-          smart-copy-paste-2
-        ];
-      })
-    ];
+      };
+    }).override
+    {
+      scripts = with pkgs.mpvScripts; [
+        uosc
+        mpris
+        thumbfast
+        sponsorblock
+        autoload
+        smart-copy-paste-2
+      ];
+    }
+  ];
+
+  hj = {
     files = {
       ".config/mpv/mpv.conf".text = ''
         profile=fast
