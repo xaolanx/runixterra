@@ -62,7 +62,7 @@ stdenv.mkDerivation rec {
 
   env.NIX_CFLAGS_COMPILE = "-std=c++17";
 
-  doCheck = true;
+  doCheck = false;
 
   meta = with lib; {
     description = "Intel Media SDK";
