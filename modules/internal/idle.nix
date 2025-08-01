@@ -66,6 +66,7 @@ in {
     hj.files.".config/hypr/hypridle.conf".text = hypridleConf;
 
     systemd.user.services.hypridle = {
+      enable = true;
       after = ["graphical-session.target"];
       description = "Hyprland's Idle Daemon";
 

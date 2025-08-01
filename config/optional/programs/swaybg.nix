@@ -14,6 +14,7 @@
 in {
   systemd.user.services = {
     swaybg = {
+      enable = true;
       description = "swaybg service";
       partOf = ["graphical-session.target"];
       after = ["graphical-session.target"];

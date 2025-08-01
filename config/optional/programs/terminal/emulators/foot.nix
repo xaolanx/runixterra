@@ -61,6 +61,7 @@ in {
     };
 
     systemd.user.services.foot-server = {
+      enable = true;
       name = "foot-server";
       description = "foot terminal service";
       partOf = ["graphical-session.target"];
