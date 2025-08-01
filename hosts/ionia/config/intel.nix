@@ -1,8 +1,4 @@
-{
-  pkgs,
-  self',
-  ...
-}: {
+{pkgs, ...}: {
   hardware.graphics.enable = true;
   hardware.graphics.extraPackages = [
     pkgs.intel-media-driver
@@ -11,7 +7,10 @@
     pkgs.intel-compute-runtime-legacy1
     pkgs.libva
     pkgs.vulkan-tools
-    self'.packages.intel-media-sdk-drv
+    (pkgs.intel-media-sdk.overrideAttrs (old: {
+      cmakeFlags = old.cmakeFlags ++ ["-DCMAKE_CXX_STANDARD=17"];
+      NIX_CFLAGS_COMPILE = "-std=c++17";
+    }))
   ];
   hj.environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
