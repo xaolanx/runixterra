@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  self',
+  ...
+}: {
   hardware.graphics.enable = true;
   hardware.graphics.extraPackages = [
     pkgs.intel-media-driver
@@ -7,6 +11,7 @@
     pkgs.intel-compute-runtime-legacy1
     pkgs.libva
     pkgs.vulkan-tools
+    self'.packages.intel-media-sdk
   ];
   hj.environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";

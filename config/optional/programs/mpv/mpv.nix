@@ -8,6 +8,13 @@ in {
   hj = {
     packages = [
       (pkgs.mpv.override {
+        ffmpeg = pkgs.ffmpeg.override {
+          ffmpegVariant = "full";
+          withMfx = true;
+          withCuda = false;
+          withCudaLLVM = false;
+          withUnfree = true;
+        };
         scripts = with pkgs.mpvScripts; [
           uosc
           mpris
