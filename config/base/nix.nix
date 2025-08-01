@@ -52,6 +52,7 @@ in {
         "segger-jlink-qt4-810"
         "olm-3.2.16"
         "libsoup-2.74.3"
+        "intel-media-sdk-23.2.2"
       ];
       segger-jlink.acceptLicense = true;
     };
