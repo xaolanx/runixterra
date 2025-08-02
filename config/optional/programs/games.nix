@@ -2,7 +2,6 @@
   hj = {
     packages = [
       pkgs.mangohud
-      pkgs.lutris
       pkgs.qbittorrent
     ];
   };
@@ -25,5 +24,5 @@
     coolercontrol.enable = true;
   };
 
-  services.hardware.openrgb.enable = true;
+  # services.hardware.openrgb.enable = true;
 }
