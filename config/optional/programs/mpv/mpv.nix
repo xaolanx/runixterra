@@ -4,7 +4,7 @@
   myLib,
   ...
 }: let
-  inherit (myLib.generators.toConf) toConf;
+  inherit (myLib.generators) toMpvConf;
   shaderFolder = ./shaders;
 in {
   environment.systemPackages = [
@@ -32,7 +32,7 @@ in {
 
   hj = {
     files = {
-      ".config/mpv/mpv.conf".text = toConf {
+      ".config/mpv/mpv.conf".text = toMpvConf {
         profile = "fast";
         alang = ["ind" "id" "jpn" "jp" "ko" "eng" "en" "enUS" "en-US"];
         audio-file-auto = "fuzzy";
@@ -98,7 +98,7 @@ in {
         };
       };
 
-      ".config/mpv/input.conf".text = toConf {
+      ".config/mpv/input.conf".text = toMpvConf {
         # Keybindings utama
         "CTRL+1" = ''no-osd change-list glsl-shaders set "${lib.concatStringsSep ":" [
             "${shaderFolder}/Anime4K_AutoDownscalePre_x2.glsl"
@@ -143,7 +143,7 @@ in {
         "CTRL+0" = ''no-osd change-list glsl-shaders clr ""; show-text "GLSL shaders cleared"'';
       };
 
-      ".config/mpv/script-opts/SmartCopyPaste_II.conf".text = toConf {
+      ".config/mpv/script-opts/SmartCopyPaste_II.conf".text = toMpvConf {
         linux_copy = "wl-copy";
         linux_paste = "wl-paste";
       };
