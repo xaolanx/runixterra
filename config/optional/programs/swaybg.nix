@@ -1,15 +1,12 @@
 {
-  lib,
   pkgs,
   config,
   ...
 }: let
-  inherit (lib.strings) concatStringsSep;
-
   inherit (pkgs) swaybg;
 
   swaybgStart = pkgs.writeShellScript "swaybg-start" ''
-    ${swaybg}/bin/swaybg -i "$(${pkgs.uutils-coreutils-noprefix}/bin/shuf -e ${concatStringsSep " " config.local.style.wallpapers} -n 1)"
+    ${swaybg}/bin/swaybg -i "${config.programs.matugen.wallpaper}"
   '';
 in {
   systemd.user.services = {
