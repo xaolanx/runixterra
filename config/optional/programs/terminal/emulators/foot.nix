@@ -6,16 +6,16 @@
   ...
 }: let
   inherit (lib.meta) getExe;
-  inherit (lib.modules) mkIf;
   inherit (lib.strings) concatStringsSep;
 
-  styleCfg = config.local.style;
+  # styleCfg = config.local.style;
+  c = config.programs.matugen.theme.colors.dark;
 
-  footTheme = styleCfg.colors.scheme {
-    templateRepo = pins.tinted-terminal;
-    target = "foot-${styleCfg.colors.scheme.system}";
-    use-ifd = "always";
-  };
+  # footTheme = styleCfg.colors.scheme {
+  #   templateRepo = pins.tinted-terminal;
+  #   target = "foot-${styleCfg.colors.scheme.system}";
+  #   use-ifd = "always";
+  # };
 
   foot = pkgs.foot.overrideAttrs {
     pname = "foot";
@@ -36,12 +36,31 @@ in {
             horizontal-letter-offset = 0;
             vertical-letter-offset = 0;
             pad = "4x4 center";
-            include = mkIf styleCfg.enable "${footTheme}";
           };
 
           colors = {
-            alpha = 0.8;
-            alpha-mode = "matching";
+            alpha = 1.0;
+            cursor = "${c.surface_variant} ${c.on_surface}";
+            background = c.surface;
+            foreground = c.on_surface;
+            regular0 = c.surface;
+            regular1 = c.red;
+            regular2 = c.green;
+            regular3 = c.yellow;
+            regular4 = c.blue;
+            regular5 = c.magenta;
+            regular6 = c.cyan;
+            regular7 = c.on_surface;
+            bright0 = c.surface_bright;
+            bright1 = c.brighter-red;
+            bright2 = c.brighter-green;
+            bright3 = c.brighter-yellow;
+            bright4 = c.brighter-blue;
+            bright5 = c.brighter-magenta;
+            bright6 = c.brighter-cyan;
+            bright7 = c.on_surface;
+            selection-foreground = c.primary;
+            selection-background = c.on_primary;
           };
 
           cursor = {

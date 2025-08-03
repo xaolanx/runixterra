@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  styleCfg = config.local.style;
+  c = config.programs.matugen.theme.colors.dark;
 in {
   programs.niri = {
     enable = true;
@@ -65,8 +65,8 @@ in {
             focus-ring { off; }
             border {
                 width 2
-                active-color "#${styleCfg.colors.scheme.base0D}"
-                inactive-color "#${styleCfg.colors.scheme.base03}"
+                active-color "#${c.primary}"
+                inactive-color "#${c.outline_variant}"
             }
             default-column-width { proportion 0.500000; }
             preset-column-widths {

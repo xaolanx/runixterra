@@ -23,6 +23,7 @@
     ];
 
   styleCfg = config.local.style;
+  c = config.programs.matugen.theme.colors.dark;
 in {
   programs.hyprland = {
     enable = true;
@@ -250,8 +251,8 @@ in {
             gaps_in = 4;
             gaps_out = 8;
             border_size = 4;
-            "col.active_border" = "rgb(${styleCfg.colors.scheme.base0D})";
-            "col.inactive_border" = "rgb(${styleCfg.colors.scheme.base03})";
+            "col.active_border" = "rgb(${c.primary})";
+            "col.inactive_border" = "rgb(${c.outline_variant})";
           };
           decoration = {
             rounding = 10;

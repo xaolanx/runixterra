@@ -9,20 +9,19 @@
   inherit (builtins) pathExists toString;
   inherit (lib.modules) mkIf;
   inherit (lib.options) mkEnableOption mkOption mkPackageOption;
-  inherit (lib.types) listOf bool path str;
+  inherit (lib.types) bool path str;
 
   cfg = config.local.style;
 in {
   options.local.style = {
     enable = mkEnableOption "style";
-    wallpapers = mkOption {
+    wallpaper = lib.mkOption {
       description = ''
-        Location of the wallpaper that will be used throughout the system.
+        Location of the wallpaper to use throughout the system.
       '';
-      type = listOf path;
-      example = lib.literalExpression "./wallpaper.png";
+      type = lib.types.path;
+      example = lib.literalExample "./wallpaper.png";
     };
-
     cursors = {
       size = mkOption {
         description = ''
