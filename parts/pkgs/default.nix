@@ -3,10 +3,14 @@ _: {
     pkgs,
     lib,
     inputs',
+    self',
     pins,
     ...
   }: let
     quickshellPkg = inputs'.quickshell.packages.default;
+    cli = self'.packages.caelestia-cli;
+    shell = self'.packages.caelestia-shell;
+    app2unitPkg = self'.packages.app2unit;
 
     basePackages = lib.packagesFromDirectoryRecursive {
       inherit (pkgs) callPackage;
@@ -26,8 +30,21 @@ _: {
           quickshell = quickshellPkg;
         };
         kvlibadwaita = basePackages.kvlibadwaita.override {
-          src = (pins.kvlibadwaita) + "/";
+          src = pins.kvlibadwaita;
           theme = "woodland";
+        };
+        caelestia-shell = basePackages.caelestia-shell.override {
+          caelestia-cli = cli;
+          app2unit = app2unitPkg;
+          quickshell = quickshellPkg;
+          withCli = false;
+          src = pins.caelestia-shell;
+        };
+        caelestia-cli = basePackages.caelestia-cli.override {
+          caelestia-shell = shell;
+          app2unit = app2unitPkg;
+          withShell = true;
+          src = pins.caelestia-cli;
         };
       };
   };
