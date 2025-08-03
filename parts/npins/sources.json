@@ -52,6 +52,32 @@
       "url": "https://github.com/ralsina/base16-zellij/archive/943eedbbcdfd6764267332d713ff4ca2de6f3d66.tar.gz",
       "hash": "17gcv3z621sqhqvzxhvlx86x5wy9l14dgfh0n7x7262js7hsl1is"
     },
+    "caelestia-cli": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "caelestia-dots",
+        "repo": "cli"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "2bde2ddfbf56277fbf93af96fe3a88cb042b6696",
+      "url": "https://github.com/caelestia-dots/cli/archive/2bde2ddfbf56277fbf93af96fe3a88cb042b6696.tar.gz",
+      "hash": "0hgz3nambk2gynsy1y5gqxqqsv64mnb6i0akyx4qgj3a3br88yjn"
+    },
+    "caelestia-shell": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "caelestia-dots",
+        "repo": "shell"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "18058407181e0f4114a4ef49a1796884c5661969",
+      "url": "https://github.com/caelestia-dots/shell/archive/18058407181e0f4114a4ef49a1796884c5661969.tar.gz",
+      "hash": "1nq0zbzlnn0l0jlzybq01a2ygzfib8kk8wyajs2nj5wwwjwssy6m"
+    },
     "everforest-yazi": {
       "type": "Git",
       "repository": {
