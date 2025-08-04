@@ -9,7 +9,6 @@
   inherit (lib.strings) concatStringsSep;
 
   # styleCfg = config.local.style;
-  c = config.programs.matugen.theme.colors.dark;
 
   # footTheme = styleCfg.colors.scheme {
   #   templateRepo = pins.tinted-terminal;
@@ -36,31 +35,7 @@ in {
             horizontal-letter-offset = 0;
             vertical-letter-offset = 0;
             pad = "4x4 center";
-          };
-
-          colors = {
-            alpha = 1.0;
-            cursor = "${c.surface_variant} ${c.on_surface}";
-            background = c.surface;
-            foreground = c.on_surface;
-            regular0 = c.surface;
-            regular1 = c.error;
-            regular2 = c.tertiary_fixed_dim;
-            regular3 = c.secondary_fixed_dim;
-            regular4 = c.blue;
-            regular5 = c.magenta;
-            regular6 = c.primary_fixed_dim;
-            regular7 = c.on_surface;
-            bright0 = c.surface_bright;
-            bright1 = c.on_error_container;
-            bright2 = c.tertiary;
-            bright3 = c.secondary;
-            bright4 = c.brighter-blue;
-            bright5 = c.brighter-magenta;
-            bright6 = c.primary;
-            bright7 = c.on_surface;
-            selection-foreground = c.primary;
-            selection-background = c.on_primary;
+            include = "~/.config/foot/caelestifoot.ini";
           };
 
           cursor = {

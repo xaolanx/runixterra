@@ -1,12 +1,14 @@
 {
   lib,
   inputs',
+  self',
   pkgs,
   config,
   ...
 }: let
   inherit (builtins) concatStringsSep toString;
   inherit (lib.attrsets) optionalAttrs;
+  inherit (lib.meta) getExe;
 
   toMonitorConf = m: let
     toResolutionString = res: rr: "${toString res.width}x${toString res.height}@${toString rr}";
@@ -23,7 +25,6 @@
     ];
 
   styleCfg = config.local.style;
-  c = config.programs.matugen.theme.colors.dark;
 in {
   programs.hyprland = {
     enable = true;
@@ -51,6 +52,7 @@ in {
       ];
       settings =
         {
+          source = ["~/.config/hypr/scheme/current.conf"];
           xwayland = {
             force_zero_scaling = true;
           };
@@ -58,7 +60,7 @@ in {
           exec-once = [
             "${pkgs.xorg.xrandr}/bin/xrandr --output 'DP-1' --primary"
             # "kurukurubar"
-            "uwsm app noctalia"
+            "uwsm app ${getExe self'.packages.caelestia-shell}"
             "uwsm app -t service kdeconnectd"
             "uwsm app kdeconnect-indicator"
           ];
@@ -251,8 +253,8 @@ in {
             gaps_in = 4;
             gaps_out = 8;
             border_size = 4;
-            "col.active_border" = "rgb(${c.primary})";
-            "col.inactive_border" = "rgb(${c.outline_variant})";
+            "col.active_border" = "rgb($primary)";
+            "col.inactive_border" = "rgb($outlineVariant)";
           };
           decoration = {
             rounding = 10;

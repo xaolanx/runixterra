@@ -56,14 +56,14 @@
       "type": "Git",
       "repository": {
         "type": "GitHub",
-        "owner": "caelestia-dots",
+        "owner": "xaolanx",
         "repo": "cli"
       },
       "branch": "main",
       "submodules": false,
-      "revision": "2bde2ddfbf56277fbf93af96fe3a88cb042b6696",
-      "url": "https://github.com/caelestia-dots/cli/archive/2bde2ddfbf56277fbf93af96fe3a88cb042b6696.tar.gz",
-      "hash": "0hgz3nambk2gynsy1y5gqxqqsv64mnb6i0akyx4qgj3a3br88yjn"
+      "revision": "54552333bba820d08b562244e17a385fc182c857",
+      "url": "https://github.com/xaolanx/cli/archive/54552333bba820d08b562244e17a385fc182c857.tar.gz",
+      "hash": "089fc63bsv9mi825rdhkibxk6ygj0harbhlbr7rkpmxrski2nahj"
     },
     "caelestia-shell": {
       "type": "Git",
