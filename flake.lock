@@ -346,15 +346,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1753834491,
-        "narHash": "sha256-m6KTzbWohLMk2d98pTIjwZnqhAhyEgO+7nfRSzGDKEI=",
-        "owner": "snugnug",
+        "lastModified": 1754273828,
+        "narHash": "sha256-+Y+kKzzG+hCNuHTAre0uHd+fVqmFXAKBNJLaaJPg7Qg=",
+        "owner": "xaolanx",
         "repo": "hjem-rum",
-        "rev": "0f0673fe6353ff0d3cd5ff9d038b21bd706fdd5e",
+        "rev": "dd5d7aab973151e9d6fcd20340af79c5cc495a3e",
         "type": "github"
       },
       "original": {
-        "owner": "snugnug",
+        "owner": "xaolanx",
         "repo": "hjem-rum",
         "type": "github"
       }

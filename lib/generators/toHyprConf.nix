@@ -1,7 +1,7 @@
 {lib, ...}: {
   attrs,
   indentLevel ? 0,
-  importantPrefixes ? ["$" "bezier" "name"],
+  importantPrefixes ? ["source" "$" "bezier" "name"],
 }: let
   inherit (builtins) removeAttrs;
   inherit

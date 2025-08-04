@@ -11,8 +11,34 @@ in {
   hj.rum.desktops.hyprland.settings = {
     "$mod" = "SUPER";
     bindr = [
-      "$mod, SUPER_L, exec, ${toggle "walker" false}"
+      "$mod, D, exec, ${toggle "walker" false}"
     ];
+    # shell keybinds
+    bindin = [
+      "$mod, mouse:272, global, caelestia:launcherInterrupt"
+      "$mod, mouse:273, global, caelestia:launcherInterrupt"
+      "$mod, mouse:274, global, caelestia:launcherInterrupt"
+      "$mod, mouse:275, global, caelestia:launcherInterrupt"
+      "$mod, mouse:276, global, caelestia:launcherInterrupt"
+      "$mod, mouse:277, global, caelestia:launcherInterrupt"
+      "$mod, mouse_up, global, caelestia:launcherInterrupt"
+      "$mod, mouse_down, global, caelestia:launcherInterrupt"
+    ];
+    bindl = [
+      "$mod, A, global, caelestia:launcher"
+      "Ctrl+Alt, C, global, caelestia:clearNotifs"
+      "$mod+Alt, L, exec, caelestia shell -d"
+      "$mod+Alt, L, global, caelestia:lock"
+      "Ctrl+$mod, Space, global, caelestia:mediaToggle"
+      ", XF86AudioPlay, global, caelestia:mediaToggle"
+      ", XF86AudioPause, global, caelestia:mediaToggle"
+      "Ctrl+$mod, Equal, global, caelestia:mediaNext"
+      ", XF86AudioNext, global, caelestia:mediaNext"
+      "Ctrl+$mod, Minus, global, caelestia:mediaPrev"
+      ", XF86AudioPrev, global, caelestia:mediaPrev"
+      ", XF86AudioStop, global, caelestia:mediaStop"
+    ];
+
     bind = [
       "$mod, Return, exec, ${run "foot"}"
       "$mod, w, exec, ${run "librewolf"}"
@@ -20,6 +46,9 @@ in {
       "$mod, q, killactive"
       "$mod SHIFT, q, exec, loginctl terminate-user \"\""
       "CTRL, Print, exec, ${runOnce "grimblast"} --notify --freeze copysave area"
+      "Ctrl+Alt, Delete, global, caelestia:session"
+      "$mod, K, global, caelestia:showall"
+      "$mod, L, global, caelestia:lock"
 
       "$mod, h, movefocus, l"
       "$mod, j, movefocus, d"
@@ -67,6 +96,7 @@ in {
       ", XF86PowerOff, exec, ${toggle "wlogout" true}"
     ];
 
+    # media
     bindel = [
       ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
@@ -75,6 +105,7 @@ in {
       ", XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5"
       ", XF86MonBrightnessDown, exec, brillo -q -u 300000 -U 5"
     ];
+
     binde = [
       "$mod Alt, l, exec, loginctl lock-session"
     ];
