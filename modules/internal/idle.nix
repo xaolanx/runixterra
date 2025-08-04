@@ -13,6 +13,7 @@
   inherit (lib.meta) getExe getExe';
 
   noctalia = getExe self'.packages.noctalia;
+  caelestia = getExe self'.packages.caelestia-cli;
   loginctl = getExe' pkgs.systemd "loginctl";
   systemctl = getExe' pkgs.systemd "systemctl";
   hyprctl = getExe' config.programs.hyprland.package "hyprctl";
@@ -50,7 +51,7 @@
       after_sleep_cmd = "${niri} msg action power-on-monitors";
     }
     else {
-      lock_cmd = "${noctalia} ipc call globalIPC toggleLock";
+      lock_cmd = "${caelestia} shell lock lock";
       before_sleep_cmd = "${loginctl} lock-session";
       after_sleep_cmd = "${hyprctl} dispatch dpms on";
     };
