@@ -17,5 +17,4 @@ in {
   };
 
   time.timeZone = mkDefault "Asia/Jakarta";
-  services.localtimed.enable = true;
 }
