@@ -23,7 +23,7 @@ jobs:
         host: [yunara, ionia]
         config-type:
           - type: "runixterra"
-            path: ".#nixosConfigurations.{host}.config.system.build.toplevel"
+            path: "nixosConfigurations.{host}.config.system.build.toplevel"
 
     steps:
       # Checkout
@@ -63,7 +63,7 @@ jobs:
         run: |
           FLAKEREF="${{ matrix.config-type.path }}"
           FLAKEREF="${FLAKEREF/\{host\}/${{ matrix.host }}}"
-          nix build ${FLAKEREF} -L
+          nix run nixpkgs#nixos-rebuild -- build -A ${FLAKEREF}
 
       # sbomnix
       - name: sbomnix
