@@ -47,6 +47,12 @@ in {
 
     rum.desktops.hyprland = {
       enable = true;
+      importantPrefixes = [
+        "source"
+        "$"
+        "bezier"
+        "name"
+      ];
       plugins = [
         inputs'.split-monitor-workspaces.packages.default
       ];
