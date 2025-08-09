@@ -14,7 +14,6 @@
 
         inherit
           (pkgs)
-          cinny-desktop
           devenv
           entr
           fastfetch
