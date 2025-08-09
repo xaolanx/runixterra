@@ -244,7 +244,7 @@
     };
 
     flake-compat = {
-      url = "https://git.lix.systems/lix-project/flake-compat/archive/main.tar.gz";
+      url = "git+https://git.lix.systems/lix-project/flake-compat";
       flake = false;
     };
   };
