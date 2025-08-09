@@ -243,7 +243,10 @@
       inputs.systems.follows = "systems";
     };
 
-    flake-compat.url = "github:edolstra/flake-compat";
+    flake-compat = {
+      url = "https://git.lix.systems/lix-project/flake-compat/archive/main.tar.gz";
+      flake = false;
+    };
   };
   nixConfig = {
     extra-substituters = [
