@@ -20,7 +20,6 @@
           fzf
           obsidian
           playerctl
-          proton-pass
           qalculate-gtk
           resources
           simple-scan
