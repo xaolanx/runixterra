@@ -984,13 +984,15 @@
       "locked": {
         "lastModified": 1753595452,
         "narHash": "sha256-vqkSDvh7hWhPvNjMjEDV4KbSCv2jyl2Arh73ZXe274k=",
+        "ref": "refs/heads/master",
         "rev": "a5431dd02dc23d9ef1680e67777fed00fe5f7cda",
-        "type": "tarball",
-        "url": "https://git.outfoxxed.me/api/v1/repos/quickshell/quickshell/archive/a5431dd02dc23d9ef1680e67777fed00fe5f7cda.tar.gz?rev=a5431dd02dc23d9ef1680e67777fed00fe5f7cda"
+        "revCount": 665,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell/archive/master.tar.gz"
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       }
     },
     "root": {
