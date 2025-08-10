@@ -119,7 +119,7 @@
     };
 
     quickshell = {
-      url = "https://git.outfoxxed.me/outfoxxed/quickshell/archive/master.tar.gz";
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
