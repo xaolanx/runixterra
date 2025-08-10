@@ -1,11 +1,10 @@
 {
-  inputs',
   self',
   pkgs,
   ...
 }: {
   hj.packages = [
-    inputs'.quickshell.packages.default
+    pkgs.quickshell
     # self'.packages.kurukurubar
     self'.packages.noctalia
     self'.packages.caelestia-cli

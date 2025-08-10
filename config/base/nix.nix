@@ -2,10 +2,12 @@
   inputs,
   pkgs,
   config,
+  pins,
   lib,
   ...
 }: let
   inherit (config.local.vars.system) username;
+  inherit (pkgs) callPackage;
 in {
   age.secrets.nix-access-tokens-github = {
     file = ../../secrets/nix-access-tokens-github.age;
@@ -49,6 +51,8 @@ in {
         cmakeFlags = old.cmakeFlags ++ ["-DCMAKE_CXX_STANDARD=17"];
         NIX_CFLAGS_COMPILE = "-std=c++17";
       });
+
+      quickshell = super.callPackage pins.quickshell {};
     })
   ];
   nixpkgs = {
