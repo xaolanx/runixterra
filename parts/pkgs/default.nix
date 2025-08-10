@@ -2,12 +2,10 @@ _: {
   perSystem = {
     pkgs,
     lib,
-    inputs',
     self',
     pins,
     ...
   }: let
-    quickshellPkg = inputs'.quickshell.packages.default;
     cli = self'.packages.caelestia-cli;
     shell = self'.packages.caelestia-shell;
     app2unitPkg = self'.packages.app2unit;
@@ -27,7 +25,6 @@ _: {
 
         noctalia = basePackages.noctalia.override {
           configPath = ./../../assets/noctalia;
-          quickshell = quickshellPkg;
         };
         kvlibadwaita = basePackages.kvlibadwaita.override {
           src = pins.kvlibadwaita;
@@ -35,8 +32,8 @@ _: {
         };
         caelestia-shell = basePackages.caelestia-shell.override {
           caelestia-cli = cli;
+          quickshell = pkgs.quickshell;
           app2unit = app2unitPkg;
-          quickshell = quickshellPkg;
           withCli = false;
           src = pins.caelestia-shell;
         };

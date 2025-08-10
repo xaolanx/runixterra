@@ -1,5 +1,12 @@
-{inputs', ...}: {
+{
+  pins,
+  pkgs,
+  ...
+}: let
+  inherit (pkgs) callPackage;
+  zen-browser = (callPackage pins.zen {}).default;
+in {
   hj.packages = [
-    inputs'.zen-browser.packages.default
+    zen-browser
   ];
 }

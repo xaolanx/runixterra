@@ -145,6 +145,20 @@
       "url": "https://github.com/xaolanx/KvLibadwaita/archive/eade51d94c55e55db602bba1e8624085b2855901.tar.gz",
       "hash": "0xjr18dwrxk6yv9an9lhz14y5dg5xsygzjmk7s3pyp37awxpka2r"
     },
+    "quickshell": {
+      "type": "Git",
+      "repository": {
+        "type": "Forgejo",
+        "server": "https://git.outfoxxed.me/",
+        "owner": "quickshell",
+        "repo": "quickshell"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "a5431dd02dc23d9ef1680e67777fed00fe5f7cda",
+      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/a5431dd02dc23d9ef1680e67777fed00fe5f7cda.tar.gz",
+      "hash": "12ggnrvnbxqyms05vjm3zl5d59p0sm08rk6qpi7ni1bvz0715ady"
+    },
     "tinted-terminal": {
       "type": "Git",
       "repository": {
@@ -183,6 +197,19 @@
       "revision": "d183c3417df6ebf5a8d4266dc92477dd27937567",
       "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/d183c3417df6ebf5a8d4266dc92477dd27937567.tar.gz",
       "hash": "1pilbrsw8a954h7f6hdzwnybam6m9iixaihi6g5nrkdr754h6qws"
+    },
+    "zen": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "451454de40a4433174153e823994fe2ecd3c869e",
+      "url": "https://github.com/youwen5/zen-browser-flake/archive/451454de40a4433174153e823994fe2ecd3c869e.tar.gz",
+      "hash": "0d0bl1vwksn2j00rv78fr8yw1lk1w67asi7wsyswmdr4aylzc2ss"
     }
   },
   "version": 5
