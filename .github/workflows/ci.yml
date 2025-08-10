@@ -61,7 +61,7 @@ jobs:
         run: |
           FLAKEREF="${{ matrix.config-type.path }}"
           FLAKEREF="${FLAKEREF/\{host\}/${{ matrix.host }}}"
-          nix run nixpkgs#nixos-rebuild -- build -A ${FLAKEREF}
+          nix-build . -A ${FLAKEREF}
 
       # sbomnix
       - name: sbomnix
