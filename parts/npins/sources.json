@@ -74,9 +74,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "18058407181e0f4114a4ef49a1796884c5661969",
-      "url": "https://github.com/caelestia-dots/shell/archive/18058407181e0f4114a4ef49a1796884c5661969.tar.gz",
-      "hash": "1nq0zbzlnn0l0jlzybq01a2ygzfib8kk8wyajs2nj5wwwjwssy6m"
+      "revision": "291a40366168d29413bc98df0a15f6e661f20aba",
+      "url": "https://github.com/caelestia-dots/shell/archive/291a40366168d29413bc98df0a15f6e661f20aba.tar.gz",
+      "hash": "0phsz4shm89zzp37ckx0c8rfpv924xk4ac6j5h1crpl5l6rp0bg9"
     },
     "everforest-yazi": {
       "type": "Git",
@@ -128,9 +128,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "d84d61a0b19de7b13faf9f2f27e2a1070de0790e",
-      "url": "https://github.com/muratoffalex/kanagawa-lotus.yazi/archive/d84d61a0b19de7b13faf9f2f27e2a1070de0790e.tar.gz",
-      "hash": "1r1irbfij4sfkcpjadia7712qzdh57l0lfy1zz1m2km9f9labn5q"
+      "revision": "4275a1a96243c8e7d12057488bce1360a3c74756",
+      "url": "https://github.com/muratoffalex/kanagawa-lotus.yazi/archive/4275a1a96243c8e7d12057488bce1360a3c74756.tar.gz",
+      "hash": "13s97sv6hzdppmdck6kr1lqlxkrd0j5ng1mxr4rvlqw0as9324ry"
     },
     "kvlibadwaita": {
       "type": "Git",
@@ -154,9 +154,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "1fabceef3698a71bf03089e04013b4d5d71b628e",
-      "url": "https://github.com/tinted-theming/tinted-terminal/archive/1fabceef3698a71bf03089e04013b4d5d71b628e.tar.gz",
-      "hash": "0r3dpyj68nrkq7qwgdbjm7f69sqx5rbrapgdhva2canhqbwwd01y"
+      "revision": "21ebc0e4ee155280a759779139f0e9b1aed0a530",
+      "url": "https://github.com/tinted-theming/tinted-terminal/archive/21ebc0e4ee155280a759779139f0e9b1aed0a530.tar.gz",
+      "hash": "1i17rfks1spl00cdw0dsxslhr5cpk5dzb7qmwbl9z0glv5qms4ii"
     },
     "tt-schemes": {
       "type": "Git",
@@ -167,9 +167,9 @@
       },
       "branch": "spec-0.11",
       "submodules": false,
-      "revision": "ed9d7d6e024c358c68c17527022df3221f61c9f2",
-      "url": "https://github.com/tinted-theming/schemes/archive/ed9d7d6e024c358c68c17527022df3221f61c9f2.tar.gz",
-      "hash": "0lhbgfac28f6l2mpsb9khni71b5645qsqi0a8q223kk0mnh7s76g"
+      "revision": "097d751b9e3c8b97ce158e7d141e5a292545b502",
+      "url": "https://github.com/tinted-theming/schemes/archive/097d751b9e3c8b97ce158e7d141e5a292545b502.tar.gz",
+      "hash": "10rzp437w84d2b6kf85mdmb0xfbvs015gjazs02bap4sf6avd8gh"
     },
     "zaphkiel": {
       "type": "Git",
@@ -180,9 +180,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "c82d13360cafa23bb3dc01beee6fa88684c50ee2",
-      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/c82d13360cafa23bb3dc01beee6fa88684c50ee2.tar.gz",
-      "hash": "0mvf0g2rv7n945nqb7bk716hr2z07maz6brqq324q7p11qisni71"
+      "revision": "d183c3417df6ebf5a8d4266dc92477dd27937567",
+      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/d183c3417df6ebf5a8d4266dc92477dd27937567.tar.gz",
+      "hash": "1pilbrsw8a954h7f6hdzwnybam6m9iixaihi6g5nrkdr754h6qws"
     }
   },
   "version": 5
