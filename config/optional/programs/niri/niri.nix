@@ -14,7 +14,7 @@ in {
 
   hj = {
     packages = [
-      inputs'.hyprwm-contrib.packages.grimblast
+      inputs'.hyprland-contrib.packages.grimblast
       pkgs.xwayland-satellite
     ];
 
