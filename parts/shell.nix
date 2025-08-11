@@ -1,14 +1,14 @@
 _: {
   perSystem = {
     config,
-    inputs',
     self',
     pkgs,
+    pins,
     ...
   }: {
     devShells.default = pkgs.mkShell {
       packages = [
-        inputs'.agenix.packages.default
+        (pkgs.callPackage (pins.agenix + "/pkgs/agenix.nix") {})
         pkgs.npins
         pkgs.commitizen
         self'.formatter

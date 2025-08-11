@@ -13,15 +13,9 @@
     # so we can .follow it
     systems.url = "github:nix-systems/default-linux";
 
-    # nix related
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # nixos-hardware.url = "github:NixOS/nixos-hardware";
-
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
@@ -29,43 +23,8 @@
     };
 
     # sorted alphabetically
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        systems.follows = "systems";
-        # stop agenix from importing home-manager and darwin
-        home-manager.follows = "";
-        darwin.follows = "";
-      };
-    };
 
     base16.url = "github:SenchoPens/base16.nix";
-
-    basix = {
-      url = "github:notashelf/basix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-    };
-
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hjem = {
-      url = "github:feel-co/hjem";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    hjem-rum = {
-      url = "github:snugnug/hjem-rum";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        hjem.follows = "hjem";
-        treefmt-nix.follows = "treefmt-nix";
-      };
-    };
 
     # hyprwm
     hyprland.url = "github:hyprwm/hyprland";
@@ -95,12 +54,6 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-parts.follows = "flake-parts";
-    };
-
     nvf = {
       url = "github:notashelf/nvf";
       inputs = {
@@ -110,33 +63,10 @@
       };
     };
 
-    pre-commit-hooks = {
-      url = "github:cachix/git-hooks.nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-compat.follows = "flake-compat";
-      };
-    };
-
-    silentSDDM = {
-      url = "github:uiriansan/SilentSDDM";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    treefmt-nix = {
-      url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # dependency pinning to prevent duplicate versions
     flake-utils = {
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
-    };
-
-    flake-compat = {
-      url = "https://git.lix.systems/lix-project/flake-compat/archive/main.tar.gz";
-      flake = false;
     };
   };
   nixConfig = {

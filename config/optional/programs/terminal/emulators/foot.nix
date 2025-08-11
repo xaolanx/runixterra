@@ -18,7 +18,7 @@
 
   foot = pkgs.foot.overrideAttrs {
     pname = "foot";
-    version = "0-unstable-${pins.foot.revision}";
+    version = "0-unstable";
     src = pins.foot;
   };
 in {

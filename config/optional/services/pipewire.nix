@@ -1,6 +1,6 @@
-{inputs, ...}: {
+{pins, ...}: {
   imports = [
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
+    (pins.nix-gaming + "/modules/pipewireLowLatency.nix")
   ];
 
   services = {

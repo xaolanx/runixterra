@@ -1,6 +1,8 @@
-{inputs, ...}: {
+{...}: let
+  pins = import ./npins;
+in {
   imports = [
-    inputs.pre-commit-hooks.flakeModule
+    (pins.git-hooks + "/flake-module.nix")
   ];
   perSystem = {config, ...}: {
     pre-commit = {

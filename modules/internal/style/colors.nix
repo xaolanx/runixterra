@@ -3,6 +3,7 @@
   config,
   lib,
   pkgs,
+  pins,
   ...
 }: let
   inherit (builtins) elem;
@@ -12,8 +13,9 @@
   inherit (lib.modules) mkIf;
 
   base16Lib = pkgs.callPackage inputs.base16.lib {};
+  basix = import pins.basix;
 
-  allSchemes = (attrNames inputs.basix.schemeData.base16) ++ (attrNames inputs.basix.schemeData.base24);
+  allSchemes = (attrNames basix.schemeData.base16) ++ (attrNames basix.schemeData.base24);
 
   cfg = config.local.style;
 in {
@@ -44,13 +46,13 @@ in {
   config = mkIf cfg.enable {
     assertions = [
       {
-        assertion = elem cfg.colors.schemeName (attrNames inputs.basix.schemeData.${cfg.colors.system});
+        assertion = elem cfg.colors.schemeName (attrNames basix.schemeData.${cfg.colors.system});
         message = ''
           The color scheme ${cfg.colors.schemeName} is not available in ${cfg.colors.system}.
         '';
       }
     ];
 
-    local.style.colors.scheme = base16Lib.mkSchemeAttrs inputs.basix.schemeData.${cfg.colors.system}.${cfg.colors.schemeName};
+    local.style.colors.scheme = base16Lib.mkSchemeAttrs basix.schemeData.${cfg.colors.system}.${cfg.colors.schemeName};
   };
 }

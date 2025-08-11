@@ -1,11 +1,13 @@
 {
   pkgs,
-  inputs',
+  pins,
   ...
 }: let
-  sddm-theme = inputs'.silentSDDM.packages.default;
+  inherit (pkgs) callPackage;
+
+  sddm-theme = callPackage (pins.silentSddm) {gitRev = pins.silentSddm.revision;};
 in {
-  environment.systemPackages = [sddm-theme sddm-theme.test];
+  environment.systemPackages = [sddm-theme];
   qt.enable = true;
   services.displayManager.sddm = {
     package = pkgs.kdePackages.sddm;
