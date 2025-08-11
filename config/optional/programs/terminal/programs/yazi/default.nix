@@ -88,7 +88,7 @@
       opener = {
         edit = [
           {
-            run = "micro \"$@\"";
+            run = "$EDITOR \"$@\"";
             desc = "$EDITOR";
             block = true;
             for = "unix";
