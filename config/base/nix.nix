@@ -5,9 +5,7 @@
   pins,
   lib,
   ...
-}: let
-  inherit (pkgs) callPackage;
-in {
+}: {
   nix = let
     flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
   in {
@@ -40,7 +38,17 @@ in {
         NIX_CFLAGS_COMPILE = "-std=c++17";
       });
 
-      quickshell = super.callPackage pins.quickshell {};
+      quickshell = super.callPackage pins.quickshell {
+        gitRev = pins.quickshell.revision;
+        withJemalloc = true;
+        withQtSvg = true;
+        withWayland = true;
+        withX11 = false;
+        withPipewire = true;
+        withPam = true;
+        withHyprland = true;
+        withI3 = false;
+      };
     })
   ];
   nixpkgs = {
