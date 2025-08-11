@@ -1,19 +1,30 @@
 {
-  inputs,
   lib,
   config,
   pkgs,
-  inputs',
   self,
+  pins,
   ...
 }: let
   inherit (lib.modules) mkAliasOptionModule;
-
   inherit (config.local.vars.home) fullName;
   inherit (config.local.vars.system) username;
+
+  rumLib = import (pins.hjem-rum + "/modules/lib/default.nix") {inherit lib;};
+  hjemRumModule = import (pins.hjem-rum + "/modules/hjem.nix") {
+    inherit lib rumLib;
+  };
 in {
   imports = [
-    inputs.hjem.nixosModules.default
+    (pins.hjem + "/modules/nixos")
+
+    # inline wrapper so the strict module doesn't get unexpected args
+    #({ lib, rumLib, ... }:
+    #  import (pins.hjem-rum + "/modules/hjem.nix") {
+    #    inherit lib rumLib;
+    #  }
+    #)
+
     # avoid boilerplate in the configuration
     (mkAliasOptionModule ["hj"] ["hjem" "users" username])
   ];
@@ -31,19 +42,19 @@ in {
     ];
   };
 
-  age.identityPaths = ["${config.hj.directory}/.ssh/id_ed25519"];
   hjem = {
     clobberByDefault = true;
     extraModules = [
-      inputs.hjem-rum.hjemModules.default
       self.hjemModules.xdg-autostart
+      hjemRumModule
     ];
+
     users.${username} = {
       enable = true;
       directory = "/home/${username}";
       user = "${username}";
     };
 
-    linker = inputs'.hjem.packages.smfh;
+    linker = pkgs.smfh;
   };
 }

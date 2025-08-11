@@ -1,4 +1,6 @@
-{...}: {
+{pins, ...}: {
+  imports = [(pins.disko + "/module.nix")];
+
   disko.devices = {
     disk = {
       main = {

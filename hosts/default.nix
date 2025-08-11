@@ -23,8 +23,6 @@
   base = [
     ../config/base
     ../modules/internal
-    inputs.agenix.nixosModules.default
-    inputs.disko.nixosModules.default
   ];
 
   workstation = [
