@@ -18,13 +18,6 @@ in {
   imports = [
     (pins.hjem + "/modules/nixos")
 
-    # inline wrapper so the strict module doesn't get unexpected args
-    #({ lib, rumLib, ... }:
-    #  import (pins.hjem-rum + "/modules/hjem.nix") {
-    #    inherit lib rumLib;
-    #  }
-    #)
-
     # avoid boilerplate in the configuration
     (mkAliasOptionModule ["hj"] ["hjem" "users" username])
   ];
