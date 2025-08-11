@@ -61,7 +61,7 @@ jobs:
         run: |
           FLAKEREF="${{ matrix.config-type.path }}"
           FLAKEREF="${FLAKEREF/\{host\}/${{ matrix.host }}}"
-          nix build ${FLAKEREF} -L
+          nix build ${FLAKEREF} -L --impure
 
       # sbomnix
       - name: sbomnix

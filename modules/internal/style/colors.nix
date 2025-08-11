@@ -13,7 +13,7 @@
   inherit (lib.modules) mkIf;
 
   base16Lib = pkgs.callPackage inputs.base16.lib {};
-  basix = import pins.basix;
+  basix = import (pins.basix);
 
   allSchemes = (attrNames basix.schemeData.base16) ++ (attrNames basix.schemeData.base24);
 
