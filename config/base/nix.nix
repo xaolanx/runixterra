@@ -7,7 +7,6 @@
   ...
 }: let
   inherit (pkgs) callPackage;
-  inherit (pkgs) callPackage;
 in {
   nix = let
     flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
