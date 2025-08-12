@@ -113,9 +113,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "291a40366168d29413bc98df0a15f6e661f20aba",
-      "url": "https://github.com/caelestia-dots/shell/archive/291a40366168d29413bc98df0a15f6e661f20aba.tar.gz",
-      "hash": "0phsz4shm89zzp37ckx0c8rfpv924xk4ac6j5h1crpl5l6rp0bg9"
+      "revision": "8c436c420bb4052154b75e78c3a38aa0bb0a63b5",
+      "url": "https://github.com/caelestia-dots/shell/archive/8c436c420bb4052154b75e78c3a38aa0bb0a63b5.tar.gz",
+      "hash": "1bs1xy1zldr05f1jhrzxj4md1sibg3gka92ydwnczy24ix34vsr0"
     },
     "disko": {
       "type": "GitRelease",
