@@ -13,8 +13,6 @@
       "chmod.yazi" = pkgs.yaziPlugins.chmod;
       "mount.yazi" = pkgs.yaziPlugins.mount;
 
-      "glow.yazi" = pkgs.yaziPlugins.glow;
-
       "hexyl.yazi" = pkgs.fetchFromGitHub {
         owner = "Reledia";
         repo = "hexyl.yazi";
@@ -281,12 +279,6 @@
       };
 
       plugin = {
-        prepend_previewers = [
-          {
-            name = "*.md";
-            run = "glow";
-          }
-        ];
         prepend_fetchers = [
           {
             id = "git";
