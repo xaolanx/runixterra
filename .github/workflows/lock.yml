@@ -48,13 +48,13 @@ jobs:
 
       - name: Weekly npins update
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
-        id: weekly
+        id: pins-weekly
         run: |
           npins -d ./parts/npins/ update
 
       - name: Weekly flake.lock update
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
-        id: weekly
+        id: lock-weekly
         uses: DeterminateSystems/update-flake-lock@v27
         with:
           token: ${{ secrets.GH_TOKEN }}
