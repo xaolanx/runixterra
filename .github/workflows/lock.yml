@@ -32,6 +32,10 @@ jobs:
           extra-conf: |
             lazy-trees = true
 
+      - name: Install npins
+        #run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
+        run: nix profile add nixpkgs#npins
+
       - name: Clear Cachix
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
         run: |
@@ -42,23 +46,11 @@ jobs:
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
 
-      # - name: Nightly flake.lock update
-      #   if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 1-6')
-      #   id: nightly
-      #   uses: DeterminateSystems/update-flake-lock@v27
-      #   with:
-      #     token: ${{ secrets.GH_TOKEN }}
-      #     branch: nightly-update
-      #     git-author-name: "xaolanx"
-      #     git-author-email: "ah0199004@gmail.com"
-      #     git-committer-name: "xaolanx"
-      #     git-committer-email: "ah0199004@gmail.com"
-      #     commit-msg: "chore(lockfile): nightly update"
-      #     pr-title: "chore(lockfile): nightly update"
-      #     pr-labels: |
-      #       dependencies
-      #       automated
-      #       nightly
+      - name: Weekly npins update
+        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+        id: weekly
+        run: |
+          npins -d ./parts/npins/ update
 
       - name: Weekly flake.lock update
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
