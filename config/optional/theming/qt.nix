@@ -10,7 +10,7 @@
       custom_palette = true;
       icon_theme = config.local.style.gtk.iconTheme.name;
       standard_dialogs = "xdgdesktopportal";
-      style = "Fusion";
+      style = "Darkly";
       color_scheme_path = "~/.config/qt5ct/colors/caelestia.conf";
     };
     Fonts = {
