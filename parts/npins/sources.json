@@ -100,9 +100,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f8011eeef524e19ff7a159520b0072b41d1f5a3c",
-      "url": "https://github.com/xaolanx/cli/archive/f8011eeef524e19ff7a159520b0072b41d1f5a3c.tar.gz",
-      "hash": "05n0r0gx1gbhms01zizhj9nlrf24lmr2bwwfmlk7463ava4qiqzj"
+      "revision": "dcc3a08a484b15f35a314313a78c86ff1fafa990",
+      "url": "https://github.com/xaolanx/cli/archive/dcc3a08a484b15f35a314313a78c86ff1fafa990.tar.gz",
+      "hash": "0n9hkn78pvvlb5r859n63s78a295lcw32l4vr9v5rwq53qd9zhw0"
     },
     "caelestia-shell": {
       "type": "Git",

@@ -2,6 +2,7 @@
   self,
   self',
   config,
+  pkgs,
   ...
 }: let
   kvantumTheme = self'.packages.kvlibadwaita;
@@ -11,7 +12,7 @@
       icon_theme = config.local.style.gtk.iconTheme.name;
       standard_dialogs = "xdgdesktopportal";
       style = "Darkly";
-      color_scheme_path = "~/.config/qt5ct/colors/caelestia.conf";
+      color_scheme_path = "/home/xaolan/.config/qt5ct/colors/caelestia.colors";
     };
     Fonts = {
       fixed = ''"monospace,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"'';
@@ -37,6 +38,9 @@ in {
   };
 
   hj = {
+    packages = [
+      pkgs.darkly-qt5
+    ];
     local.misc = {
       qtct = {
         enable = true;
