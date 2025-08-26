@@ -12,7 +12,7 @@
       icon_theme = config.local.style.gtk.iconTheme.name;
       standard_dialogs = "xdgdesktopportal";
       style = "Darkly";
-      color_scheme_path = "/home/xaolan/.config/qt5ct/colors/caelestia.colors";
+      color_scheme_path = "/home/xaolan/.config/qt5ct/colors/qtcolors.conf";
     };
     Fonts = {
       fixed = ''"monospace,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Regular"'';
@@ -40,6 +40,7 @@ in {
   hj = {
     packages = [
       pkgs.darkly-qt5
+      pkgs.darkly
     ];
     local.misc = {
       qtct = {
