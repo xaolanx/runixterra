@@ -18,13 +18,13 @@
   caelestia-shell ? null,
   withShell ? false,
   discordBin ? "discord",
-  qtctStyle ? "Fusion",
+  qtctStyle ? "Darkly",
 }:
 python3.pkgs.buildPythonApplication {
   pname = "caelestia-cli";
   version = "0-unstable";
-  pyproject = true;
   inherit src;
+  pyproject = true;
 
   build-system = with python3.pkgs; [
     hatch-vcs
@@ -70,9 +70,9 @@ python3.pkgs.buildPythonApplication {
     	--replace-fail 'discord' ${discordBin} \
       --replace-fail 'todoist' 'todoist.desktop'
 
-    # Use config style instead of fusion
+    # Use config style instead of darkly
     substituteInPlace src/caelestia/data/templates/qtct.conf \
-    	--replace-fail 'Fusion' '${qtctStyle}'
+    	--replace-fail 'Darkly' '${qtctStyle}'
   '';
 
   postInstall = "installShellCompletion completions/caelestia.fish";
