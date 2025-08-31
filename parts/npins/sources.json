@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "71e01c1766fdb4f4f3c86ea24054074c9f5f5647",
-      "url": "https://github.com/imbypass/base16-discord/archive/71e01c1766fdb4f4f3c86ea24054074c9f5f5647.tar.gz",
-      "hash": "1pngfzppp2zjhfrswwdraw1qb773mbqlz9wl6y4938lj49gggzba"
+      "revision": "2d2718edf7033dda7797c716fe7ddd1f43ed3f78",
+      "url": "https://github.com/imbypass/base16-discord/archive/2d2718edf7033dda7797c716fe7ddd1f43ed3f78.tar.gz",
+      "hash": "15q940kvngsw90jkmf87imwxd5n5c8hlm730aj5hzw5kw5k03pvs"
     },
     "base16-helix": {
       "type": "Git",
@@ -113,9 +113,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "fd3b98db60fbf07f14d2f46a42cef70228c6ac8a",
-      "url": "https://github.com/caelestia-dots/shell/archive/fd3b98db60fbf07f14d2f46a42cef70228c6ac8a.tar.gz",
-      "hash": "02ldp1g1yk923q27999z0hipd6asar6xy0n37p4nzhsdxsscbwa6"
+      "revision": "c2d6849d42e88ee38c0c63f446fa86dd3761d6c5",
+      "url": "https://github.com/caelestia-dots/shell/archive/c2d6849d42e88ee38c0c63f446fa86dd3761d6c5.tar.gz",
+      "hash": "1g60124q34yz6ncw6k9mxcd5bnx8sxl16p8h4gi977nflldkg5df"
     },
     "disko": {
       "type": "GitRelease",
@@ -155,8 +155,8 @@
     "foot": {
       "type": "Tarball",
       "url": "https://codeberg.org/dnkl/foot/archive/master.tar.gz",
-      "locked_url": "https://codeberg.org/api/v1/repos/dnkl/foot/archive/72d9a13c0c6b6ee4b56a38f508c2e8d5c56616b5.tar.gz?rev=72d9a13c0c6b6ee4b56a38f508c2e8d5c56616b5",
-      "hash": "1hmiaqp0ln2ff13r1x4zj8i0ldlfhy50kvk74pcik5kda00jhibi"
+      "locked_url": "https://codeberg.org/api/v1/repos/dnkl/foot/archive/f0e36e35cb65bdb92dbe24d00a9cc6bc8d72a458.tar.gz?rev=f0e36e35cb65bdb92dbe24d00a9cc6bc8d72a458",
+      "hash": "0bz3ghdnsmsn7cywfdh6mrw2630lfgcxsw3aa0my6xjmygzxy440"
     },
     "git-hooks": {
       "type": "Git",
@@ -196,9 +196,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "565a15366d7b5aa5483ebe101fbc0ea27f0516b7",
-      "url": "https://github.com/feel-co/hjem/archive/565a15366d7b5aa5483ebe101fbc0ea27f0516b7.tar.gz",
-      "hash": "0x0d4w6za9539xry7jdb76i3b38wd2ndxw5b0m5m5r53sxwdayg1"
+      "revision": "2426d6ad20e767895e936ed0c9563cc4e2b6c96f",
+      "url": "https://github.com/feel-co/hjem/archive/2426d6ad20e767895e936ed0c9563cc4e2b6c96f.tar.gz",
+      "hash": "0lnn46m56qlv58g1l3d3pd3gxk3m3i4aj3k3xqjk49mdzw7g97jq"
     },
     "hjem-rum": {
       "type": "Git",
@@ -209,9 +209,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "7c639526ac8e4c3674221e6dcc9ab0f7c7a42a16",
-      "url": "https://github.com/snugnug/hjem-rum/archive/7c639526ac8e4c3674221e6dcc9ab0f7c7a42a16.tar.gz",
-      "hash": "044fbwwvyp8gzi6v866kk1sxvanpghc5bw7c6ay4df20gwvr4why"
+      "revision": "397e73ca7ac236ac5209f8d1d42c682e5ee558e5",
+      "url": "https://github.com/snugnug/hjem-rum/archive/397e73ca7ac236ac5209f8d1d42c682e5ee558e5.tar.gz",
+      "hash": "1gyn6x92zyya6wxrgjzfld7h1mydrinhpdnn8d6ij21y5yjsfvj1"
     },
     "kanagawa-lotus-yazi": {
       "type": "Git",
@@ -248,9 +248,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "b44f0ddc0912702662ae36ab265633d6cef3ea26",
-      "url": "https://github.com/fufexan/nix-gaming/archive/b44f0ddc0912702662ae36ab265633d6cef3ea26.tar.gz",
-      "hash": "1q9c61sdpbmkgn3hs0bgri681hjwwjh8nrw2jrby7nnn69s5a6hn"
+      "revision": "68bc9c5f9387032907a4a0f64b67f5fdf7e5eddd",
+      "url": "https://github.com/fufexan/nix-gaming/archive/68bc9c5f9387032907a4a0f64b67f5fdf7e5eddd.tar.gz",
+      "hash": "0p5x6dfb23miydsc66xb2m03rg5ip5pb3s50a3qza034191j6rry"
     },
     "nix-index": {
       "type": "Git",
@@ -261,9 +261,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "ebbc1c05f786ae39bb5e04e57bf2c10c44a649e3",
-      "url": "https://github.com/nix-community/nix-index-database/archive/ebbc1c05f786ae39bb5e04e57bf2c10c44a649e3.tar.gz",
-      "hash": "156fri66yn0zmx0s0f19l8w73j1mzwg6yqy2ydyz03v661j739j3"
+      "revision": "52dec1cb33a614accb9e01307e17816be974d24d",
+      "url": "https://github.com/nix-community/nix-index-database/archive/52dec1cb33a614accb9e01307e17816be974d24d.tar.gz",
+      "hash": "1wcca9fraf82fzxadg543lm5g8qlnsg1fvb8xkbxz2ypwidc3x5d"
     },
     "quickshell": {
       "type": "Git",
@@ -275,9 +275,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a5431dd02dc23d9ef1680e67777fed00fe5f7cda",
-      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/a5431dd02dc23d9ef1680e67777fed00fe5f7cda.tar.gz",
-      "hash": "12ggnrvnbxqyms05vjm3zl5d59p0sm08rk6qpi7ni1bvz0715ady"
+      "revision": "f7597cdae2d537c5b12843599955856090dc49d5",
+      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/f7597cdae2d537c5b12843599955856090dc49d5.tar.gz",
+      "hash": "1a1ylc7fk5wkdwggskas8808c7avcn1mfkn0073kxkfgfhyrlhjj"
     },
     "silentSddm": {
       "type": "Git",
@@ -340,9 +340,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "23acb475b45fec0e92e1b4d9622e2cc7416fc65d",
-      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/23acb475b45fec0e92e1b4d9622e2cc7416fc65d.tar.gz",
-      "hash": "11nramyap1c6525lhv3d1ayiyzl9xg3ny789b6f7s44fhp1dh0cz"
+      "revision": "fb289b544add7c6d0318209fe2a1cb98c7a9e64c",
+      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/fb289b544add7c6d0318209fe2a1cb98c7a9e64c.tar.gz",
+      "hash": "1kyqyqwx2lcnlf78k3s4ikkkv3ls4lk54avmd3s34qh65cmm91d4"
     },
     "zen": {
       "type": "Git",
@@ -353,9 +353,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "e37d2b326311320c8571111b3ef89b29d26d4b64",
-      "url": "https://github.com/youwen5/zen-browser-flake/archive/e37d2b326311320c8571111b3ef89b29d26d4b64.tar.gz",
-      "hash": "18nz3rlm7lspzzbasl87i54p860vghird6xxcd3vsa0mx72fd41i"
+      "revision": "3cef1d4a0b597c1746d399cc46ef98a53af9a732",
+      "url": "https://github.com/youwen5/zen-browser-flake/archive/3cef1d4a0b597c1746d399cc46ef98a53af9a732.tar.gz",
+      "hash": "0sa1k6p4672jnliglhf82ky5ry7qzlbzfz7c0whmi08fji7i9iv8"
     }
   },
   "version": 5
