@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  inherit (lib.meta) getExe;
+  inherit (lib.meta) getExe';
 in {
   security = {
     polkit = {
@@ -26,7 +26,7 @@ in {
 
     serviceConfig = {
       Type = "simple";
-      ExecStart = getExe pkgs.kdePackages.polkit-kde-agent-1;
+      ExecStart = "${getExe' pkgs.kdePackages.polkit-kde-agent-1 "polkit-kde-authentication-agent-1"}";
       Restart = "on-failure";
       RestartSec = 1;
       TimeoutStopSec = 10;
