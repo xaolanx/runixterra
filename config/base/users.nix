@@ -4,6 +4,7 @@
   pkgs,
   self,
   pins,
+  options,
   ...
 }: let
   inherit (lib.modules) mkAliasOptionModule;
@@ -16,7 +17,10 @@
   };
 in {
   imports = [
-    (pins.hjem + "/modules/nixos")
+    (lib.modules.importApply "${pins.hjem}/modules/nixos" {
+      inherit pkgs config lib options;
+      hjem-lib = import "${pins.hjem}/lib.nix" {inherit lib pkgs;};
+    })
 
     # avoid boilerplate in the configuration
     (mkAliasOptionModule ["hj"] ["hjem" "users" username])
