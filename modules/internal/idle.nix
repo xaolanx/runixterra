@@ -82,9 +82,14 @@ in {
 
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${hypridle}/bin/hypridle";
+        ExecStart = "${pkgs.hypridle}/bin/hypridle";
         Restart = "on-failure";
         Slice = "background-graphical.slice";
+        Environment = "PATH=${pkgs.lib.makeBinPath [
+          self'.packages.caelestia-shell
+          self'.packages.caelestia-cli
+          pkgs.coreutils
+        ]}";
       };
 
       wantedBy = ["graphical-session.target"];

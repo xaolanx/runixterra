@@ -14,19 +14,19 @@ _: {
     };
 
     cliAndShell = lib.fix (self: {
-      caelestia-cli = pkgs.callPackage (pins.caelestia-cli + "/default.nix") {
-        rev = pins.caelestia-cli.rev or "dirty";
-        caelestia-shell = pkgs.runCommand "dummy-shell" {} "mkdir -p $out";
-        app2unit = app2unitPkg;
-        withShell = false;
-      };
-
       caelestia-shell = pkgs.callPackage (pins.caelestia-shell + "/nix/default.nix") {
-        rev = pins.caelestia-shell.rev or "dirty";
+        rev = pins.caelestia-shell.rev or "unstable";
         caelestia-cli = self.caelestia-cli;
         quickshell = pkgs.quickshell;
         app2unit = app2unitPkg;
         withCli = true;
+      };
+
+      caelestia-cli = pkgs.callPackage (pins.caelestia-cli + "/default.nix") {
+        rev = pins.caelestia-cli.rev or "unstable";
+        caelestia-shell = self.caelestia-shell;
+        app2unit = app2unitPkg;
+        withShell = false;
       };
     });
   in {
