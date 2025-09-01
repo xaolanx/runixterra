@@ -21,7 +21,7 @@
         "--expose-wayland"
       ];
     };
-    coolercontrol.enable = true;
+    coolercontrol.enable = false;
   };
 
   # services.hardware.openrgb.enable = true;
