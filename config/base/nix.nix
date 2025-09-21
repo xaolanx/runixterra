@@ -2,7 +2,6 @@
   inputs,
   pkgs,
   config,
-  pins,
   lib,
   ...
 }: {
@@ -37,18 +36,6 @@
         cmakeFlags = old.cmakeFlags ++ ["-DCMAKE_CXX_STANDARD=17"];
         NIX_CFLAGS_COMPILE = "-std=c++17";
       });
-
-      quickshell = super.callPackage pins.quickshell {
-        gitRev = pins.quickshell.revision;
-        withJemalloc = true;
-        withQtSvg = true;
-        withWayland = true;
-        withX11 = false;
-        withPipewire = true;
-        withPam = true;
-        withHyprland = true;
-        withI3 = false;
-      };
     })
   ];
   nixpkgs = {

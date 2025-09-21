@@ -43,6 +43,8 @@ in {
   hj = {
     packages = [
       inputs'.hyprland-contrib.packages.grimblast
+      self'.packages.caelestia-cli
+      self'.packages.caelestia-shell
     ];
 
     rum.desktops.hyprland = {

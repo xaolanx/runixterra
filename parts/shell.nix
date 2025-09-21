@@ -10,7 +10,6 @@ _: {
       packages = [
         (pkgs.callPackage (pins.agenix + "/pkgs/agenix.nix") {})
         pkgs.npins
-        pkgs.commitizen
         self'.formatter
       ];
 

@@ -3,25 +3,15 @@
   config,
   pkgs,
   self,
-  pins,
-  options,
+  inputs,
   ...
 }: let
   inherit (lib.modules) mkAliasOptionModule;
   inherit (config.local.vars.home) fullName;
   inherit (config.local.vars.system) username;
-
-  rumLib = import (pins.hjem-rum + "/modules/lib/default.nix") {inherit lib;};
-  hjemRumModule = import (pins.hjem-rum + "/modules/hjem.nix") {
-    inherit lib rumLib;
-  };
 in {
   imports = [
-    (lib.modules.importApply "${pins.hjem}/modules/nixos" {
-      inherit pkgs config lib options;
-      hjem-lib = import "${pins.hjem}/lib.nix" {inherit lib pkgs;};
-    })
-
+    inputs.hjem.nixosModules.default
     # avoid boilerplate in the configuration
     (mkAliasOptionModule ["hj"] ["hjem" "users" username])
   ];
@@ -43,7 +33,7 @@ in {
     clobberByDefault = true;
     extraModules = [
       self.hjemModules.xdg-autostart
-      hjemRumModule
+      inputs.hjem-rum.hjemModules.default
     ];
 
     users.${username} = {

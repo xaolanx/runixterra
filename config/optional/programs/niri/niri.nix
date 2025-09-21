@@ -11,6 +11,7 @@ in {
   };
 
   services.dbus.implementation = "broker";
+  services.noctalia-shell.enable = true;
 
   hj = {
     packages = [
@@ -102,7 +103,8 @@ in {
             TERMINAL "foot"
         }
         binds {
-            Ctrl+Alt+L { spawn "noctalia" "ipc" "call" "globalIPC" "toggleLock"; }
+            Ctrl+Alt+L { spawn "noctalia-shell" "ipc" "call" "lockScreen" "toggle"; }
+            Ctrl+Alt+I { spawn "noctalia-shell" "ipc" "call" "idleInhibitor" "toggle"; }
             Mod+1 { focus-workspace 1; }
             Mod+2 { focus-workspace 2; }
             Mod+3 { focus-workspace 3; }
@@ -118,7 +120,7 @@ in {
             Mod+C { center-window; }
             Mod+Ctrl+R { reset-window-height; }
             Mod+D { spawn "uwsm" "app" "--" "walker"; }
-            Mod+A { spawn "noctalia" "ipc" "call" "globalIPC" "toggleLauncher"; }
+            Mod+A { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
             Mod+Down { focus-workspace-down; }
             Mod+E { spawn "uwsm" "app" "--" "nautilus"; }
             Mod+End { focus-column-last; }
@@ -174,7 +176,6 @@ in {
             XF86MonBrightnessUp { spawn "brillo" "-q" "-u" "300000" "-A" "5"; }
             XF86MonBrightnessDown { spawn "brillo" "-q" "-u" "300000" "-U" "5"; }
         }
-        spawn-at-startup "noctalia"
         spawn-at-startup "xwayland-satellite"
         spawn-at-startup "Telegram"
         spawn-at-startup "wl-paste --type image --watch cliphist store"

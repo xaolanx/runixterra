@@ -23,6 +23,7 @@
   base = [
     ../config/base
     ../modules/internal
+    inputs.noctalia.nixosModules.default
   ];
 
   workstation = [

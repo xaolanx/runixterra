@@ -3,6 +3,7 @@ _: {
     pkgs,
     lib,
     self',
+    inputs',
     pins,
     ...
   }: let
@@ -17,7 +18,7 @@ _: {
       caelestia-shell = pkgs.callPackage (pins.caelestia-shell + "/nix/default.nix") {
         rev = pins.caelestia-shell.rev or "unstable";
         caelestia-cli = self.caelestia-cli;
-        quickshell = pkgs.quickshell;
+        quickshell = inputs'.quickshell.packages.default;
         app2unit = app2unitPkg;
         withCli = true;
       };
@@ -33,10 +34,6 @@ _: {
     packages =
       basePackages
       // {
-        noctalia = basePackages.noctalia.override {
-          configPath = ./../../assets/noctalia;
-        };
-
         kvlibadwaita = basePackages.kvlibadwaita.override {
           src = pins.kvlibadwaita;
           theme = "woodland";

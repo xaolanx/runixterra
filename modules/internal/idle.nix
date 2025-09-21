@@ -12,7 +12,7 @@
   inherit (inputs'.hypridle.packages) hypridle;
   inherit (lib.meta) getExe getExe';
 
-  noctalia = getExe self'.packages.noctalia;
+  noctalia = getExe config.services.noctalia-shell.package;
   caelestia = getExe self'.packages.caelestia-cli;
   loginctl = getExe' pkgs.systemd "loginctl";
   systemctl = getExe' pkgs.systemd "systemctl";
@@ -46,7 +46,7 @@
   generalSettings =
     if config.programs.niri.enable
     then {
-      lock_cmd = "${noctalia} ipc call globalIPC toggleLock";
+      lock_cmd = "${noctalia} ipc call lockScreen toggle";
       before_sleep_cmd = "${loginctl} lock-session";
       after_sleep_cmd = "${niri} msg action power-on-monitors";
     }

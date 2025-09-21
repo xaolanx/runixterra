@@ -187,32 +187,6 @@
       "url": "https://api.github.com/repos/sachnr/gruvbox-kvantum-themes/tarball/1.1",
       "hash": "12zjcv1jzmpbrk2vxnzdbyv35ybx0jc5dsnx1b6wif27zxjphqmv"
     },
-    "hjem": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "feel-co",
-        "repo": "hjem"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "2426d6ad20e767895e936ed0c9563cc4e2b6c96f",
-      "url": "https://github.com/feel-co/hjem/archive/2426d6ad20e767895e936ed0c9563cc4e2b6c96f.tar.gz",
-      "hash": "0lnn46m56qlv58g1l3d3pd3gxk3m3i4aj3k3xqjk49mdzw7g97jq"
-    },
-    "hjem-rum": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "snugnug",
-        "repo": "hjem-rum"
-      },
-      "branch": "main",
-      "submodules": false,
-      "revision": "397e73ca7ac236ac5209f8d1d42c682e5ee558e5",
-      "url": "https://github.com/snugnug/hjem-rum/archive/397e73ca7ac236ac5209f8d1d42c682e5ee558e5.tar.gz",
-      "hash": "1gyn6x92zyya6wxrgjzfld7h1mydrinhpdnn8d6ij21y5yjsfvj1"
-    },
     "kanagawa-lotus-yazi": {
       "type": "Git",
       "repository": {
@@ -265,20 +239,6 @@
       "url": "https://github.com/nix-community/nix-index-database/archive/3fe768e1f058961095b4a0d7a2ba15dc9736bdc6.tar.gz",
       "hash": "1wc8y3diczlqjcn2ganr8v75sbfx2c8rl6qjhavmdw9aa3lma2gy"
     },
-    "quickshell": {
-      "type": "Git",
-      "repository": {
-        "type": "Forgejo",
-        "server": "https://git.outfoxxed.me/",
-        "owner": "quickshell",
-        "repo": "quickshell"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "6eb12551baf924f8fdecdd04113863a754259c34",
-      "url": "https://git.outfoxxed.me/quickshell/quickshell/archive/6eb12551baf924f8fdecdd04113863a754259c34.tar.gz",
-      "hash": "1jv0z261vznihwqbm8pngaajg6x8dhk3n3ld3jkkr6k20psq66qs"
-    },
     "silentSddm": {
       "type": "Git",
       "repository": {
@@ -330,19 +290,6 @@
       "revision": "097d751b9e3c8b97ce158e7d141e5a292545b502",
       "url": "https://github.com/tinted-theming/schemes/archive/097d751b9e3c8b97ce158e7d141e5a292545b502.tar.gz",
       "hash": "10rzp437w84d2b6kf85mdmb0xfbvs015gjazs02bap4sf6avd8gh"
-    },
-    "zaphkiel": {
-      "type": "Git",
-      "repository": {
-        "type": "GitHub",
-        "owner": "Rexcrazy804",
-        "repo": "Zaphkiel"
-      },
-      "branch": "master",
-      "submodules": false,
-      "revision": "01d226068a1f06159fcdfcd44e624a9c0366a2bf",
-      "url": "https://github.com/Rexcrazy804/Zaphkiel/archive/01d226068a1f06159fcdfcd44e624a9c0366a2bf.tar.gz",
-      "hash": "01sq0zrqwa018ff1x5r4mhbya6jmn8c4ckh66g142a00s1ls2cqq"
     },
     "zen": {
       "type": "Git",

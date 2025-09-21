@@ -5,4 +5,6 @@ _: {
     # battery info
     upower.enable = true;
   };
+
+  powerManagement.cpuFreqGovernor = "performance";
 }
