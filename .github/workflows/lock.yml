@@ -32,6 +32,11 @@ jobs:
           extra-conf: |
             lazy-trees = true
 
+      - name: Configure GitHub token for Nix
+        run: |
+          mkdir -p ~/.config/nix
+          echo "access-tokens = github.com=${{ secrets.GH_TOKEN }}" >> ~/.config/nix/nix.conf
+
       - name: Install npins
         #run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
         run: nix profile add nixpkgs#npins
