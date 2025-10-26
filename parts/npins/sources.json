@@ -9,9 +9,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "9edb1787864c4f59ae5074ad498b6272b3ec308d",
-      "url": "https://github.com/ryantm/agenix/archive/9edb1787864c4f59ae5074ad498b6272b3ec308d.tar.gz",
-      "hash": "06w2dxnf8qxwcmqvgyxnrrx62ca5x1cw3lminpgs112md17wa3rl"
+      "revision": "2f0f812f69f3eb4140157fe15e12739adf82e32a",
+      "url": "https://github.com/ryantm/agenix/archive/2f0f812f69f3eb4140157fe15e12739adf82e32a.tar.gz",
+      "hash": "1d4m7hsq727q7ndjqmgyl8vkbkqjwps962ygmv2mcc5dbqzgn963"
     },
     "ayu-yazi": {
       "type": "Git",
@@ -48,9 +48,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "8c28a59804fd48b0d359cd7f816656c5dc031626",
-      "url": "https://github.com/imbypass/base16-discord/archive/8c28a59804fd48b0d359cd7f816656c5dc031626.tar.gz",
-      "hash": "1p70fy8wsqh0nynikppxxw3fgb17j85hs9dpjgnp3bma15ffbxcg"
+      "revision": "976bb54825e0478e88cff0d3a22c7986d83893ef",
+      "url": "https://github.com/imbypass/base16-discord/archive/976bb54825e0478e88cff0d3a22c7986d83893ef.tar.gz",
+      "hash": "1gqwx5879zwv86p6lp19yf3xzahhs439l9b8zqvq65a2ayd59mb3"
     },
     "base16-helix": {
       "type": "Git",
@@ -61,9 +61,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "27cf1e66e50abc622fb76a3019012dc07c678fac",
-      "url": "https://github.com/tinted-theming/base16-helix/archive/27cf1e66e50abc622fb76a3019012dc07c678fac.tar.gz",
-      "hash": "1hxsda3swj2qynh81k80vdz39grlm09il37v7g74gjqqb7w0q96h"
+      "revision": "d646af9b7d14bff08824538164af99d0c521b185",
+      "url": "https://github.com/tinted-theming/base16-helix/archive/d646af9b7d14bff08824538164af99d0c521b185.tar.gz",
+      "hash": "0g63rmk37n3anfvdpkgh9j54gyfssy17clz6fy3qpcr78qcrzkcv"
     },
     "base16-zellij": {
       "type": "Git",
@@ -113,9 +113,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "f9da00e6fbd409483ef071e53cef018669207db2",
-      "url": "https://github.com/caelestia-dots/shell/archive/f9da00e6fbd409483ef071e53cef018669207db2.tar.gz",
-      "hash": "1p6wpb94wf84csj8zlgc3j4h38w8idvsbz0hbfiz43qbv62cx5k8"
+      "revision": "210e0b6a682e1f09a1604b37050edf25f60ac8fe",
+      "url": "https://github.com/caelestia-dots/shell/archive/210e0b6a682e1f09a1604b37050edf25f60ac8fe.tar.gz",
+      "hash": "0yk1qkac9clhr3np39jl740i0h43wf92kd199j835p5kqds49ck3"
     },
     "disko": {
       "type": "GitRelease",
@@ -155,8 +155,8 @@
     "foot": {
       "type": "Tarball",
       "url": "https://codeberg.org/dnkl/foot/archive/master.tar.gz",
-      "locked_url": "https://codeberg.org/api/v1/repos/dnkl/foot/archive/c34f0633075769a2564e10d359feeca604373ae4.tar.gz?rev=c34f0633075769a2564e10d359feeca604373ae4",
-      "hash": "0xqff0b0qdz44yj8kx2vqfh6aa384r8gp2brhx8gmys123fz8yjn"
+      "locked_url": "https://codeberg.org/api/v1/repos/dnkl/foot/archive/558760446932f0f22c794084285cf998462dd706.tar.gz?rev=558760446932f0f22c794084285cf998462dd706",
+      "hash": "1wcxzjww42rc478zjb89i0mi6q32y796kjshdj4h5xk4w5qadim7"
     },
     "git-hooks": {
       "type": "Git",
@@ -167,9 +167,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "54df955a695a84cd47d4a43e08e1feaf90b1fd9b",
-      "url": "https://github.com/cachix/git-hooks.nix/archive/54df955a695a84cd47d4a43e08e1feaf90b1fd9b.tar.gz",
-      "hash": "12n0v8f44xa7kiqamwv6cmw1d5cfdzf47sq1gz79wnfswm23pp6a"
+      "revision": "ca5b894d3e3e151ffc1db040b6ce4dcc75d31c37",
+      "url": "https://github.com/cachix/git-hooks.nix/archive/ca5b894d3e3e151ffc1db040b6ce4dcc75d31c37.tar.gz",
+      "hash": "11r45r45qcfv77rx024mqpra2yixnc5g248kp7rmccq09vll1y85"
     },
     "gruvbox-kvantum": {
       "type": "GitRelease",
@@ -222,9 +222,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "cd931e08409954b2e3595b1532039f8052dd8198",
-      "url": "https://github.com/fufexan/nix-gaming/archive/cd931e08409954b2e3595b1532039f8052dd8198.tar.gz",
-      "hash": "0zcijndy6jz6h5l6vdq26bjfn1yqcp0a4h8s64bri9nifdchdckb"
+      "revision": "5e6ced46102b654619d0b60356b1268511053cba",
+      "url": "https://github.com/fufexan/nix-gaming/archive/5e6ced46102b654619d0b60356b1268511053cba.tar.gz",
+      "hash": "1irbskk915688rf1lpjkyf4sj7csk14i4hnlhk8wj8xlgxjh9bw8"
     },
     "nix-index": {
       "type": "Git",
@@ -235,9 +235,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "050a5feb5d1bb5b6e5fc04a7d3d816923a87c9ea",
-      "url": "https://github.com/nix-community/nix-index-database/archive/050a5feb5d1bb5b6e5fc04a7d3d816923a87c9ea.tar.gz",
-      "hash": "17rm322w50s8fcspv9c9x9j2szdr4gbiy0477la511znfdxjjwnw"
+      "revision": "ed6b293161b378a7368cda38659eb8d3d9a0dac4",
+      "url": "https://github.com/nix-community/nix-index-database/archive/ed6b293161b378a7368cda38659eb8d3d9a0dac4.tar.gz",
+      "hash": "1jn0ih2vj2zdpirx5939a1wx6wysvxmip71kywmad3h827mln4m8"
     },
     "silentSddm": {
       "type": "Git",
@@ -248,9 +248,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "44c39db1c38ce0ab94025e656aec67fa4beedc24",
-      "url": "https://github.com/uiriansan/SilentSDDM/archive/44c39db1c38ce0ab94025e656aec67fa4beedc24.tar.gz",
-      "hash": "1ddi9dvk258nwk3k65hp9f15zpswb812ashk5cq3idbca9pfyjj7"
+      "revision": "e334d92d3512cb5f49d16ca4b0a4baef721f9713",
+      "url": "https://github.com/uiriansan/SilentSDDM/archive/e334d92d3512cb5f49d16ca4b0a4baef721f9713.tar.gz",
+      "hash": "0nm6jx17ns5cx32dnwvamm9027c9nj1byw1v9m93ikam1q43gqf8"
     },
     "tinted-terminal": {
       "type": "Git",
@@ -274,9 +274,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "128222dc911b8e2e18939537bed1762b7f3a04aa",
-      "url": "https://github.com/numtide/treefmt-nix/archive/128222dc911b8e2e18939537bed1762b7f3a04aa.tar.gz",
-      "hash": "1p81chik0sb8aligng579m4h0klnndxv76z0p4gyhr4g3s9cydpw"
+      "revision": "2eddae033e4e74bf581c2d1dfa101f9033dbd2dc",
+      "url": "https://github.com/numtide/treefmt-nix/archive/2eddae033e4e74bf581c2d1dfa101f9033dbd2dc.tar.gz",
+      "hash": "0xnppaig8nav7r0xviz7i87irv8bzjhhp9v080rkljkrqklvrjij"
     },
     "tt-schemes": {
       "type": "Git",
@@ -300,9 +300,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "3968348af022fe88468ef8de4f9683076e2e5e4b",
-      "url": "https://github.com/youwen5/zen-browser-flake/archive/3968348af022fe88468ef8de4f9683076e2e5e4b.tar.gz",
-      "hash": "0q07630ac2mhp98nh4bgg2xl9mvbnpbsy9pmi3p0bikr131db78i"
+      "revision": "a69ee46d64a6af7673905ccb7e21c1ae1960a101",
+      "url": "https://github.com/youwen5/zen-browser-flake/archive/a69ee46d64a6af7673905ccb7e21c1ae1960a101.tar.gz",
+      "hash": "0bjc61gj4fnpmxjj73fnqj1bgibka97f84i8q6vpabqlpca36nmv"
     }
   },
   "version": 5
