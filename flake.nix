@@ -32,8 +32,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # FIXME: back to upstream when https://github.com/snugnug/hjem-rum/pull/140 gets merged
     hjem-rum = {
-      url = "github:snugnug/hjem-rum";
+      url = "github:snugnug/hjem-rum/pull/140/head";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
