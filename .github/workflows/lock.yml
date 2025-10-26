@@ -9,7 +9,6 @@ on:
         default: "false"
   schedule:
     - cron: "0 0 * * 0" # Sunday
-# - cron: "0 0 * * 1-6" # Mon-Sat
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -38,7 +37,6 @@ jobs:
           echo "access-tokens = github.com=${{ secrets.GH_TOKEN }}" >> ~/.config/nix/nix.conf
 
       - name: Install npins
-        #run: nix-env -f https://github.com/andir/npins/archive/master.tar.gz -i
         run: nix profile add nixpkgs#npins
 
       - name: Clear Cachix
@@ -51,14 +49,18 @@ jobs:
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
 
-      - name: Weekly npins update
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+      - name: npins update (Sun or manual non-dry)
+        if: >
+          (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
+          (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
         id: pins-weekly
         run: |
           npins -d ./parts/npins/ update
 
-      - name: Weekly flake.lock update
-        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+      - name: flake.lock update (Sun or manual non-dry)
+        if: >
+          (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
+          (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
         id: lock-weekly
         uses: DeterminateSystems/update-flake-lock@v27
         with:
@@ -75,13 +77,5 @@ jobs:
             automated
             weekly
 
-      - uses: DeterminateSystems/flake-checker-action@main
-
-      # - name: Auto-merge PR
-      #   if: steps.nightly.outputs.pull-request-number || steps.weekly.outputs.pull-request-number
-      #   run: |
-      #     PR_NUMBER="${{ steps.nightly.outputs.pull-request-number || steps.weekly.outputs.pull-request-number }}"
-      #     echo "Merging PR #$PR_NUMBER"
-      #     gh pr merge "$PR_NUMBER" --squash --auto
-      #   env:
+      - uses: DeterminateSystems/flake-checker-action@main      #   env:
       #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
