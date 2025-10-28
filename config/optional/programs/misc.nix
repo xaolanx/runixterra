@@ -10,6 +10,7 @@
           (self'.packages)
           app2unit
           gpurecording
+          helium-browser
           ;
 
         inherit
