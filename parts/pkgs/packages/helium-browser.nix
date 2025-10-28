@@ -81,7 +81,7 @@ Name=${name}
 GenericName=Web Browser
 Terminal=false
 Icon=$out/bin/product_logo_256.png
-Exec=$out/bin/${name}
+Exec=$out/bin/${name} --enable-zero-copy --disable-gpu-driver-bug-workarounds --enable-gpu-rasterization --enable-unsafe-webgpu --enable-webgpu-developer-features --ignore-gpu-blocklist --ozone-platform-hint=wayland --enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,CanvasOopRasterization,VaapiIgnoreDriverChecks,EnableVulkan,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE
 Type=Application
 Categories=Network;WebBrowser;
 INI
