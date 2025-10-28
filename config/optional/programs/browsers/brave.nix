@@ -1,13 +1,9 @@
 {pkgs, ...}: let
   commandLineArgs = [
-    "--enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,CanvasOopRasterization,DefaultANGLEVulkan,EnableDrDc,SkiaGraphite,Vulkan,VulkanFromANGLE,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo,UseOzonePlatform,VaapiIgnoreDriverChecks"
+    "--enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,UseOzonePlatform"
     "--ozone-platform=wayland"
-    "--disable-features=UseChromeOSDirectVideoDecoder"
     "--ignore-gpu-blocklist"
     "--enable-zero-copy"
-    "--disable-gpu-driver-bug-workarounds"
-    "--enable-gpu-rasterization"
-    "--enable-unsafe-webgpu"
     "--ozone-platform-hint=wayland"
   ];
 in {

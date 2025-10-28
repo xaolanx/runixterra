@@ -32,6 +32,8 @@ in {
       "systemd.show_status=auto"
       "rd.udev.log_level=3"
     ];
+
+    kernelPackages = pkgs.linuxPackages_latest;
   };
   system.nixos.distroName = "Runixterra";
   environment.etc.issue = {
