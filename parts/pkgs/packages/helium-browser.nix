@@ -1,96 +1,49 @@
 {
-lib,
-unzip,
-autoPatchelfHook,
-stdenv,
-fetchurl,
-xorg,
-libgbm,
-cairo,
-libudev-zero,
-libxkbcommon,
-nspr,
-nss,
-libcupsfilters,
-qt6,
-qt5,
-alsa-lib,
-atk,
-at-spi2-core,
-at-spi2-atk,
-pango
- }:
+  lib,
+  pkgs,
+  ...
+}:
+pkgs.appimageTools.wrapType2 rec {
+  pname = "helium";
+  version = "0.5.8.1";
 
-stdenv.mkDerivation rec {
-    name = "Helium";
-    version = "0.5.8.1";
-
-    src = fetchurl {
-	url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-x86_64_linux.tar.xz";
-        sha256 = "sha256-sORkRGYA6/Qu6v6MA+UWro+zd/bXiD3AoW4PgDUPWSM=";
+  src = let
+    platformMap = {
+      "x86_64-linux" = "x86_64";
+      "aarch64-linux" = "arm64";
     };
 
-    nativeBuildInputs = [ 
-        unzip
-        autoPatchelfHook
-    ];
-    
-    buildInputs = [
-        unzip
-        xorg.libxcb
-        xorg.libX11
-        xorg.libXcomposite
-        xorg.libXdamage
-        xorg.libXext
-        xorg.libXfixes
-        xorg.libXrandr
-        libgbm
-        cairo
-        pango
-        libudev-zero
-        libxkbcommon
-        nspr
-        nss
-        alsa-lib
-        atk
-        at-spi2-core
-        at-spi2-atk
-        qt5.qtbase
-        qt5.qttools
-        qt5.qtx11extras
-        libcupsfilters
-        qt5.wrapQtAppsHook
-    ];
+    platform = platformMap.${pkgs.system};
 
-    autoPatchelfIgnoreMissingDeps = [
-        "libQt6Core.so.6"
-        "libQt6Gui.so.6"
-        "libQt6Widgets.so.6"
-    ];
-
-    installPhase = ''
-        runHook preInstall
-        mkdir -p $out/bin
-        mv * $out/bin/
-        mv $out/bin/chrome $out/bin/${name}
-        mkdir -p $out/share/applications
-        
-        cat <<INI> $out/share/applications/${name}.desktop
-[Desktop Entry]
-Name=${name}
-GenericName=Web Browser
-Terminal=false
-Icon=$out/bin/product_logo_256.png
-Exec=$out/bin/${name} --enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist --enable-zero-copy --ozone-platform-hint=wayland
-Type=Application
-Categories=Network;WebBrowser;
-INI
-        '';
-
-
-    meta = with lib; {
-        homepage = "https://github.com/imputnet/helium-linux";
-        description = "A description of your application";
-        platforms = platforms.linux;
+    hashes = {
+      "x86_64-linux" = "sha256-d8kwLEU6qgEgp7nlEwdfRevB1JrbEKHRe8+GhGpGUig=";
+      "aarch64-linux" = "sha256-/ZnLJNS/WBcWjUXUfqylqJCVh8HUNlIrVQCrb/QoL2I=";
     };
+
+    hash = hashes.${pkgs.system};
+  in
+    pkgs.fetchurl {
+      url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-${platform}.AppImage";
+      inherit hash;
+    };
+
+  extraInstallCommands = let
+    contents = pkgs.appimageTools.extractType2 {inherit pname version src;};
+  in ''
+    mkdir -p "$out/share/applications"
+    mkdir -p "$out/share/lib/helium"
+    cp -r ${contents}/opt/helium/locales "$out/share/lib/helium"
+    cp -r ${contents}/usr/share/* "$out/share"
+    cp "${contents}/${pname}.desktop" "$out/share/applications/"
+    substituteInPlace $out/share/applications/${pname}.desktop --replace-fail 'Exec=AppRun' 'Exec=${meta.mainProgram} --enable-features=AcceleratedVideoDecodeLinuxZeroCopyGL,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoEncoder,UseOzonePlatform --ozone-platform=wayland --ignore-gpu-blocklist --enable-zero-copy --ozone-platform-hint=wayland'
+  '';
+
+  meta = {
+    description = "Private, fast, and honest web browser based on Chromium";
+    homepage = "https://github.com/imputnet/helium-chromium";
+    changelog = "https://github.com/imputnet/helium-linux/releases/tag/${version}";
+    platforms = ["x86_64-linux" "aarch64-linux"];
+    license = lib.licenses.gpl3;
+    mainProgram = "helium";
+  };
 }
