@@ -9,9 +9,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "2f0f812f69f3eb4140157fe15e12739adf82e32a",
-      "url": "https://github.com/ryantm/agenix/archive/2f0f812f69f3eb4140157fe15e12739adf82e32a.tar.gz",
-      "hash": "1d4m7hsq727q7ndjqmgyl8vkbkqjwps962ygmv2mcc5dbqzgn963"
+      "revision": "9ba0d85de3eaa7afeab493fed622008b6e4924f5",
+      "url": "https://github.com/ryantm/agenix/archive/9ba0d85de3eaa7afeab493fed622008b6e4924f5.tar.gz",
+      "hash": "1pkgdarjb2k7chs93s5wnbsnmqbhlbidipa6ncxr3yhr7sx5dhwn"
     },
     "ayu-yazi": {
       "type": "Git",
@@ -48,8 +48,8 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "976bb54825e0478e88cff0d3a22c7986d83893ef",
-      "url": "https://github.com/imbypass/base16-discord/archive/976bb54825e0478e88cff0d3a22c7986d83893ef.tar.gz",
+      "revision": "33bc6342a293338d1ed1e355924b42d85d6bb9b9",
+      "url": "https://github.com/imbypass/base16-discord/archive/33bc6342a293338d1ed1e355924b42d85d6bb9b9.tar.gz",
       "hash": "1gqwx5879zwv86p6lp19yf3xzahhs439l9b8zqvq65a2ayd59mb3"
     },
     "base16-helix": {
@@ -113,9 +113,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "210e0b6a682e1f09a1604b37050edf25f60ac8fe",
-      "url": "https://github.com/caelestia-dots/shell/archive/210e0b6a682e1f09a1604b37050edf25f60ac8fe.tar.gz",
-      "hash": "0yk1qkac9clhr3np39jl740i0h43wf92kd199j835p5kqds49ck3"
+      "revision": "9bc3f378d01497adcaa60afff22c0537f939d556",
+      "url": "https://github.com/caelestia-dots/shell/archive/9bc3f378d01497adcaa60afff22c0537f939d556.tar.gz",
+      "hash": "0yrh53rcjjpwndfkhnx20wl151f8n9xvr8v5j5pccczs7js6s587"
     },
     "disko": {
       "type": "GitRelease",
@@ -155,8 +155,8 @@
     "foot": {
       "type": "Tarball",
       "url": "https://codeberg.org/dnkl/foot/archive/master.tar.gz",
-      "locked_url": "https://codeberg.org/api/v1/repos/dnkl/foot/archive/558760446932f0f22c794084285cf998462dd706.tar.gz?rev=558760446932f0f22c794084285cf998462dd706",
-      "hash": "1wcxzjww42rc478zjb89i0mi6q32y796kjshdj4h5xk4w5qadim7"
+      "locked_url": "https://codeberg.org/api/v1/repos/dnkl/foot/archive/1fce0e69f5ec2c24d518917c0538a4d762b8a1e4.tar.gz?rev=1fce0e69f5ec2c24d518917c0538a4d762b8a1e4",
+      "hash": "12wbq2swyk6f23ijxaii20r5lzp6gm3in35vxkmaxs9ppmrhrxlr"
     },
     "git-hooks": {
       "type": "Git",
@@ -222,9 +222,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "5e6ced46102b654619d0b60356b1268511053cba",
-      "url": "https://github.com/fufexan/nix-gaming/archive/5e6ced46102b654619d0b60356b1268511053cba.tar.gz",
-      "hash": "1irbskk915688rf1lpjkyf4sj7csk14i4hnlhk8wj8xlgxjh9bw8"
+      "revision": "de8ea9d63d88f88010989e11d1cc05546bc4c9db",
+      "url": "https://github.com/fufexan/nix-gaming/archive/de8ea9d63d88f88010989e11d1cc05546bc4c9db.tar.gz",
+      "hash": "0ascikljqyqycn88j2phrjdx5jj5wsvh5wzqis531yalrdqngs8v"
     },
     "nix-index": {
       "type": "Git",
@@ -300,9 +300,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "a69ee46d64a6af7673905ccb7e21c1ae1960a101",
-      "url": "https://github.com/youwen5/zen-browser-flake/archive/a69ee46d64a6af7673905ccb7e21c1ae1960a101.tar.gz",
-      "hash": "0bjc61gj4fnpmxjj73fnqj1bgibka97f84i8q6vpabqlpca36nmv"
+      "revision": "5355c0dc6857a2aa34b126fb4a93a454ed702f52",
+      "url": "https://github.com/youwen5/zen-browser-flake/archive/5355c0dc6857a2aa34b126fb4a93a454ed702f52.tar.gz",
+      "hash": "1bw0k6q1snq1lrfayi7c3sn5m3kd4djh35zaz8zp5fcj180dzncy"
     }
   },
   "version": 5
