@@ -58,6 +58,10 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    # mangowc
+
+    mango.url = "github:DreamMaoMao/mango";
+
     split-monitor-workspaces = {
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";

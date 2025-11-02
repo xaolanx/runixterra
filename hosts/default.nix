@@ -23,7 +23,6 @@
   base = [
     ../config/base
     ../modules/internal
-    inputs.noctalia.nixosModules.default
   ];
 
   workstation = [
@@ -79,11 +78,18 @@
   niri = [
     ../config/optional/programs/niri
     ../config/optional/programs/uwsm.nix
+    inputs.noctalia.nixosModules.default
   ];
 
   hyprland = [
     ../config/optional/programs/hypr
   ];
+
+  mangowc = [
+    ../config/optional/programs/mangowc
+    inputs.mango.nixosModules.mango
+  ];
+  
 in {
   flake.nixosConfigurations = {
     ionia = mkNixosSystem {
@@ -111,5 +117,18 @@ in {
           ../config/optional/programs/games.nix
         ];
     };
+
+    edelweiss = mkNixosSystem {
+      system = "x86_64-linux";
+      modules =
+        base
+        ++ workstation
+        ++ wm
+        ++ mangowc
+        ++ [
+          ./edelweiss
+          ../config/optional/programs/games.nix
+        ];
+    };    
   };
 }
