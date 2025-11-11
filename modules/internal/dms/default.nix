@@ -128,6 +128,7 @@ in {
         pkgs.libsForQt5.qt5ct
         pkgs.kdePackages.qt6ct
         inputs'.dms-cli.packages.dms-cli
+        inputs'.dankMaterialShell.packages.default
       ]
       ++ lib.optional cfg.enableSystemMonitoring inputs'.dgop.packages.default
       ++ lib.optionals cfg.enableClipboard [ pkgs.cliphist pkgs.wl-clipboard ]
