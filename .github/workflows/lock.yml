@@ -62,7 +62,7 @@ jobs:
           (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
           (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
         id: lock-weekly
-        uses: DeterminateSystems/update-flake-lock@v27
+        uses: DeterminateSystems/update-flake-lock@v28
         with:
           token: ${{ secrets.GH_TOKEN }}
           branch: weekly-update
