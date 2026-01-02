@@ -1,4 +1,4 @@
-{pins, ...}: let
+{pins, lib, ...}: let
   nixdb = (import "${pins.nix-index}/nixos-module.nix") pins.nix-index;
 in {
   imports = [nixdb];
