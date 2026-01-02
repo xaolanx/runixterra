@@ -49,6 +49,12 @@ jobs:
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
 
+      - name: npins upgrade
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true'
+        id: pins-upgrade
+        run: |
+          npins -d ./parts/npins/ upgrade
+
       - name: npins update (Sun or manual non-dry)
         if: >
           (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
