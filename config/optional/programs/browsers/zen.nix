@@ -4,7 +4,7 @@
   ...
 }: let
   inherit (pkgs) callPackage;
-  zen-browser = (callPackage pins.zen {}).default;
+  zen-browser = (callPackage pins.zen {});
 in {
   hj.packages = [
     zen-browser
