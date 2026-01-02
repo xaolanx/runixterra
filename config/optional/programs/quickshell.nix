@@ -3,5 +3,8 @@
     pkgs.quickshell
     pkgs.material-symbols
   ];
-  programs.dankMaterialShell.enable = true;
+  programs.dank-material-shell = {
+    enable = true;
+    dgop.package = pkgs.dgop;
+  };
 }

@@ -73,6 +73,7 @@
     ../config/optional/services/idle.nix
     ../config/optional/services/logind.nix
     ../config/optional/services/power.nix
+    inputs.dms.nixosModules.default
   ];
 
   niri = [
