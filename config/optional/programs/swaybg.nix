@@ -6,7 +6,7 @@
   inherit (pkgs) swaybg;
 
   swaybgStart = pkgs.writeShellScript "swaybg-start" ''
-    ${swaybg}/bin/swaybg -i "${config.programs.matugen.wallpaper}"
+    ${swaybg}/bin/swaybg -i "${config.local.style.wallpaper}"
   '';
 in {
   systemd.user.services = {

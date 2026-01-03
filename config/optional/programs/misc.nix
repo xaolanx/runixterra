@@ -27,6 +27,7 @@
           wl-clipboard
           cliphist
           telegram-desktop
+          npins
           ;
       };
     };

@@ -36,6 +36,16 @@
         cmakeFlags = old.cmakeFlags ++ ["-DCMAKE_CXX_STANDARD=17"];
         NIX_CFLAGS_COMPILE = "-std=c++17";
       });
+
+      npins = super.npins.overrideAttrs (_: {
+        version = "0.3.1";
+        src = super.fetchFromGitHub {
+          owner = "andir";
+          repo = "npins";
+          tag = "0.3.1";
+          sha256 = "sha256-PPk9Ve1pM3X7NfGeGb8Jiq4YDEwAjErP4xzGwLaakTU=";
+        };
+      });
     })
   ];
   nixpkgs = {

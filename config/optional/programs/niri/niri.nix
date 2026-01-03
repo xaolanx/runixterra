@@ -3,9 +3,7 @@
   inputs',
   pkgs,
   ...
-}: let
-  c = config.programs.matugen.theme.colors.dark;
-in {
+}: {
   programs.niri = {
     enable = true;
   };
@@ -66,8 +64,8 @@ in {
             focus-ring { off; }
             border {
                 width 2
-                active-color "#${c.primary}"
-                inactive-color "#${c.outline_variant}"
+                active-color "#ffffff"
+                inactive-color "#000000"
             }
             default-column-width { proportion 0.500000; }
             preset-column-widths {

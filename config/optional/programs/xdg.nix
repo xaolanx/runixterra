@@ -38,7 +38,7 @@ in {
     config = {
       common.default = ["gtk"];
       hyprland.default = ["gtk" "hyprland"];
-      niri.default = ["gtk" "gnome"];
+      niri.default = ["gnome" "gtk"];
     };
 
     extraPortals = [
