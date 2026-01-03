@@ -37,14 +37,17 @@
         NIX_CFLAGS_COMPILE = "-std=c++17";
       });
 
-      npins = super.npins.overrideAttrs (_: {
+      npins = super.npins.overrideAttrs (_old: rec {
+        pname = "npins";
         version = "0.3.1";
+
         src = super.fetchFromGitHub {
           owner = "andir";
           repo = "npins";
-          tag = "0.3.1";
+          rev = "${version}";
           sha256 = "sha256-PPk9Ve1pM3X7NfGeGb8Jiq4YDEwAjErP4xzGwLaakTU=";
         };
+
         cargoHash = "sha256-YRW2TqbctuGC2M6euR4bb0m9a19m8WQVvWucRMpzkQE=";
       });
     })
