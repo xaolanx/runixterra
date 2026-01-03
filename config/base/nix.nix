@@ -44,7 +44,7 @@
         src = super.fetchFromGitHub {
           owner = "andir";
           repo = "npins";
-          rev = "${version}";
+          tag = "${version}";
           sha256 = "sha256-PPk9Ve1pM3X7NfGeGb8Jiq4YDEwAjErP4xzGwLaakTU=";
         };
 
