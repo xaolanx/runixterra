@@ -4,7 +4,7 @@
       inherit
         (pkgs)
         spotify
-        tidal-hifi
+        # tidal-hifi
         celluloid
         gthumb
         papers
