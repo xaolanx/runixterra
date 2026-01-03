@@ -11,6 +11,7 @@
           app2unit
           gpurecording
           helium-browser
+          npins
           ;
 
         inherit
@@ -27,7 +28,6 @@
           wl-clipboard
           cliphist
           telegram-desktop
-          npins
           ;
       };
     };
