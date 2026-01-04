@@ -1,0 +1,39 @@
+{
+  pkgs,
+  config,
+  ...
+}:
+{
+  boot = {
+    loader = {
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        efiInstallAsRemovable = true;
+      };
+    };
+
+    plymouth = {
+      enable = true;
+      extraConfig = ''
+        [Daemon]
+        DeviceScale=2
+      '';
+    };
+
+    consoleLogLevel = 0;
+    initrd.systemd.enable = true;
+    initrd.verbose = false;
+
+    kernelParams = [
+      "quiet"
+      "systemd.show_status=auto"
+      "rd.udev.log_level=3"
+    ];
+
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
+
+  environment.systemPackages = [ config.boot.kernelPackages.cpupower ];
+}
