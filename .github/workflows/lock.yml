@@ -1,0 +1,84 @@
+name: lock updater
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (skip actual update)"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "0 0 * * 0" # Sunday
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  chore:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: DeterminateSystems/determinate-nix-action@main
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          extra-conf: |
+            lazy-trees = true
+
+      - name: Install npins
+        run: nix profile add nixpkgs#npins
+
+      - name: Clear Cachix
+        if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
+        run: |
+          echo "Clearing Cachix cache"
+          curl -X 'POST' \
+            'https://app.cachix.org/api/v1/cache/yunara/clear' \
+            -H 'accept: application/json;charset=utf-8' \
+            -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
+            -d ''
+
+      - name: npins upgrade
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true'
+        id: pins-upgrade
+        run: |
+          npins -d ./parts/npins/ upgrade
+
+      - name: npins update (Sun or manual non-dry)
+        if: >
+          (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
+          (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
+        id: pins-weekly
+        run: |
+          npins -d ./parts/npins/ update
+
+      - name: flake.lock update (Sun or manual non-dry)
+        if: >
+          (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
+          (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
+        id: lock-weekly
+        uses: DeterminateSystems/update-flake-lock@v27
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          branch: weekly-update
+          git-author-name: "xaolanx"
+          git-author-email: "ah0199004@gmail.com"
+          git-committer-name: "xaolanx"
+          git-committer-email: "ah0199004@gmail.com"
+          commit-msg: "chore(lockfile): weekly update"
+          pr-title: "chore(lockfile): weekly update"
+          pr-labels: |
+            dependencies
+            automated
+            weekly
+
+      - uses: DeterminateSystems/flake-checker-action@main      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
