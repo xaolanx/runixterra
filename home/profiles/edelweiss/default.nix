@@ -1,7 +1,7 @@
 {
   imports = [
     # editors
-    # ../../editors/helix
+    ../../editors/helix
     # ../../editors/jetbrains/idea.nix
 
     # programs
