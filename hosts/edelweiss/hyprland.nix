@@ -8,10 +8,10 @@
       monitor = [
         "DP-1, preferred, auto-left, auto"
         "DP-2, preferred, auto-left, auto"
-        "eDP-1, preferred, auto, 1.600000"
+        "eDP-1, preferred, auto, 1"
       ];
 
-      "device[elan2841:00-04f3:31eb-touchpad]" = {
+      "device[etps/2-elantech-touchpad]" = {
         accel_profile = "custom ${accelpoints}";
         scroll_points = accelpoints;
         natural_scroll = true;
