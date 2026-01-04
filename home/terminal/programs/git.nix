@@ -117,6 +117,6 @@ in
   };
 
   xdg.configFile."git/allowed_signers".text = ''
-    ${cfg.user.email} namespaces="git" ${key}
+    ${cfg.settings.user.email} namespaces="git" ${key}
   '';
 }
