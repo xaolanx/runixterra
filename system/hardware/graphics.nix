@@ -9,7 +9,7 @@
     pkgs.vulkan-tools
     pkgs.intel-media-sdk
   ];
-  hj.environment.sessionVariables = {
+  environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
     LIBVA_DRIVERS_PATH = "${pkgs.intel-media-driver}/lib/dri";
     VKD_ICD_FILENAMES = "/run/opengl-driver/share/vulkan/icd.d/intel_icd/x86_64.json";
