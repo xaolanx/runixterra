@@ -5,7 +5,7 @@
 }:
 pkgs.appimageTools.wrapType2 rec {
   pname = "helium";
-  version = "0.7.9";
+  version = "0.7.9.1";
 
   src = let
     platformMap = {
@@ -13,14 +13,14 @@ pkgs.appimageTools.wrapType2 rec {
       "aarch64-linux" = "arm64";
     };
 
-    platform = platformMap.${pkgs.system};
+    platform = platformMap.${pkgs.stdenv.hostPlatform.system};
 
     hashes = {
-      "x86_64-linux" = "sha256-d8kwLEU6qgEgp7nlEwdfRevB1JrbEKHRe8+GhGpGUig=";
+      "x86_64-linux" = "sha256-69y8dNJPJk+HgnLzkyYLMdps1Med65yeN+77Nk6jbyM=";
       "aarch64-linux" = "sha256-/ZnLJNS/WBcWjUXUfqylqJCVh8HUNlIrVQCrb/QoL2I=";
     };
 
-    hash = hashes.${pkgs.system};
+    hash = hashes.${pkgs.stdenv.hostPlatform.system};
   in
     pkgs.fetchurl {
       url = "https://github.com/imputnet/helium-linux/releases/download/${version}/helium-${version}-${platform}.AppImage";

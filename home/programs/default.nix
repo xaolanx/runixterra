@@ -4,6 +4,7 @@
     ./browsers/chromium.nix
     ./browsers/firefox.nix
     ./browsers/zen.nix
+    ./browsers/helium.nix
     ./media
     ./gtk.nix
     ./office
