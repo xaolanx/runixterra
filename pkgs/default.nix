@@ -11,6 +11,8 @@
         bibata-hyprcursor = pkgs.callPackage ./bibata-hyprcursor { };
 
         wl-ocr = pkgs.callPackage ./wl-ocr { };
+
+        helium-browser = pkgs.callPackage ./helium { };
       };
     };
 }
