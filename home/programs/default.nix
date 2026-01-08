@@ -15,7 +15,7 @@
   home.packages = with pkgs; [
     halloy
     signal-desktop
-    # telegram-desktop
+    telegram-desktop
 
     gnome-calculator
     gnome-control-center
