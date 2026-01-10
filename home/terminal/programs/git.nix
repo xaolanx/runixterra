@@ -96,8 +96,8 @@ in
         };
 
       user = {
-        email = "xaolan@fufexan.net";
-        name = "Mihai Fufezan";
+        email = "ah0199004@gmail.com";
+        name = "Xaolan";
       };
 
       gpg.ssh.allowedSignersFile =
