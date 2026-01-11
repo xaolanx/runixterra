@@ -33,8 +33,8 @@ jobs:
           extra-conf: |
             lazy-trees = true
 
-      - name: Install npins
-        run: nix profile add nixpkgs#npins
+      # - name: Install npins
+      #  run: nix profile add nixpkgs#npins
 
       - name: Clear Cachix
         if: github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0'
@@ -46,19 +46,19 @@ jobs:
             -H 'Authorization: Bearer ${{ secrets.CACHIX_AUTH_TOKEN }}' \
             -d ''
 
-      - name: npins upgrade
-        if: github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true'
-        id: pins-upgrade
-        run: |
-          npins -d ./parts/npins/ upgrade
+      # - name: npins upgrade
+      #  if: github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true'
+      #  id: pins-upgrade
+      #  run: |
+      #    npins -d ./parts/npins/ upgrade
 
-      - name: npins update (Sun or manual non-dry)
-        if: >
-          (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
-          (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
-        id: pins-weekly
-        run: |
-          npins -d ./parts/npins/ update
+      # - name: npins update (Sun or manual non-dry)
+      #  if: >
+      #    (github.event_name == 'schedule' && github.event.schedule == '0 0 * * 0') ||
+      #    (github.event_name == 'workflow_dispatch' && inputs.dry_run != 'true')
+      #  id: pins-weekly
+      #  run: |
+      #    npins -d ./parts/npins/ update
 
       - name: flake.lock update (Sun or manual non-dry)
         if: >
