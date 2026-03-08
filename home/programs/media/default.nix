@@ -10,7 +10,7 @@
     # audio control
     pulsemixer
     pwvucontrol
-    helvum
+    # helvum
 
     # audio
     amberol
